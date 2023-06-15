@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>commons</module>
-    
+        <module>onboard-service</module>
     </modules>
     <properties>
         <snakeyaml.version>2.0</snakeyaml.version>
