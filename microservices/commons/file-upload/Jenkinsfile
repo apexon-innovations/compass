@@ -1,0 +1,62 @@
+pipeline {
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '15'))
+    }
+    agent any
+
+    environment {
+                AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
+                AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
+                SLACK_BASE_URL = 'https://des-xdb7438.slack.com/services/hooks/jenkins-ci/'
+                NEXUS_CRED = credentials('NEXUS_CRED')
+            }
+    stages {
+
+        stage('Code Compile') {
+            agent {
+                docker {
+                    image 'maven:3.6.3'
+                    args '-v $HOME/.m2:/root/.m2 --entrypoint='
+                }
+            }
+            steps {
+                script {
+                    FAILED_STAGE=env.STAGE_NAME
+                    echo "Code Compile stage"
+                    sh "mvn clean package -Dmaven.test.skip=true"
+                    stash name: "target", includes: "target/**/*"
+		        }
+            }
+        }
+        stage('Deploy To Nexus') {
+            when {
+               expression { env.TAG_NAME ==~ /(rc.*)|(v.*)/ || env.BRANCH_NAME == "develop" }
+            }
+            agent {
+                docker {
+                    image 'maven:3.6.3'
+                    args '-v $HOME/.m2:/root/.m2 --entrypoint='
+                }
+            }
+            steps {
+                script {
+                    FAILED_STAGE=env.STAGE_NAME
+                    echo "Deploy To Nexus"
+                    unstash "target"
+                    sh'''
+                    mvn -s "${NEXUS_CRED}" deploy
+                    '''
+		        }
+            }
+        }
+
+    }
+    post {
+        success {
+            slackSend (baseUrl: "${SLACK_BASE_URL}", color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        }
+        failure {
+            slackSend (baseUrl: "${SLACK_BASE_URL}", color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} ${FAILED_STAGE} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        }
+    }
+}
