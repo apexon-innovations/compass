@@ -1,0 +1,30 @@
+server:
+  port: 9095
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/email-db
+jwt:
+  key: ${COMPASS_JWT_KEY}
+logging:
+  level:
+    ROOT: INFO
+    com:
+      infostretch: INFO
+    io:
+      github:
+        jhipster: INFO
+    org:
+      apache:
+        http: INFO
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+ribbon:
+  eureka:
+    enabled: false

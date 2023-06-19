@@ -1,0 +1,19 @@
+server:
+  port: 9090
+
+oauth2:
+  clients:
+    - client_id: messaging-client
+      client_secret: "${CLIENT_SECRET}"
+      grant_types:
+        - authorization_code
+        - refresh_token
+        - client_credentials
+      redirect_uri:
+        - https://oauth.pstmn.io/v1/callback
+      scopes:
+        - openid
+
+roles:
+  admin: pmo_overview_status, pmo_overview_memberStatus, pmo_overview_blockers, pmo_overview_effortVariance, pmo_overview_barometer, pmo_overview_compliance, pmo_overview-defectsTotalCount, pmo_overview_defectsLoggedVsAccepted, pmo_overview_sprintCalendarView, pmo_overview_projectHealthMetrics, pmo_operational_storyReports, pmo_operational_storyPointsDeliveredVsAccepted, pmo_operational_nps, pmo_operational_billing, pmo_operational_sprintBurnDownChart, pmo_operational_sayDoRatio, pmo_strategic_prsManagement, pmo_strategic_submitterMetrics, pmo_strategic_reviewersMetrics, pmo_strategic_collaborationsMetrics, pmo_strategic_qualityMetrics, pmo_strategic_compliance, pmo_strategic_repositoryInspector, pmo_strategic_codeChurnAndLegacyFactor, pmo_strategic_memberwiseActivityMetrics, pmo_strategic_violation, pmo_strategic_score, pmo_strategic_risk, pmo_strategic_securityScore, client_operational_productHealthOverview, client_operational_openDefectsSummary, client_operational_storyPointsDefectsRatio, client_operational_projectCompletionTrends, client_operational_storyPointsDeliveryTrends, client_operational_velocityTrends, client_business_codeHealth, client_operational_defectAgeing, pdo_overallHealth
+  manager: pmo_overview_status

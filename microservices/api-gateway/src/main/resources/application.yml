@@ -1,0 +1,51 @@
+server:
+  port: 8765
+
+spring:
+  cloud:
+    gateway:
+      routes:
+
+        - id: psr-service
+          uri: http://psr-service:9091
+          predicates:
+            - Path=/psr-service/**
+
+        - id: user-service
+          uri: http://user-service:9090
+          predicates:
+            - Path=/user-service/**
+
+        - id: strategy-service
+          uri: http://strategy-service:9093
+          predicates:
+            - Path=/strategy-service/**
+
+        - id: client-dashboard-service
+          uri: http://client-dashboard-service:9095
+          predicates:
+            - Path=/client-dashboard-service/**
+
+  application:
+    name: api-gateway
+  main:
+    allow-bean-definition-overriding: true
+
+
+psr-serviceUri: http://psr-service:9091
+user-serviceUri: http://user-service:9090
+strategy-serviceUri: http://strategy-service:9093
+client-dashboard-serviceUri: http://client-dashboard-service:9095
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+

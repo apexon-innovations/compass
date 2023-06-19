@@ -12,6 +12,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>commons</module>
+        <module>commons</module>
+        <module>api-gateway</module>
+        <module>psr-service</module>
+        <module>client-service</module>
+        <module>strategy-service</module>
+        <module>user-service</module>
         <module>onboard-service</module>
     </modules>
     <properties>
