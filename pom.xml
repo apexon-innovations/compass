@@ -16,6 +16,7 @@
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     </properties>
+
     <developers>
         <developer>
             <name>Jay Momaya</name>
@@ -30,10 +31,12 @@
             <email>tanmay.baxi@gmail.com</email>
         </developer>
     </developers>
+
     <modules>
         <module>microservices</module>
         <module>collectors</module>
     </modules>
+    
     <profiles>
         <profile>
             <id>owasp-dependency-check</id>

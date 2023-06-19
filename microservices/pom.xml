@@ -10,6 +10,7 @@
     <artifactId>microservices</artifactId>
     <name>microservices</name>
     <packaging>pom</packaging>
+
     <modules>
         <module>commons</module>
         <module>api-gateway</module>
@@ -19,6 +20,7 @@
         <module>user-service</module>
         <module>onboard-service</module>
     </modules>
+
     <properties>
         <snakeyaml.version>2.0</snakeyaml.version>
         <java-jwt.version>4.3.0</java-jwt.version>
@@ -30,6 +32,7 @@
         <spring-javaformat-maven-plugin.version>0.0.38</spring-javaformat-maven-plugin.version>
         <springdoc-openapi-starter-webmvc-ui.version>2.0.4</springdoc-openapi-starter-webmvc-ui.version>
     </properties>
+
     <developers>
         <developer>
             <name>Utkarsh Bhavsar</name>
@@ -40,6 +43,7 @@
             <email>jaymomaya95@gmail.com</email>
         </developer>
     </developers>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
