@@ -35,6 +35,7 @@
     <modules>
         <module>microservices</module>
         <module>collectors</module>
+        <module>postprocessors</module>
     </modules>
     
     <profiles>
