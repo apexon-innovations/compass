@@ -1,0 +1,112 @@
+@import '../../theme/theme.scss';
+
+.RepositoryInspectorWidget {
+  width: 100%;
+  @include flexbox();
+
+  .sectionTitle {
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: $themeBlueMain;
+  }
+}
+
+.repoInspectorInner {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.codeSmell {
+  width: 100%;
+  margin: 0 0 20px 0;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-between);
+
+  .box {
+    width: 100%;
+    margin: 0 5px;
+    text-align: center;
+    border: 1px solid $themeBlueShade01;
+    @include border-radius(6px);
+    padding: 5px;
+    @include truncate(100%);
+
+    .label {
+      color: $greyB1;
+      font-size: 12px;
+      font-weight: 400;
+      @include truncate(100%);
+    }
+    .value {
+      font-size: 16px;
+      font-weight: 600;
+      color: $themeBlueMain;
+      @include truncate(100%);
+    }
+  }
+}
+
+.circleGraphs {
+  width: 100%;
+  margin: 10px 0;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-evenly);
+
+  .graph {
+    width: 100%;
+    max-width: 60px;
+    @include flexbox();
+    @include flex-direction(column);
+    text-align: center;
+
+    .label {
+      width: 100%;
+      margin: 5px 0 0 0;
+
+      &.green {
+        color: $themeGreenMain;
+      }
+      &.amber {
+        color: $themeAmberMain;
+      }
+      &.red {
+        color: $themeRedMain;
+      }
+    }
+  }
+}
+
+.techDebts {
+  width: 100%;
+  margin: 0;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-between);
+
+  .box {
+    width: 100%;
+    margin: 0 5px;
+    text-align: center;
+    padding: 5px;
+    @include truncate(100%);
+
+    .label {
+      color: $greyB1;
+      font-size: 12px;
+      font-weight: 400;
+      @include truncate(100%);
+    }
+    .value {
+      font-size: 16px;
+      font-weight: 600;
+      color: $themeBlueMain;
+      @include truncate(100%);
+    }
+  }
+}

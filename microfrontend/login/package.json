@@ -1,0 +1,95 @@
+{
+  "name": "login",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "animejs": "^3.2.1",
+    "bootstrap": "^5.2.3",
+    "node-sass": "^8.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-dev-utils": "^12.0.1",
+    "react-dom": "^18.2.0",
+    "react-notifications": "^1.7.4",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1",
+    "react-simple-oauth2-login": "^0.5.4",
+    "react-slick": "^0.29.0",
+    "react-svg": "^16.1.7",
+    "reusable-components": "file:../reusable-components"
+  },
+  "jest": {
+    "transformIgnorePatterns": [],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!<rootDir>/node_modules/"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
+  "scripts": {
+    "start": "PORT=3000 react-app-rewired start",
+    "start:win": "set PORT=3000 && react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-scripts test",
+    "test-report": "react-scripts test --coverage --watchAll -u",
+    "eject": "react-scripts eject",
+    "analyze": "node analyze.js",
+    "pretty": "prettier --write {src}/**/*.js",
+    "start:all": "node start.js",
+    "start:utilities": "node startUtilities.js",
+    "lint": "eslint --fix"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "babel-jest": "^29.5.0",
+    "concurrently": "^5.2.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewire-aliases": "^0.2.0",
+    "react-app-rewired": "^2.2.1",
+    "shelljs": "^0.8.5",
+    "webpack-bundle-analyzer": "^4.8.0"
+  }
+}

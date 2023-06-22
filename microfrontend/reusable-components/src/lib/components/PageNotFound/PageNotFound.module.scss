@@ -1,0 +1,43 @@
+@import '../../theme/theme.scss';
+@import '../../theme/keyframes.scss';
+
+.pageNotFound {
+  width: 100%;
+}
+
+.Page404 {
+  width: 100%;
+  height: calc(100vh - 150px);
+  @include flexbox();
+  @include align-items(center);
+}
+
+.Page404Box {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.img404 {
+  max-width: 300px;
+  margin: 0 auto 30px auto;
+
+  :global(#img_dashboard_switch) {
+    animation: blinkType1 2s linear infinite;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 150px;
+  }
+}
+
+.txt404 {
+  h2 {
+    color: $graphElements;
+    text-transform: uppercase;
+  }
+  p {
+    color: $graphElements;
+  }
+}

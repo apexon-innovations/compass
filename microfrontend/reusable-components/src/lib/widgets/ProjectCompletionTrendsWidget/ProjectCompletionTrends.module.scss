@@ -1,0 +1,133 @@
+@import '../../theme/theme.scss';
+
+.projectCompletionTrends {
+  width: 100%;
+  @include flexbox();
+
+  .projectCompletionTrendsInner {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+
+    .zeroPadding {
+      position: relative;
+      top: 0px;
+    }
+  }
+
+  .projectCompletionTrendsInners {
+    width: 100%;
+    @include flexbox();
+
+    .zeroPadding {
+      position: relative;
+      top: 0px;
+    }
+  }
+
+  .controlRow {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+
+    :global(.transparentMultiSelect) {
+      position: relative;
+      top: 0;
+      right: 10px;
+    }
+  }
+}
+
+.ttProjectCompletionTrends {
+  .tootltipWrapper {
+    @include flexbox;
+    @include flex-wrap(wrap);
+
+    .item {
+      padding: 0px 14px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      &:not(:last-child) {
+        border-right: 1px solid rgba(113, 143, 191, 0.38);
+      }
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+        color: $themeBlueMain;
+      }
+      .date {
+        font-size: 12px;
+        font-weight: 500;
+        color: $tooltipDate;
+        margin-top: 4px;
+      }
+      .points {
+        min-width: 100px;
+        @include border-radius(4px);
+        background-color: rgba(144, 204, 232, 0.42);
+        padding: 3px 0 3px;
+        font-size: 11px;
+        font-weight: 500;
+        color: $whiteColor;
+        text-align: center;
+        margin-top: 9px;
+      }
+      .squadNumber {
+        margin-top: 7px;
+        font-size: 12px;
+        font-weight: 500;
+        color: $themeBlueMain;
+      }
+      .squadList {
+        list-style: none;
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-top: 5px;
+
+        .squadListItem {
+          @include flexbox;
+          @include flex-wrap(wrap);
+          @include align-items(center);
+
+          &:not(:last-child) {
+            margin-bottom: 4px;
+          }
+
+          .icon {
+            width: 22px;
+            height: 22px;
+            background-color: $userIconBg;
+            margin-right: 6px;
+            overflow: hidden;
+            font-size: 8px;
+            font-weight: bold;
+            text-align: center;
+            color: $whiteColor;
+            line-height: 22px;
+            text-transform: uppercase;
+            @include border-radius(50%);
+
+            img {
+              max-width: 22px;
+              max-height: 22px;
+              @include border-radius(50%);
+            }
+          }
+          .name {
+            font-size: 11px;
+            font-weight: normal;
+            color: $tooltipSquadName;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}

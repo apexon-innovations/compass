@@ -1,0 +1,76 @@
+@import '../../theme/theme.scss';
+
+.riskBox {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+
+  .statusNumbers {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+
+    .box {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+      margin: 25px 0;
+
+      .title {
+        color: $themeBlueMain;
+        font-size: 14px;
+        text-align: center;
+        margin: 0 0 5px 0;
+      }
+      .number {
+        color: $themeAmberMain;
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .sliderDiv {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .numberBox {
+    width: 60px;
+    height: 60px;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include border-radius(50%);
+    margin: 0 auto 10px auto;
+    border: 1px solid;
+
+    &.red {
+      .number {
+        color: $themeRedMain;
+      }
+    }
+    &.green {
+      .number {
+        color: $themeGreenMain;
+      }
+    }
+    &.amber {
+      .number {
+        color: $themeAmberMain;
+      }
+    }
+
+    .number {
+      font-size: 20px;
+    }
+  }
+
+  .riskName {
+    width: 100%;
+    @include truncate(100%);
+    font-size: 14px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,161 @@
+@import '../../../theme/theme.scss';
+
+.modernBox {
+  width: 100%;
+  padding: 8px;
+  position: relative;
+  margin: 0 0 30px 0;
+  @include flexbox();
+
+  .modernBoxContent {
+    width: 100%;
+    min-height: 100px;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include align-self(stretch);
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid $graphContainerGrey;
+    border-top: 0;
+
+    .boxTitle {
+      width: 100%;
+      text-align: center;
+      color: $themeBlueGeneric;
+      @include position(absolute, -10px, unset, unset, 0);
+      z-index: 2060;
+      @include flexbox();
+      @include justify-content(center);
+
+      &.amber {
+        color: $themeAmberShade01;
+      }
+      &.green {
+        color: $themeGreenMain;
+      }
+      &.red {
+        color: $themeRedMain;
+      }
+      &.blue {
+        color: $themeBlueGeneric;
+      }
+
+      &.blank {
+        :before {
+          margin-right: -20px;
+        }
+      }
+
+      h2 {
+        @include truncate(100%);
+        width: 100%;
+        font-size: 18px;
+        margin: 0;
+        span {
+          padding: 0 5px;
+          position: relative;
+          &:before,
+          &::after {
+            width: 600px;
+            content: '';
+            position: absolute;
+            height: 1px;
+            top: 50%;
+            background: $graphContainerGrey;
+          }
+          &:before {
+            right: 100%;
+            margin-right: 5px;
+          }
+          &::after {
+            left: 100%;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .decoration {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.3;
+
+    .corner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: $graphContainerGrey;
+        position: absolute;
+      }
+      &::after {
+        content: '';
+        width: 2px;
+        height: 30px;
+        background: $graphContainerGrey;
+        position: absolute;
+      }
+      &.TL {
+        top: 0;
+        left: 0;
+
+        &:before {
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.TR {
+        top: 0;
+        right: 0;
+        &:before {
+          top: 0;
+          right: 0;
+        }
+        &::after {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.BL {
+        bottom: 0;
+        left: 0;
+
+        &:before {
+          bottom: 0;
+          left: 0;
+        }
+        &::after {
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &.BR {
+        bottom: 0;
+        right: 0;
+        &:before {
+          bottom: 0;
+          right: 0;
+        }
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}

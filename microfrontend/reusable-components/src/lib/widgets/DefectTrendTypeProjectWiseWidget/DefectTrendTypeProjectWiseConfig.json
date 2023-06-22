@@ -1,0 +1,69 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "width": "100%",
+  "height": 350,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "fontSize": 12,
+    "tick": {
+      "verticalAnchor": "start",
+      "fill": "#01FFFF"
+    }
+  },
+  "y": {
+    "tick": {
+      "fill": "#01ffff",
+      "fontSize": 12
+    },
+    "tickCount": 8,
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Defects #",
+    "dy": 0,
+    "angle": -90,
+    "fontSize": 12,
+    "fill": "#01ffff",
+    "interval": 0,
+    "width": 50
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false
+  },
+  "bar": [
+    {
+      "key": "Defects Raised",
+      "type": "linear",
+      "yAxisId": "left",
+      "barSize": 7,
+      "stroke": "#952323"
+    }
+  ],
+  "line": [
+    {
+      "key": "Defects Closed",
+      "stroke": "#10e80a",
+      "fill": "#10e80a",
+      "strokeWidth": "1"
+    }
+  ]
+}

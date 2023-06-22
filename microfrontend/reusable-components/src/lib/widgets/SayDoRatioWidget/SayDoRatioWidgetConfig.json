@@ -1,0 +1,67 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": true,
+  "legendIconType": "circle",
+  "legendMargin": {
+    "top": 20,
+    "right": 0,
+    "left": 0,
+    "bottom": 0
+  },
+  "height": 350,
+  "margin": {
+    "top": 10,
+    "right": 0,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 110,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#01ffff"
+    }
+  },
+  "y": {
+    "tick": { "fill": "#01ffff" },
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Story Point",
+    "dy": 160,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff"
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": true
+  },
+  "line": [
+    {
+      "key": "Actual",
+      "dot": true,
+      "stroke": "#f8ff73",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "Expected",
+      "type": "monotone",
+      "dot": false,
+      "stroke": "#24ff00",
+      "strokeWidth": "1",
+      "strokeDasharray": "8, 5"
+    }
+  ]
+}

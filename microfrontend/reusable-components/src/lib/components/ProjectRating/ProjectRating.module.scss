@@ -1,0 +1,181 @@
+@import '../../theme/theme.scss';
+
+.projectRating {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+
+  .wrapBox {
+    width: 100%;
+    max-width: 90%;
+    margin: 20px auto 50px auto;
+    cursor: pointer;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
+
+    &.red {
+      .ring {
+        border-color: $themeRedMain;
+      }
+      .name {
+        color: $themeRedMain;
+      }
+    }
+    &.green {
+      .ring {
+        border-color: $themeGreenMain;
+      }
+      .name {
+        color: $themeGreenMain;
+      }
+    }
+    &.amber {
+      .ring {
+        border-color: $themeAmberMain;
+      }
+      .name {
+        color: $themeAmberMain;
+      }
+    }
+  }
+
+  .projectIcon {
+    position: relative;
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      @include border-radius(50%);
+      background: $whiteColor;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      position: relative;
+      z-index: 10;
+
+      h6 {
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none !important;
+        letter-spacing: -1px;
+        margin: 0;
+        color: $grey33;
+      }
+
+      img {
+        width: 90%;
+      }
+    }
+    .ring {
+      width: 74px;
+      height: 74px;
+      @include position(absolute, 50%, unset, unset, 50%);
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      @include border-radius(50%);
+      border: 2px solid;
+    }
+  }
+  .name {
+    color: $themeAmberShade01;
+    text-align: left;
+    font-size: 20px;
+    line-height: 120%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    position: relative;
+    z-index: 110;
+    padding-left: 30px;
+
+    .cmpName {
+      color: $themeBlueMain;
+      margin: 0 0 5px 0;
+    }
+    .projName {
+      color: $themeAmberMain;
+      margin: 0 0 5px 0;
+
+      span {
+        color: $themeBlueMain;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.ratingBox {
+  width: 75%;
+  margin: 0 auto 50px auto;
+  position: relative;
+
+  :global(.progress) {
+    width: 100%;
+    background: transparent;
+    border: 3px solid rgba(20, 57, 146, 0.7);
+    @include border-radius(9px);
+    padding: 3px;
+    height: 18px;
+    :global(.progress-bar) {
+      @include border-radius(5px);
+      background: linear-gradient(
+        90deg,
+        rgba(239, 83, 80, 0.9) 33%,
+        rgba(255, 193, 69, 0.9) 66%,
+        rgba(102, 187, 106, 0.9) 100%
+      );
+      @include transition(width, 0.4s, ease);
+    }
+  }
+
+  .progressTitle {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    color: $themeAmberMain;
+  }
+
+  .projectProgressBar {
+    @include position(relative, -18px, unset, unset, 8px);
+    width: 100%;
+    max-width: calc(100% - 16px);
+    height: 100%;
+
+    .division {
+      width: 30px;
+      height: 18px;
+      @include position(absolute, 0, unset, unset, 0);
+      transform: translateX(-15px);
+      text-align: center;
+      @include transition(margin-left, 1s, ease);
+
+      &:before {
+        content: '';
+        width: 1px;
+        height: 5px;
+        background: $whiteColor;
+        @include position(absolute, -5px, unset, unset, -50%);
+      }
+      &::after {
+        content: '';
+        width: 1px;
+        height: 5px;
+        background: $whiteColor;
+        @include position(absolute, unset, unset, -5px, 50%);
+      }
+
+      .number {
+        margin-top: 26px;
+        font-size: 18px;
+      }
+
+      &.amber {
+        &:before {
+          background: $themeAmberMain;
+        }
+      }
+    }
+  }
+}

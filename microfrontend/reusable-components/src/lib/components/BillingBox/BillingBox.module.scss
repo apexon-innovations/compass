@@ -1,0 +1,115 @@
+@import '../../theme/theme.scss';
+
+.billingBox {
+  width: 100%;
+  @include flexbox();
+
+  :global(.row) {
+    @include align-items(center);
+    flex-grow: 1;
+  }
+
+  .cols {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-self(stretch);
+  }
+
+  .boxTitle {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0 10px 0;
+    font-size: 16px;
+    color: $themeBlueShade01;
+  }
+}
+
+.invoiceBox {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  padding: 15px 0;
+
+  .invoiceIcon {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      @include border-radius(50%);
+      border: 1px dashed $themeBlueMain;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      margin: 0 0 5px 0;
+
+      img {
+        max-width: 28px;
+        max-height: 28px;
+      }
+    }
+    .statusArea {
+      @include flexbox();
+      @include flex-direction(row);
+      @include align-items(center);
+
+      .status {
+        width: 100%;
+        text-align: center;
+        margin: 0 10px 0 0;
+        color: $themeAmberMain;
+        font-size: 16px;
+      }
+    }
+  }
+  .nextBilling {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    margin: 0 0 5px 0;
+
+    span {
+      color: $themeBlueShade01;
+      font-style: italic;
+    }
+  }
+  .lastPayment {
+    text-align: center;
+    font-size: 12px;
+    color: $themeBlueShade01;
+  }
+  .paymentOn {
+    text-align: center;
+    font-size: 12px;
+    color: $themeBlueMain;
+  }
+}
+
+.timeSheetBox {
+}
+
+.blackRound {
+  margin: 10px 0;
+  @include flexbox();
+  @include justify-content(center);
+
+  :global(.btn) {
+    @include border-radius(20px);
+    font-size: 12px;
+    padding: 5px 15px;
+    border-color: $graphContainerGrey;
+    background: $graphBg;
+    color: $themeBlueMain;
+    font-weight: 600;
+    @include transition(all, 0.4s, ease);
+
+    &:hover {
+      background: $themeBlueMain;
+      color: $graphBg;
+    }
+  }
+}

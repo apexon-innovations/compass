@@ -1,0 +1,143 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.loginPage {
+  width: 100%;
+  height: 100%;
+  @include position(fixed, 0, unset, unset, 0);
+  z-index: 10;
+}
+
+.loginSideImage {
+  width: 100%;
+  height: 100vh;
+  background-position: 40% 0;
+  background-size: cover;
+}
+
+.loginOuter {
+  height: 100vh;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 360px;
+  @include flexbox;
+  @include flex-direction(Column);
+  @include align-items(flex-start);
+  margin: 0 auto;
+  :global(.row) {
+    width: 100%;
+  }
+  :global(form) {
+    width: 100%;
+  }
+  .logo {
+    margin: 0 0 55px 0;
+    img {
+      max-width: 205px;
+    }
+    h3 {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+  }
+  .pageTitle {
+    color: $loginTitleColor;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+  }
+  :global(.form-label) {
+    color: $loginTitleColor;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  :global(.form-control) {
+    height: 52px;
+    border-color: $loginBorderColor;
+    &:focus {
+      @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0), false);
+    }
+  }
+  a {
+    color: $loginTitleColor;
+    font-weight: 500;
+  }
+  :global(.btn-primary) {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  :global(.form-check) {
+    cursor: pointer;
+  }
+  :global(.form-check-input) {
+    opacity: 0;
+  }
+  :global(.form-check-label) {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .checkmark {
+    @include position(absolute, 0, unset, unset, 0);
+    width: 20px;
+    height: 20px;
+    background: $loginBorderColor;
+    @include border-radius(4px);
+  }
+  .checkmark:after {
+    content: '';
+    @include position(absolute, 5px, unset, unset, 8px);
+    display: none;
+  }
+  .checked .checkmark:after {
+    display: block;
+  }
+  .checkmark:after {
+    width: 5px;
+    height: 10px;
+    border: solid $primaryText;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .loginSideImage {
+    max-height: 150px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1230px) {
+  .loginPage {
+    :global(.footer) {
+      :global(.row) {
+        @include flex-direction(column);
+      }
+    }
+    .copyBox {
+      :global(&.col-md-8) {
+        width: 100% !important;
+        max-width: 100% !important;
+        .copyRight {
+          text-align: center;
+        }
+      }
+    }
+    .powerBox {
+      :global(&.col-md-4) {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        .poweredBy {
+          @include justify-content(center);
+        }
+      }
+    }
+  }
+}

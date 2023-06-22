@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Raised",
+    "label": "Raised",
+    "value": 10001,
+    "stroke": "#00c1ff",
+    "fill": "#00c1ff",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Closed",
+    "label": "Closed",
+    "value": 10001,
+    "stroke": "#10e80a",
+    "fill": "#10e80a",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Open",
+    "label": "Open",
+    "value": 10001,
+    "stroke": "#d3ff00",
+    "fill": "#d3ff00",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  }
+]

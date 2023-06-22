@@ -1,0 +1,104 @@
+@import '../../theme/theme.scss';
+
+.storyReports {
+  width: 100%;
+  height: 100%;
+  @include flexbox();
+  margin-left: -15px;
+  margin-right: -15px;
+
+  :global(.row) {
+    @include align-items(center);
+    @include flexbox();
+  }
+  .cols {
+    @include flexbox();
+    @include align-self(stretch);
+  }
+
+  .completedLabel {
+    text-align: center;
+  }
+}
+
+.storyCompleted {
+  width: 100%;
+  @include flexbox;
+  @include align-self(stretch);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.plannedVsCompleted {
+  width: 100%;
+  @include flexbox;
+  @include align-self(stretch);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.storyFailure {
+  width: 100%;
+  @include flexbox;
+  @include align-self(stretch);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+
+  &.amber {
+    .number {
+      color: $themeAmberMain;
+      border-color: $themeAmberMain;
+      .highlight {
+        @include box-shadow(0, 0, 10px, 0, $themeAmberMain, false);
+      }
+    }
+  }
+  &.red {
+    .number {
+      color: $themeRedMain;
+      border-color: $themeRedMain;
+      .highlight {
+        @include box-shadow(0, 0, 10px, $themeRedMain, false);
+      }
+    }
+  }
+  &.green {
+    .number {
+      border-color: $themeGreenMain;
+      .highlight {
+        @include box-shadow(0, 0, 10px, 0, $themeGreenMain, false);
+      }
+    }
+  }
+  .number {
+    width: 70px;
+    height: 70px;
+    @include border-radius(50%);
+    position: relative;
+    text-align: center;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    border: 1px solid $themeBlueMain;
+    color: $themeBlueMain;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 15px 0;
+
+    .highlight {
+      @include box-shadow(0, 0, 10px, 0, $themeBlueMain, false);
+      width: 100%;
+      height: 100%;
+      @include position(absolute, 0, unset, unset, 0);
+      @include border-radius(50%);
+    }
+  }
+  .label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $themeBlueMain;
+  }
+}

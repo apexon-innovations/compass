@@ -1,0 +1,104 @@
+{
+  "tooltip": true,
+  "activeDot": true,
+  "toolTipType": "color",
+  "legend": false,
+  "width": "100%",
+  "height": 350,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#01ffff"
+    }
+  },
+  "y": {
+    "tick": { "fill": "#01ffff" },
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Story Point",
+    "dy": 190,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff",
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": true
+  },
+  "line": [
+    {
+      "key": "ProjectA",
+      "dot": {
+        "stroke": "#c8e80a",
+        "strokeWidth": 4,
+        "r": 4
+      },
+      "stroke": "#c8e80a",
+      "fill": "#c8e80a",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "ProjectB",
+      "dot": {
+        "stroke": "#00d2ff",
+        "strokeWidth": 4,
+        "r": 4
+      },
+      "stroke": "#00d2ff",
+      "fill": "#00d2ff",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "ProjectC",
+      "dot": {
+        "stroke": "#f16293",
+        "strokeWidth": 4,
+        "r": 4
+      },
+      "stroke": "#f16293",
+      "fill": "#f16293",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "ProjectD",
+      "dot": {
+        "stroke": "#6757ff",
+        "strokeWidth": 4,
+        "r": 4
+      },
+      "stroke": "#6757ff",
+      "fill": "#6757ff",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "ProjectE",
+      "dot": {
+        "stroke": "#c611ff",
+        "strokeWidth": 4,
+        "r": 4
+      },
+      "stroke": "#c611ff",
+      "fill": "#c611ff",
+      "strokeWidth": "1"
+    }
+  ]
+}

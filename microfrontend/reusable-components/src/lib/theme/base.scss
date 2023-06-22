@@ -1,0 +1,1222 @@
+@import 'theme.scss';
+@import 'keyframes.scss';
+
+* {
+  outline: none;
+}
+
+body {
+  background: $whiteColor;
+  color: $themeBlueMain;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  @include box-shadow(0, 0, 0);
+}
+
+.border-top {
+  border-top-color: $themeBlueMain !important;
+}
+
+.border-right {
+  border-right-color: $themeBlueMain !important;
+}
+
+.border-bottom {
+  border-bottom-color: $themeBlueMain !important;
+}
+
+.border-left {
+  border-left-color: $themeBlueMain !important;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+.gap10 {
+  height: 10px;
+}
+.gap20 {
+  height: 20px;
+}
+.gap30 {
+  height: 30px;
+}
+.gap40 {
+  height: 40px;
+}
+.gap50 {
+  height: 50px;
+}
+
+.container1400 {
+  max-width: 1400px !important;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.table {
+  color: $whiteColor;
+  text-align: center;
+  margin: 0;
+
+  th {
+    font-size: 14px;
+    padding: 5px;
+  }
+  tr {
+    td {
+      font-size: 14px;
+      padding: 5px;
+      color: $themeBlueShade02;
+    }
+  }
+  .red {
+    color: $themeRedMain;
+  }
+  .amber {
+    color: $themeAmberMain;
+  }
+  .green {
+    color: $themeGreenMain;
+  }
+  .blue {
+    color: $themeBlueGeneric;
+  }
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  background: $themeBlueShade01;
+  @include border-radius(50%);
+
+  &.red {
+    background: $themeRedMain;
+  }
+  &.amber {
+    background: $themeAmberMain;
+  }
+  &.green {
+    background: $themeGreenMain;
+  }
+}
+
+.customThemeToolTip {
+  background: #02071b
+    linear-gradient(
+      180deg,
+      rgba(70, 157, 246, 1) 0,
+      rgba(70, 157, 246, 0.2) 25px,
+      rgba(2, 7, 27, 1) 30px,
+      rgba(2, 7, 27, 1) 100%
+    ) !important;
+  padding: 10px !important;
+  text-align: left;
+  color: $themeBlueMain !important;
+  min-width: 140px !important;
+  border-color: $themeBlueShade01 !important;
+  z-index: 2061 !important;
+
+  &.max-width300 {
+    max-width: 300px;
+  }
+
+  h3 {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    overflow: auto;
+    max-height: 115px;
+
+    li {
+      @include flexbox();
+      @include justify-content(space-between);
+      border-bottom: 1px solid $graphContainerGrey;
+      font-size: 12px;
+      padding: 3px 0;
+
+      .value {
+        padding: 0 0 0 3px;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.triColoredTitle {
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+
+  span {
+    padding: 0 3px;
+    color: $whiteColor;
+  }
+
+  .amber {
+    color: $themeAmberMain;
+  }
+  .green {
+    color: $themeGreenMain;
+  }
+}
+
+.nav-tabs {
+  border-bottom: 0;
+  background: transparent;
+
+  .nav-link,
+  .nav-link.active {
+    padding: 3px 10px;
+    border: 0;
+    @include border-radius(0);
+    @include box-shadow(0, 0, 0);
+    font-weight: 600;
+  }
+
+  .nav-link.active {
+    background: $themeBlueGeneric;
+    color: $graphBg;
+  }
+  .nav-link {
+    border: 1px solid $themeBlueGeneric;
+    color: $themeBlueGeneric;
+    margin: 0 3px 0 0;
+    font-size: 16px;
+
+    &:hover {
+      background: $whiteColor;
+      border-color: $whiteColor;
+      color: $graphBg;
+    }
+  }
+
+  &.blackNWhite {
+    .nav-link.active {
+      background: $graphBg;
+      color: $whiteColor;
+    }
+    .nav-link {
+      border: 1px solid $graphBg;
+      color: $graphBg;
+
+      &:hover {
+        background: $whiteColor;
+        border-color: $whiteColor;
+        color: $graphBg;
+      }
+    }
+  }
+}
+
+.blurAll {
+  filter: blur(3px);
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    @include position(absolute, 0, unset, unset, 0);
+    z-index: 1;
+  }
+}
+
+.noDataBox {
+  @include position(absolute, 1px, unset, unset, 1px);
+  background: $modalBg;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  z-index: 105;
+  padding: 30px;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+
+  .text {
+    color: $themeBlueMain;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.toggleThings {
+  width: 100%;
+  @include flexbox();
+  opacity: 1;
+  max-height: 1500px;
+  @include transition(all, 0.4s, linear);
+}
+
+.moreBtn {
+  min-width: 62px;
+  min-height: 62px;
+  max-width: 110px;
+  word-break: break-all;
+  @include position(absolute, unset, 0, 0, unset);
+  background: transparentize($color: $moreButton, $amount: 0.2);
+  @include transition(all, 0.4s, linear);
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  color: $whiteColor;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background: transparentize($color: $moreButton, $amount: 0);
+  }
+}
+
+.coloredToggleSwitch {
+  color: $themeRedMain;
+  width: 100%;
+  margin: 0 0 5px 0;
+  @include flexbox();
+  @include justify-content(flex-end);
+
+  .switch {
+    width: 30px;
+    height: 15px;
+    @include border-radius(4px);
+    border: 1px solid $themeBlueMain;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    @include transition(all, 0.4s, ease);
+
+    &.red {
+      border-color: $themeRedMain;
+      &:hover,
+      &.fill {
+        background: $themeRedMain;
+      }
+    }
+    &.green {
+      border-color: $themeGreenMain;
+      &:hover,
+      &.fill {
+        background: $themeGreenMain;
+      }
+    }
+    &.amber {
+      border-color: $themeAmberMain;
+      &:hover,
+      &.fill {
+        background: $themeAmberMain;
+      }
+    }
+    &.blue {
+      border-color: $themeBlueMain;
+      &:hover,
+      &.fill {
+        background: $themeBlueMain;
+      }
+    }
+  }
+}
+
+.transparentDropdownBox {
+  @include position(absolute, -15px, 30px, unset, unset);
+  z-index: 2061;
+  @include flexbox();
+
+  &.bordered {
+    .dropdown {
+      .btn {
+        border-color: $themeBlueGeneric;
+        padding: 7px 38px 7px 14px;
+        color: $themeBlueGeneric;
+        @include border-radius(12px);
+
+        &.active,
+        &:active {
+          border-color: $themeBlueGeneric;
+        }
+
+        &::after {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .dropdown {
+    margin-left: 10px;
+
+    .btn {
+      background: transparent;
+      border-color: transparent;
+      box-shadow: 0 0 0 !important;
+      padding: 5px 15px 5px 0;
+      font-size: 14px;
+      color: $themeBlueGeneric;
+
+      &:active {
+        background: transparent !important;
+        border-color: transparent !important;
+        color: $themeBlueGeneric !important;
+      }
+
+      &::after {
+        width: 12px;
+        height: 7px;
+        @include position(absolute, calc(50% - 3px), 0, unset, unset);
+        background: url('../images/ic_down_arrow_blue.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        border: 0;
+        opacity: 1;
+      }
+    }
+  }
+  .dropdown-menu {
+    background: $modalBg;
+    border-color: $graphContainerGrey;
+    padding: 3px 0;
+
+    .dropdown-item {
+      padding: 5px 10px;
+      text-align: right;
+      color: $themeBlueGeneric;
+
+      &:hover,
+      &:focus {
+        background: $themeBlueGeneric;
+        color: $graphBg;
+      }
+    }
+  }
+}
+
+.transparentMultiSelect {
+  @include position(absolute, -15px, 30px, unset, unset);
+  @include flexbox();
+  width: 50%;
+  max-width: 230px;
+  z-index: 2080;
+
+  &.bordered {
+    .dropdown-content {
+      min-width: 210px;
+      right: 0;
+      top: calc(100% + 1px) !important;
+    }
+    .multi-select {
+      .dropdown-heading {
+        background: transparent !important;
+        border: 1px solid $themeBlueGeneric !important;
+        @include border-radius(12px, !important);
+      }
+      .dropdown-heading-value {
+        right: 35px !important;
+        position: relative !important;
+      }
+      .dropdown-heading-dropdown-arrow {
+        span {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  .multi-select {
+    width: 100%;
+    .dropdown {
+      width: 100%;
+    }
+    .dropdown-heading {
+      background: transparent !important;
+      border: 0 !important;
+    }
+    .dropdown-heading-value {
+      right: 20px !important;
+      text-align: right;
+      padding-right: 0 !important;
+      color: $themeBlueGeneric !important;
+      span {
+        color: $themeBlueGeneric !important;
+      }
+    }
+    .dropdown-heading-dropdown-arrow {
+      width: 30px !important;
+      padding-right: 0 !important;
+      span {
+        width: 12px !important;
+        height: 7px !important;
+        position: absolute !important;
+        top: calc(50% - 3px) !important;
+        right: 0;
+        background: url('../images/ic_down_arrow_blue.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        border: 0 !important;
+        opacity: 1;
+      }
+    }
+  }
+  .select-panel {
+    input[type='text'] {
+      background: transparent !important;
+      border-color: $themeBlueGeneric !important;
+      color: $themeBlueGeneric !important;
+    }
+    ::placeholder {
+      color: $themeBlueGeneric;
+      opacity: 1;
+    }
+    :-ms-input-placeholder {
+      color: $themeBlueGeneric;
+    }
+    ::-ms-input-placeholder {
+      color: $themeBlueGeneric;
+    }
+  }
+  .dropdown-content {
+    background: $modalBg !important;
+    border-color: $graphContainerGrey !important;
+    padding: 3px 0 !important;
+    @include border-radius(4px);
+  }
+  .select-item {
+    background: transparent !important;
+    padding: 8px 10px !important;
+    margin: 0 !important;
+    color: $themeBlueGeneric !important;
+    &:hover {
+      background: $themeBlueGeneric !important;
+      color: $graphBg !important;
+    }
+  }
+  .item-renderer {
+    @include flexbox();
+    @include align-items(flex-start);
+
+    input {
+      position: relative;
+      top: 4px;
+    }
+
+    span {
+      line-height: 14px;
+      padding: 0 5px;
+      text-align: left;
+    }
+  }
+}
+
+.graphToolTip,
+.customToolTip,
+.recharts-default-tooltip {
+  width: auto;
+  background: $graphBg !important;
+  border: 1px solid $graphContainerGrey !important;
+  padding: 10px;
+  @include border-radius(5px);
+  z-index: 2060 !important;
+  min-width: 100px;
+
+  &.sprintPoint {
+    max-width: 170px;
+    border-color: $graphContainerGrey !important;
+    padding: 0;
+
+    .header {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+      padding: 5px;
+      border-bottom: 1px solid $orangeShade;
+
+      .projectName,
+      .sprintName,
+      .timeline {
+        @include truncate(100%);
+        margin: 0;
+        color: $orangeShade;
+        text-align: left;
+      }
+      .projectName {
+        font-size: 12px;
+      }
+      .sprintName {
+        font-size: 11px;
+      }
+      .timeline {
+        font-size: 10px;
+      }
+    }
+    .content {
+      width: 100%;
+      padding: 5px;
+      @include flexbox();
+
+      ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          width: 100%;
+          @include flexbox();
+          @include justify-content(space-between);
+          font-size: 12px;
+
+          .label {
+            text-align: left;
+          }
+          .value {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  &.__react_component_tooltip {
+    padding: 10px 15px !important;
+
+    &.show {
+      opacity: 1 !important;
+    }
+  }
+  .title {
+    color: $themeBlueShade01;
+    margin: 0 0 5px 0;
+  }
+  .reviewList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0 0 2px 0;
+
+      &.red {
+        color: $themeRedMain;
+      }
+      &.green {
+        color: $themeGreenMain;
+      }
+      &.amber {
+        color: $themeAmberMain;
+      }
+    }
+  }
+  .memberMetrics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      margin: 0 0 2px 0;
+
+      .square {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px 0 0;
+        background: $whiteColor;
+        position: relative;
+        @include inline-flex();
+      }
+
+      &.red {
+        color: $themeRedMain;
+
+        .square {
+          background: $themeRedMain;
+        }
+      }
+      &.green {
+        color: $themeGreenMain;
+
+        .square {
+          background: $themeGreenMain;
+        }
+      }
+      &.amber {
+        color: $themeAmberMain;
+
+        .square {
+          background: $themeAmberMain;
+        }
+      }
+      &.blue {
+        color: $themeBlueMain;
+
+        .square {
+          background: $themeBlueMain;
+        }
+      }
+    }
+  }
+
+  * {
+    color: $themeBlueMain;
+  }
+}
+
+.commonPage {
+  padding: 10px 30px;
+}
+
+.customButton {
+  min-width: 120px;
+  @include border-radius(20px);
+  font-size: 16px;
+  padding: 5px 15px;
+  border-color: $themeBlueShade01;
+  color: $themeBlueShade01;
+  background: $graphBg;
+  @include box-shadow(0, 0, 0);
+  font-weight: 600;
+  @include transition(all, 0.4s, ease);
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 !important;
+    background: transparent;
+  }
+
+  &.btn-primary {
+    border-color: $themeBlueShade01;
+    color: $themeBlueShade01;
+    &:hover {
+      color: $graphBg;
+      background: $themeBlueShade01;
+    }
+    &:active {
+      background: $themeBlueShade01 !important;
+      box-shadow: 0 0 0 !important;
+      border-color: $themeBlueShade01 !important;
+      color: $graphBg !important;
+    }
+  }
+  &.btn-secondary {
+    border-color: $themeBlueMain;
+    color: $themeBlueMain;
+    &:hover {
+      color: $graphBg;
+      background: $themeBlueMain;
+    }
+    &:active {
+      background: $themeBlueMain !important;
+      box-shadow: 0 0 0 !important;
+      border-color: $themeBlueMain !important;
+      color: $graphBg !important;
+    }
+  }
+  &.btn-success {
+    border-color: $themeGreenMain;
+    color: $themeGreenMain;
+    &:hover {
+      color: $graphBg;
+      background: $themeGreenMain;
+    }
+    &:active {
+      background: $themeGreenMain !important;
+      box-shadow: 0 0 0 !important;
+      border-color: $themeGreenMain !important;
+      color: $graphBg !important;
+    }
+  }
+  &.btn-warning {
+    border-color: $themeAmberMain;
+    color: $themeAmberMain;
+    &:hover {
+      color: $graphBg;
+      background: $themeAmberMain;
+    }
+    &:active {
+      background: $themeAmberMain !important;
+      box-shadow: 0 0 0 !important;
+      border-color: $themeAmberMain !important;
+      color: $graphBg !important;
+    }
+  }
+  &.btn-danger {
+    border-color: $themeRedMain;
+    color: $themeRedMain;
+    &:hover {
+      color: $graphBg;
+      background: $themeRedMain;
+    }
+    &:active {
+      background: $themeRedMain !important;
+      box-shadow: 0 0 0 !important;
+      border-color: $themeRedMain !important;
+      color: $graphBg !important;
+    }
+  }
+  &.btn-info {
+    border-color: $graphElements;
+    color: $graphElements;
+    &:hover {
+      color: $graphBg;
+      background: $graphElements;
+    }
+    &:active {
+      background: $graphElements !important;
+      box-shadow: 0 0 0 !important;
+      border-color: $graphElements !important;
+      color: $graphBg !important;
+    }
+  }
+}
+
+.projectHealthMeter {
+  margin: 80px 0 0 20px;
+  max-width: 180px;
+  .stripe {
+    width: 100%;
+    @include flexbox;
+    @include flex-direction(row);
+    .digit {
+      min-width: 80px;
+      max-width: 100%;
+      border-bottom: 1px solid $graphContainerGrey;
+      margin-right: 3px;
+      @include flexbox;
+      @include align-items(center);
+      font-size: 21px;
+      font-weight: 600;
+      &.noBorder {
+        border: 0 !important;
+      }
+    }
+    .bar {
+      width: 100%;
+      max-width: 26px;
+    }
+    .barShadow {
+      max-width: 60px;
+      width: 100%;
+    }
+    &.red {
+      .digit {
+        color: $themeRedMain;
+        @include justify-content(center);
+      }
+      .bar {
+        background: $themeRedMain;
+      }
+      .barShadow {
+        opacity: 0.15;
+        @include gradient($themeRedMain, transparent, horizontal);
+      }
+    }
+    &.amber {
+      .digit {
+        @include justify-content(center);
+        color: $themeAmberMain;
+      }
+      .bar {
+        background: $themeAmberMain;
+      }
+      .barShadow {
+        opacity: 0.15;
+        @include gradient($themeAmberMain, transparent, horizontal);
+      }
+    }
+    &.green {
+      .digit {
+        @include justify-content(center);
+        color: $themeGreenMain;
+      }
+      .bar {
+        background: $themeGreenMain;
+      }
+      .barShadow {
+        opacity: 0.15;
+        @include gradient($themeGreenMain, transparent, horizontal);
+      }
+    }
+    &.grey {
+      .digit {
+        @include justify-content(center);
+        color: $grey51;
+      }
+      .bar {
+        background: $grey51;
+      }
+      .barShadow {
+        opacity: 0.15;
+        @include gradient($grey51, transparent, horizontal);
+      }
+    }
+    &.grey {
+      .digit {
+        @include justify-content(center);
+        color: $grey51;
+      }
+      .bar {
+        background: $grey51;
+      }
+      .barShadow {
+        opacity: 0.15;
+        @include gradient($grey51, transparent, horizontal);
+      }
+    }
+  }
+  &.horizontal {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 20px auto;
+    @include flexbox();
+
+    .stripe {
+      @include flex-direction(column);
+
+      .digit {
+        order: 2;
+        border: 0;
+        margin: 3px 0 0 0;
+      }
+      .bar {
+        order: 1;
+        max-width: 100%;
+        height: 14px;
+      }
+      .barShadow {
+        order: 0;
+        height: 40px;
+        max-width: 100%;
+        display: none;
+      }
+
+      &.red {
+        .barShadow {
+          @include gradient(transparent, $themeRedMain, vertical);
+        }
+      }
+      &.amber {
+        .barShadow {
+          @include gradient(transparent, $themeAmberMain, vertical);
+        }
+      }
+      &.green {
+        .barShadow {
+          @include gradient(transparent, $themeGreenMain, vertical);
+        }
+      }
+    }
+  }
+}
+
+.whiteTable {
+  margin: 30px 0 0 0;
+
+  thead {
+    tr:hover {
+      th {
+        background: transparent !important;
+      }
+    }
+    th {
+      padding: 14px;
+      border-bottom: 0;
+      background: transparent;
+      text-align: left;
+      color: $whiteColor;
+      border-color: $graphContainerGrey;
+    }
+  }
+  tbody {
+    tr:hover {
+      background: $modalBgDark !important;
+    }
+    td {
+      padding: 13px;
+      text-align: left;
+      color: $whiteColor;
+      border-color: $graphContainerGrey;
+
+      a {
+        color: $whiteColor;
+      }
+
+      .dots {
+        width: 10px;
+        height: 10px;
+        background: $themeBlueShade01;
+        @include inline-flex();
+        @include border-radius(50%);
+
+        &.green {
+          background: $themeGreenMain;
+        }
+        &.red {
+          background: $themeRedMain;
+        }
+        &.amber {
+          background: $themeAmberMain;
+        }
+        &.grey {
+          background: $grey51;
+        }
+      }
+    }
+  }
+}
+
+.graphNavBox {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+
+  .prev,
+  .next {
+    width: 8px;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  .caption {
+    max-width: 200px;
+    @include truncate(200px);
+    padding: 0 15px;
+    font-weight: 600;
+    color: $themeBlueGeneric;
+    @include flexbox();
+    @include align-items(center);
+
+    span {
+      @include truncate(200px);
+      margin: 0 10px 0 0;
+    }
+
+    .info {
+      width: 12px;
+      height: 12px;
+      @include flexbox();
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.modalTitle {
+  font-size: 26px;
+  color: $whiteColor;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.graphHolder {
+  max-width: 100%;
+  min-height: 100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 0;
+}
+
+.graphHolderWithBg {
+  max-width: 1200px;
+  min-height: 200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 15px;
+  background: linear-gradient($grdGreenLight 0%, $grdGreenDark 100%);
+
+  .graphNavBox {
+    .prev,
+    .next {
+      svg {
+        * {
+          fill: $whiteColor;
+        }
+      }
+    }
+    .caption {
+      color: $whiteColor;
+    }
+  }
+
+  .transparentDropdownBox {
+    position: relative;
+    top: 0;
+    .dropdown {
+      .btn {
+        color: $whiteColor;
+
+        &::after {
+          height: 6px;
+          top: calc(50% - 2px);
+          background: url('../images/ic_down_arrow_white.svg');
+        }
+      }
+    }
+  }
+}
+
+.popButton {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+}
+
+.upRightControls {
+  @include position(absolute, 0, 30px, unset, unset);
+  @include flexbox();
+  z-index: 2080;
+
+  .popButton {
+    margin-top: -10px;
+  }
+}
+
+.btnHideShow {
+  width: auto;
+  @include position(absolute, -10px, 30px, unset, unset);
+  z-index: 2060;
+  cursor: pointer;
+}
+
+.clientWidgetInner {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  padding: 20px 0 0 0;
+}
+
+.simpleTooltip {
+  &.__react_component_tooltip {
+    background: $navyBlue !important;
+    border-color: #35445f !important;
+    padding: 15px;
+    color: $themeBlueMain;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.infoContent {
+  max-width: 350px;
+  color: $themeBlueShade01 !important;
+
+  p,
+  li,
+  a {
+    word-wrap: break-word;
+    white-space: initial;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  ul {
+    padding: 0 0 0 15px;
+    margin: 0;
+  }
+}
+
+.customTabs {
+  @include inline-flex();
+  @include flex-direction(row);
+  background: $tabBg;
+  border: 1px solid $themeBlueShade01;
+
+  &.titleTabs {
+    @include border-radius(0);
+    background: transparent;
+    border: 1px solid $themeBlueShade01;
+    padding: 0;
+
+    .tab {
+      border-right: 1px solid $themeBlueShade01;
+      @include border-radius(0);
+      font-size: 16px;
+      font-weight: 600;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  .tab {
+    min-width: 80px;
+    cursor: pointer;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    color: $whiteColor;
+    padding: 5px 15px;
+    border-right: 1px solid $themeBlueShade01;
+
+    &.active {
+      background: $themeBlueShade01;
+      color: $graphBg;
+    }
+  }
+}
+.tabsContainer {
+  .tabCont {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .whiteTable {
+    th {
+      white-space: nowrap !important;
+    }
+  }
+}

@@ -1,0 +1,864 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalComplianceBox Snapshot 1`] = `
+<div>
+  <div>
+    <ul
+      class="blackNWhite nav nav-tabs"
+      role="tablist"
+    >
+      <li
+        class="nav-item"
+        role="presentation"
+      >
+        <button
+          aria-controls="react-aria6494588069-1-tabpane-tabCompTickets"
+          aria-selected="true"
+          class="nav-link active"
+          data-rr-ui-event-key="tabCompTickets"
+          id="react-aria6494588069-1-tab-tabCompTickets"
+          role="tab"
+          type="button"
+        >
+          Tickets
+        </button>
+      </li>
+      <li
+        class="nav-item"
+        role="presentation"
+      >
+        <button
+          aria-controls="react-aria6494588069-1-tabpane-tabCompObservations"
+          aria-selected="false"
+          class="nav-link"
+          data-rr-ui-event-key="tabCompObservations"
+          id="react-aria6494588069-1-tab-tabCompObservations"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Observations
+        </button>
+      </li>
+    </ul>
+    <div
+      class="tab-content"
+    >
+      <div
+        aria-labelledby="react-aria6494588069-1-tab-tabCompTickets"
+        class="fade tab-pane active show"
+        id="react-aria6494588069-1-tabpane-tabCompTickets"
+        role="tabpanel"
+      >
+        <div>
+          <div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                To-Dos
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                In-Progress
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  11
+                </span>
+              </div>
+              <div>
+                Completed
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              style="position: relative; overflow: hidden; width: 100%; height: auto; min-height: 0; max-height: 100px;"
+            >
+              <div
+                style="position: relative; overflow: scroll; margin-right: 0px; margin-bottom: 0px; min-height: 0; max-height: 100px;"
+              >
+                <div>
+                  <ol>
+                     
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-324"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-324
+                           
+                          Training Plan for the team is available however same needs to be prepared in QMS Standard Template
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-325"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-325
+                           
+                          major Risk associated with this Project which needs to be identified and updated in the Risk Register
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-324"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-324
+                           
+                          Training Plan for the team is available however same needs to be prepared in QMS Standard Template
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-325"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-325
+                           
+                          major Risk associated with this Project which needs to be identified and updated in the Risk Register
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-449"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-449
+                           
+                          % Rework is continuously reported 0. Which is incorrect. It should be calculated by logging effort spent on bug fixing from testing and code reviews
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-324"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-324
+                           
+                          Training Plan for the team is available however same needs to be prepared in QMS Standard Template
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-325"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-325
+                           
+                          major Risk associated with this Project which needs to be identified and updated in the Risk Register
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-449"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-449
+                           
+                          % Rework is continuously reported 0. Which is incorrect. It should be calculated by logging effort spent on bug fixing from testing and code reviews
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-324"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-324
+                           
+                          Training Plan for the team is available however same needs to be prepared in QMS Standard Template
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-325"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-325
+                           
+                          major Risk associated with this Project which needs to be identified and updated in the Risk Register
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        08/02/2019
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-449"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-449
+                           
+                          % Rework is continuously reported 0. Which is incorrect. It should be calculated by logging effort spent on bug fixing from testing and code reviews
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                     
+                  </ol>
+                </div>
+              </div>
+              <div
+                style="position: absolute; height: 6px; display: none; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+              <div
+                style="position: absolute; width: 6px; display: none; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="react-aria6494588069-1-tab-tabCompObservations"
+        class="fade tab-pane"
+        id="react-aria6494588069-1-tabpane-tabCompObservations"
+        role="tabpanel"
+      >
+        <div>
+          <div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                Open
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  12
+                </span>
+              </div>
+              <div>
+                Addressed
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              style="position: relative; overflow: hidden; width: 100%; height: auto; min-height: 0; max-height: 100px;"
+            >
+              <div
+                style="position: relative; overflow: scroll; margin-right: 0px; margin-bottom: 0px; min-height: 0; max-height: 100px;"
+              >
+                <div>
+                  <ol>
+                     
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-444"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-444
+                           
+                          There was an outstanding amount in invoices of approx 90K pounds
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-445"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-445
+                           
+                          5.	Identification of future training needs of team members was not done as the training register was not evident during the audit
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-446"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-446
+                           
+                          Risk Register - Risk no 1. Description and re assessement columns to be modified and risk to be closed. And add one risk related to Covid 19 and Data security threat at Project level.
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-447"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-447
+                           
+                          Communication Plan on confluence – Needs to be updated to give more clarity on the type of meetings,participants, the written communication,etc as explained during the audit
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-444"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-444
+                           
+                          There was an outstanding amount in invoices of approx 90K pounds
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-445"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-445
+                           
+                          5.	Identification of future training needs of team members was not done as the training register was not evident during the audit
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-446"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-446
+                           
+                          Risk Register - Risk no 1. Description and re assessement columns to be modified and risk to be closed. And add one risk related to Covid 19 and Data security threat at Project level.
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-447"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-447
+                           
+                          Communication Plan on confluence – Needs to be updated to give more clarity on the type of meetings
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-444"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-444
+                           
+                          There was an outstanding amount in invoices of approx 90K pounds
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-445"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-445
+                           
+                          5.	Identification of future training needs of team members was not done as the training register was not evident during the audit
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-446"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-446
+                           
+                          Risk Register - Risk no 1. Description and re assessement columns to be modified and risk to be closed. And add one risk related to Covid 19 and Data security threat at Project level.
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a
+                          href="https://jira.infostretch.com/browse/AUD-447"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          AUD-447
+                           
+                          Communication Plan on confluence – Needs to be updated to give more clarity on the type of meetings
+                           (
+                          Audit Finding
+                          )
+                        </a>
+                      </div>
+                      <div>
+                        Due:
+                         
+                        07/20/2020
+                      </div>
+                    </li>
+                     
+                  </ol>
+                </div>
+              </div>
+              <div
+                style="position: absolute; height: 6px; display: none; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+              <div
+                style="position: absolute; width: 6px; display: none; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ModalComplianceBox Snapshot No data for project 1`] = `
+<div>
+  <div>
+    <ul
+      class="blackNWhite nav nav-tabs"
+      role="tablist"
+    >
+      <li
+        class="nav-item"
+        role="presentation"
+      >
+        <button
+          aria-controls="react-aria6494588069-2-tabpane-tabCompTickets"
+          aria-selected="true"
+          class="nav-link active"
+          data-rr-ui-event-key="tabCompTickets"
+          id="react-aria6494588069-2-tab-tabCompTickets"
+          role="tab"
+          type="button"
+        >
+          Tickets
+        </button>
+      </li>
+      <li
+        class="nav-item"
+        role="presentation"
+      >
+        <button
+          aria-controls="react-aria6494588069-2-tabpane-tabCompObservations"
+          aria-selected="false"
+          class="nav-link"
+          data-rr-ui-event-key="tabCompObservations"
+          id="react-aria6494588069-2-tab-tabCompObservations"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Observations
+        </button>
+      </li>
+    </ul>
+    <div
+      class="tab-content"
+    >
+      <div
+        aria-labelledby="react-aria6494588069-2-tab-tabCompTickets"
+        class="fade tab-pane active show"
+        id="react-aria6494588069-2-tabpane-tabCompTickets"
+        role="tabpanel"
+      >
+        <div>
+          <div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                To-Dos
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                In-Progress
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                Completed
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              style="position: relative; overflow: hidden; width: 100%; height: auto; min-height: 0; max-height: 100px;"
+            >
+              <div
+                style="position: relative; overflow: scroll; margin-right: 0px; margin-bottom: 0px; min-height: 0; max-height: 100px;"
+              >
+                <div>
+                  <div>
+                    Sorry, No Record Available.
+                  </div>
+                </div>
+              </div>
+              <div
+                style="position: absolute; height: 6px; display: none; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+              <div
+                style="position: absolute; width: 6px; display: none; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="react-aria6494588069-2-tab-tabCompObservations"
+        class="fade tab-pane"
+        id="react-aria6494588069-2-tabpane-tabCompObservations"
+        role="tabpanel"
+      >
+        <div>
+          <div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                Open
+              </div>
+            </div>
+            <div
+              class=" "
+            >
+              <div>
+                <span>
+                  0
+                </span>
+              </div>
+              <div>
+                Addressed
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              style="position: relative; overflow: hidden; width: 100%; height: auto; min-height: 0; max-height: 100px;"
+            >
+              <div
+                style="position: relative; overflow: scroll; margin-right: 0px; margin-bottom: 0px; min-height: 0; max-height: 100px;"
+              >
+                <div>
+                  <div>
+                    Sorry, No Record Available.
+                  </div>
+                </div>
+              </div>
+              <div
+                style="position: absolute; height: 6px; display: none; right: 2px; bottom: 2px; left: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+              <div
+                style="position: absolute; width: 6px; display: none; right: 2px; bottom: 2px; top: 2px; border-radius: 3px;"
+              >
+                <div
+                  style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2);"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

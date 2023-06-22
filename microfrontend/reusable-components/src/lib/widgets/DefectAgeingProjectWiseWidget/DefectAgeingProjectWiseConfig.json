@@ -1,0 +1,101 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "width": "100%",
+  "height": 350,
+  "margin": {
+    "top": 20,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01FFFF",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": 1,
+    "textAnchor": "middle",
+    "height": 40,
+    "tick": {
+      "verticalAnchor": "start",
+      "fill": "#01FFFF"
+    }
+  },
+  "y": {
+    "tick": {
+      "fill": "#01FFFF"
+    },
+    "stroke": "#01FFFF",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Counts #",
+    "dy": 170,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01FFFF",
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false,
+    "id": "storyPointDelVsAcc"
+  },
+  "linearGradient": {
+    "id": "storyPointDelVsAcc",
+    "x1": "0",
+    "y1": "0",
+    "x2": "1",
+    "y2": "0",
+    "stop": [
+      {
+        "offset": "65%",
+        "stopColor": "#f16293",
+        "stopOpacity": 0.8
+      },
+      {
+        "offset": "100%",
+        "stopColor": "#ffffff",
+        "stopOpacity": 0.8
+      }
+    ]
+  },
+  "line": [
+    {
+      "key": "Blocker",
+      "stroke": "#e00e2c",
+      "fill": "#e00e2c",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "Critical",
+      "stroke": "#de5e3f",
+      "fill": "#de5e3f",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "Major",
+      "stroke": "#ffb200",
+      "fill": "#ffb200",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "Minor",
+      "stroke": "#ded739",
+      "fill": "#ded739",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "Unattended",
+      "stroke": "#ffffff",
+      "fill": "#ffffff",
+      "strokeWidth": "1"
+    }
+  ]
+}

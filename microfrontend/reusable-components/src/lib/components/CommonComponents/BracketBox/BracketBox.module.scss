@@ -1,0 +1,145 @@
+@import '../../../theme/theme.scss';
+
+.bracketBox {
+  width: 100%;
+  padding: 8px 0;
+  position: relative;
+  margin: 0 0 30px 0;
+  @include flexbox();
+
+  &.hide {
+    .bracketBoxContent {
+      min-height: 30px;
+      padding: 0 15px;
+
+      :global(.toggleThings) {
+        opacity: 0;
+        max-height: 1px;
+        @include transition(all, 0.4s, linear);
+      }
+    }
+  }
+
+  :global(.tab-content) {
+    width: 100%;
+    @include inline-flex();
+    height: 100%;
+  }
+  :global(.tab-pane) {
+    width: 100%;
+  }
+
+  :global(.nav-tabs) {
+    margin: -30px 10px 20px 10px;
+    height: 30px;
+    position: relative;
+    z-index: 2051;
+  }
+
+  :global(.container-fluid) {
+    height: 100%;
+    display: inline-grid;
+  }
+
+  .bracketBoxContent {
+    width: 100%;
+    min-height: 100px;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include align-self(stretch);
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    @include transition(all, 0.4s, linear);
+
+    &.alignTop {
+      @include align-items(flex-start);
+    }
+
+    .boxTitle {
+      width: calc(100% - 60px);
+      color: $themeBlueGeneric;
+      @include position(absolute, -10px, unset, unset, 30px);
+      z-index: 2060;
+      text-align: left;
+      @include flexbox();
+      @include justify-content(center);
+
+      :global(.info) {
+        margin: 0 0 0 5px;
+        cursor: pointer;
+        @include inline-flex();
+
+        svg {
+          width: 16px;
+          height: 16px;
+
+          path {
+            fill: $themeBlueGeneric;
+          }
+        }
+      }
+
+      &.amber {
+        color: $themeAmberShade01;
+      }
+      &.green {
+        color: $themeGreenMain;
+      }
+      &.red {
+        color: $themeRedMain;
+      }
+      &.blue {
+        color: $themeBlueGeneric;
+      }
+
+      h2 {
+        @include truncate(100%);
+        width: 100%;
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+  }
+
+  .decoration {
+    width: 100%;
+    height: 100%;
+    @include position(absolute, 0, unset, unset, 0);
+    z-index: 0;
+
+    .corner {
+      width: 1px;
+      height: calc(100% - 16px);
+      background: $graphContainerGrey;
+      position: absolute;
+      top: 8px;
+
+      &:before,
+      &::after {
+        content: '';
+        width: 20px;
+        height: 1px;
+        background: inherit;
+        position: absolute;
+        top: 0;
+      }
+      &::after {
+        top: auto;
+        bottom: 0;
+      }
+    }
+    .lhs {
+      left: 0;
+    }
+    .rhs {
+      right: 0;
+      &:before,
+      &::after {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}

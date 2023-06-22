@@ -1,0 +1,63 @@
+@import '../../theme/theme.scss';
+
+.graphBgAnimation {
+  width: 100%;
+  height: 100vh;
+  background: $graphBg;
+  @include position(fixed, 0, unset, unset, 0);
+  z-index: -1;
+
+  &.themeUtility {
+    background: $utilityGraphBg;
+
+    .lines {
+      background: radial-gradient(rgba(85, 85, 85, 0.1) 30%, transparent 100%);
+    }
+  }
+}
+
+.lines {
+  width: 100%;
+  height: 100%;
+  @include position(absolute, 0, unset, unset, 0);
+  right: 0;
+  z-index: 0;
+  margin: auto;
+  opacity: 0.4;
+  background: radial-gradient(rgba(14, 25, 69, 1), transparent);
+
+  &:before {
+    width: 100%;
+    height: 100vh;
+    content: '';
+    @include position(absolute, 0, unset, unset, 0);
+  }
+
+  .hLine {
+    @include position(absolute, 0, unset, unset, 0);
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+  }
+  .vLine {
+    @include position(absolute, 0, unset, unset, 0);
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+  }
+}
+
+@for $itemNumber from $startValue through $endValue {
+  .hLine {
+    &:nth-child(#{$itemNumber}) {
+      margin-left: ($itemNumber * $gapSize);
+    }
+  }
+  .vLine {
+    &:nth-child(#{$itemNumber}) {
+      margin-top: ($itemNumber * $gapSize);
+    }
+  }
+}

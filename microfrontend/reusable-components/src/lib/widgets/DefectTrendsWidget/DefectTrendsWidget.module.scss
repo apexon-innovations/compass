@@ -1,0 +1,455 @@
+@import '../../theme/theme';
+@import '../../theme/keyframes';
+
+.defectSummary {
+  width: 100%;
+  @include flexbox();
+
+  .defectSummaryInner {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*==== Development UI Start====*/
+.defectProject {
+  width: 100%;
+  margin-bottom: 14px;
+  @include flexbox();
+  @include flex-wrap(wrap);
+
+  .titleWrapper {
+    width: 100%;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    .title {
+      font-size: 14px;
+      font-weight: 500;
+      color: $whiteColor;
+      margin: 0;
+    }
+
+    .totalDefects {
+      font-size: 12px;
+      letter-spacing: normal;
+      color: $themeBlueMain;
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+
+      .defectsCount {
+        font-size: 16px;
+        font-weight: 300;
+        color: $themeYellow;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .defectWrapper {
+    width: 100%;
+    border: 1px solid $defectBorder;
+    @include flexbox();
+
+    .singleDefectSummary {
+      width: 50%;
+      padding: 8px 11px;
+
+      .defectSummarytitle {
+        font-size: 12px;
+        font-weight: 300;
+        color: $whiteColor;
+        text-transform: capitalize;
+        @include flexbox();
+        @include align-items(center);
+
+        .defectsSummaryLabel {
+          margin-right: 5px;
+        }
+
+        .defectSummaryCount {
+          font-size: 16px;
+        }
+      }
+
+      &.openDefects {
+        .defectSummarytitle {
+          .defectSummaryCount {
+            color: $openDefecttext;
+          }
+        }
+      }
+
+      &.closeDefects {
+        .defectSummarytitle {
+          .defectSummaryCount {
+            color: $themeBlueGeneric;
+          }
+        }
+      }
+
+      &:last-child {
+        border-left: 1px solid $defectBorder;
+      }
+
+      .defectChart {
+        position: relative;
+        width: 105px;
+        height: 92px;
+        margin: 2px auto 0 auto;
+        @include flexbox();
+
+        div {
+          font-size: 14px;
+          font-weight: 300;
+          color: $whiteColor;
+          text-align: center;
+          @include border-radius(50%);
+        }
+
+        .defectXL {
+          width: 48px;
+          height: 48px;
+          line-height: 48px;
+          @include position(absolute, 11px, auto, auto, 0);
+        }
+        .defectLG {
+          width: 44px;
+          height: 44px;
+          line-height: 44px;
+          @include position(absolute, 0, auto, auto, 46px);
+        }
+        .defectMD {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          @include position(absolute, 42px, auto, auto, 63px);
+        }
+        .defectSM {
+          width: 36px;
+          height: 36px;
+          line-height: 36px;
+          @include position(absolute, 54px, auto, auto, 28px);
+        }
+
+        .criticalDefect {
+          background-color: $defectRed;
+        }
+        .minorDefect {
+          background-color: $defectGreen;
+        }
+        .majorDefect {
+          background-color: $defectBlue;
+        }
+        .blockerDefect {
+          background-color: $defectPurple;
+        }
+      }
+    }
+  }
+}
+.defectStatusLegend {
+  position: relative;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+
+    li {
+      display: inline-block;
+      padding-left: 14px;
+      margin-right: 16px;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 8px;
+        width: 8px;
+        margin-top: -4px;
+        @include position(absolute, 50%, auto, auto, 0);
+        @include border-radius(50%);
+      }
+
+      &.defectRed {
+        color: $defectRed;
+
+        &::before {
+          background-color: $defectRed;
+        }
+      }
+      &.defectPurple {
+        color: $defectPurple;
+
+        &::before {
+          background-color: $defectPurple;
+        }
+      }
+      &.defectBlue {
+        color: $defectBlue;
+
+        &::before {
+          background-color: $defectBlue;
+        }
+      }
+      &.defectGreen {
+        color: $defectGreen;
+
+        &::before {
+          background-color: $defectGreen;
+        }
+      }
+    }
+  }
+}
+/*==== Development UI End====*/
+
+.defectTrend {
+  width: 100%;
+  margin-bottom: 14px;
+  @include flexbox();
+  @include flex-wrap(wrap);
+
+  .titleWrapper {
+    width: 100%;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    .title {
+      font-size: 14px;
+      font-weight: 500;
+      color: $whiteColor;
+      margin: 0;
+    }
+
+    .totalDefects {
+      font-size: 12px;
+      letter-spacing: normal;
+      color: $themeBlueMain;
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+
+      .defectsCount {
+        font-size: 16px;
+        font-weight: 300;
+        color: $themeYellow;
+        margin-left: 3px;
+      }
+    }
+  }
+  .defectBox {
+    width: 100%;
+    @include flexbox();
+    border: 1px solid $defectBorder;
+    margin: 0 0 10px 0;
+
+    .graphArea {
+      width: 132px;
+      padding: 10px;
+      border-right: 1px solid $defectBorder;
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+      @include flex(0, 0, 132px);
+
+      .graphAreaInner {
+        width: 100%;
+        height: 81px;
+        position: relative;
+      }
+
+      .circle {
+        @include border-radius(50%);
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        position: absolute;
+
+        .number {
+          color: $whiteColor;
+          position: relative;
+        }
+
+        .arrow {
+          @include position(absolute, 0, unset, unset, 50%);
+          transform: translateX(-50%);
+          width: 8px;
+          height: 12px;
+
+          &.up {
+            top: -10px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid $whiteColor;
+          }
+          &.down {
+            top: auto;
+            bottom: -10px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid $whiteColor;
+          }
+        }
+
+        &.red {
+          background: $defectRed;
+          .arrow {
+            &.up {
+              border-bottom-color: darken($defectRed, 15%);
+            }
+            &.down {
+              border-top-color: darken($defectRed, 15%);
+            }
+          }
+        }
+        &.green {
+          background: $defectGreen;
+          .arrow {
+            &.up {
+              border-bottom-color: darken($defectGreen, 15%);
+            }
+            &.down {
+              border-top-color: darken($defectGreen, 15%);
+            }
+          }
+        }
+        &.blue {
+          background: $defectBlue;
+          .arrow {
+            &.up {
+              border-bottom-color: darken($defectBlue, 15%);
+            }
+            &.down {
+              border-top-color: darken($defectBlue, 15%);
+            }
+          }
+        }
+
+        &.large {
+          width: 60px;
+          height: 60px;
+          left: 0;
+          top: 0;
+        }
+        &.medium {
+          width: 50px;
+          height: 50px;
+          top: 0;
+          right: 0;
+        }
+        &.small {
+          width: 35px;
+          height: 35px;
+          bottom: 0;
+          left: 48px;
+        }
+      }
+    }
+    .detailsArea {
+      width: 100%;
+      padding: 10px;
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        ul {
+          width: 100%;
+          padding: 0 0 0 13px;
+          margin: 0;
+
+          li {
+            color: $whiteColor;
+            @include flexbox();
+            @include flex-direction(row);
+            margin: 0;
+
+            .label,
+            .value {
+              color: $defectValue !important;
+            }
+          }
+        }
+
+        li {
+          margin: 0 0 3px 0;
+          padding: 0;
+          list-style: none;
+          @include flexbox();
+          @include flex-direction(column);
+          font-size: 12px;
+          font-weight: 600;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          &.green {
+            .dot {
+              background: $defectGreen;
+            }
+            .label {
+              color: $defectGreen;
+            }
+            .value {
+              color: $defectGreen;
+            }
+          }
+          &.red {
+            .dot {
+              background: $defectRed;
+            }
+            .label {
+              color: $defectRed;
+            }
+            .value {
+              color: $defectRed;
+            }
+          }
+          &.blue {
+            .dot {
+              background: $defectBlue;
+            }
+            .label {
+              color: $defectBlue;
+            }
+            .value {
+              color: $defectBlue;
+            }
+          }
+
+          .info {
+            @include flexbox();
+            @include flex-direction(row);
+            @include align-items(center);
+          }
+
+          .dot {
+            width: 8px;
+            min-width: 8px;
+            max-width: 8px;
+            height: 8px;
+            margin: 0 5px 0 0;
+            background: $whiteColor;
+            @include border-radius(50%);
+          }
+          .label {
+            width: 100%;
+            margin: 0 5px 0 0;
+            font-weight: normal;
+          }
+          .value {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

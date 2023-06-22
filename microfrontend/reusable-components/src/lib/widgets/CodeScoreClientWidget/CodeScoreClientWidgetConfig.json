@@ -1,0 +1,91 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": true,
+  "width": "100%",
+  "height": 250,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#01ffff"
+    }
+  },
+  "y": {
+    "tick": {
+      "fill": "#01ffff",
+      "fontSize": 12
+    },
+    "tickCount": 8,
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Score Overview",
+    "dy": 130,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff",
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false
+  },
+  "line": [
+    {
+      "key": "Security",
+      "type": "monotone",
+      "activeDot": {
+        "stroke": "#0597f2",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#0597f2",
+      "fill": "#0597f2",
+      "strokeWidth": "2"
+    },
+    {
+      "key": "Efficiency",
+      "type": "monotone",
+      "activeDot": {
+        "stroke": "#c748d9",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#c748d9",
+      "fill": "#c748d9",
+      "strokeWidth": "2"
+    },
+    {
+      "key": "Robustness",
+      "type": "monotone",
+      "activeDot": {
+        "stroke": "#f38567",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#f38567",
+      "fill": "#f38567",
+      "strokeWidth": "2"
+    }
+  ]
+}

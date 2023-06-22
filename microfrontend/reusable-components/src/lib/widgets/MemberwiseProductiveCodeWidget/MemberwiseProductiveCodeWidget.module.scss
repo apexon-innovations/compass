@@ -1,0 +1,42 @@
+@import '../../theme/theme.scss';
+
+.MemberwiseProductiveCode {
+  width: 100%;
+  @include flexbox();
+
+  .codeNumbers {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    margin: 10px 0 20px 0;
+
+    .box {
+      margin-right: 15px;
+      @include flexbox();
+      @include flex-direction(column);
+      text-align: center;
+
+      .title {
+        color: $themeBlueMain;
+      }
+      .number {
+        font-size: 20px;
+      }
+      .green {
+        color: $themeGreenMain;
+      }
+      .amber {
+        color: $themeAmberMain;
+      }
+      .excelBlue {
+        color: $excelBlue;
+      }
+      .grey {
+        color: $grey97;
+      }
+      .yellow {
+        color: $themeYellow;
+      }
+    }
+  }
+}

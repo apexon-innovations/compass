@@ -1,0 +1,41 @@
+@import '../../theme/theme.scss';
+
+.PRmgmtSumitterMatrics {
+  width: 100%;
+  @include flexbox();
+  position: relative;
+  z-index: 120;
+}
+.PRmgmtSumitterMatricsInner {
+  width: 100%;
+  @include flexbox();
+  @include justify-content(flex-start);
+  @include flex-direction(column);
+  height: 100%;
+
+  :global(.tab-content) {
+    height: 100%;
+  }
+  :global(.tab-pane) {
+    height: 100%;
+  }
+}
+.prsManagement {
+  height: 100%;
+  @include flexbox();
+
+  :global(.recharts-wrapper) {
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 71px;
+      height: 71px;
+      position: absolute;
+      z-index: 1000;
+      top: calc(50% - 55px);
+      left: calc(50% - 36px);
+      @include border-radius(50%);
+    }
+  }
+}

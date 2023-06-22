@@ -1,0 +1,24 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.operationalScreen {
+  padding: 10px 0 140px 0;
+  transform-origin: 50% 35%;
+
+  .cols {
+    @include flexbox();
+  }
+
+  :global(.row) {
+    :global(.col) {
+      @include flexbox();
+    }
+  }
+
+  &.pgGo {
+    animation: pgScaleDown 1.4s 1 ease-in-out;
+  }
+  &.pgUp {
+    animation: pgScaleUp 1.4s 1 ease-in-out;
+  }
+}

@@ -1,0 +1,112 @@
+@import '../../theme/theme.scss';
+
+.codeMetrix {
+  width: 100%;
+
+  .codeMetrixList {
+    font-size: 14px;
+    font-weight: normal;
+    color: $themeBlueMain;
+    list-style: none;
+    margin: 11px 0 0 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 8px;
+
+      span {
+        margin-left: 6px;
+        font-weight: 600;
+      }
+
+      &.newLine {
+        span {
+          color: $lineOfCode;
+        }
+      }
+      &.churn {
+        span {
+          color: $churn;
+        }
+      }
+      &.lagecy {
+        span {
+          color: $lagecy;
+        }
+      }
+    }
+  }
+  .codeMetrixGraph {
+    margin-top: 20px;
+  }
+}
+
+.ttTechnicalDebtOverview {
+  .tooltipHead {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: $graphElements;
+    border-bottom: 1px solid $technicalDebtBorder;
+
+    li {
+      margin-bottom: 5px;
+      span {
+        margin-left: 3px;
+
+        &.totalCount {
+          font-size: 14px;
+          font-weight: bold;
+          color: $technicalDebtCount;
+        }
+      }
+    }
+  }
+
+  .tooltipBody {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: normal;
+
+    li {
+      margin-top: 3px;
+
+      span {
+        margin-left: 3px;
+        font-weight: 600;
+        color: inherit;
+      }
+
+      &.complexity {
+        color: $technicalDebtComplexity;
+      }
+      &.duplication {
+        color: $technicalDebtDuplication;
+      }
+      &.issues {
+        color: $technicalDebtIssues;
+      }
+      &.mainatainability {
+        color: $technicalDebtMaitenance;
+      }
+      &.reliability {
+        color: $technicalDebtReliable;
+      }
+      &.security {
+        color: $technicalDebtSecurity;
+      }
+      &.size {
+        color: $technicalDebtSize;
+      }
+      &.coverage {
+        color: $technicalDebtCoverage;
+      }
+    }
+  }
+}

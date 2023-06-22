@@ -1,0 +1,277 @@
+@import '../../../theme/theme.scss';
+
+.clientsInfo {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.companyInfo {
+  width: 100%;
+  position: relative;
+  margin: 10px 0 0 0;
+
+  &.green {
+    .icon {
+      background: $themeGreenMain;
+      h6 {
+        color: $whiteColor;
+      }
+    }
+    .ring {
+      border-color: $themeGreenMain;
+    }
+  }
+  &.red {
+    .icon {
+      background: $themeRedMain;
+      h6 {
+        color: $whiteColor;
+      }
+    }
+    .ring {
+      border-color: $themeRedMain;
+    }
+  }
+  &.amber {
+    .icon {
+      background: $themeAmberMain;
+      h6 {
+        color: $whiteColor;
+      }
+    }
+    .ring {
+      border-color: $themeAmberMain;
+    }
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    @include border-radius(50%);
+    background: $whiteColor;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    margin: 0 auto;
+    cursor: pointer;
+    &.whiteBg {
+      background: $whiteColor;
+    }
+
+    &:hover {
+      .editBox {
+        bottom: 0;
+      }
+    }
+
+    .editBox {
+      width: 100%;
+      height: 30px;
+      background: $themeBlueMain;
+      @include position(absolute, unset, unset, -100%, 0);
+      text-align: center;
+      padding: 5px 0;
+      cursor: pointer;
+      @include transition(bottom, 0.4s, ease);
+
+      img {
+        max-width: 16px;
+        max-height: 16px;
+      }
+    }
+
+    h6 {
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none !important;
+      letter-spacing: -1px;
+      margin: 0;
+      color: $grey33;
+    }
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+  .ring {
+    width: 95px;
+    height: 95px;
+    @include position(absolute, 50%, unset, unset, 50%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    @include border-radius(50%);
+    border: 3px solid;
+  }
+}
+
+.companyDetails {
+  width: 100%;
+  text-align: left;
+
+  .box {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    margin: 0 0 10px 0;
+
+    .label {
+      width: 100%;
+      font-size: 14px;
+      @include truncate(100%);
+      color: $whiteColor;
+    }
+    .value {
+      width: 100%;
+      font-size: 16px;
+      color: $themeBlueMain;
+    }
+  }
+}
+
+.ownersInfo {
+  width: 100%;
+  @include flexbox();
+  @include justify-content(space-around);
+  margin: 20px 0 30px 0;
+
+  .ownersBox {
+    text-align: left;
+
+    .userImg {
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      margin: 0 0 10px 0;
+      @include border-radius(10px);
+      border: 1px solid $whiteColor;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .designation {
+      font-size: 14px;
+      color: $whiteColor;
+    }
+    .name {
+      font-size: 18px;
+      color: $themeAmberMain;
+    }
+  }
+}
+
+.membersInfo {
+  width: 100%;
+
+  .membersCount {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    text-align: center;
+
+    .numberBox {
+      margin: 0 0 10px 0;
+
+      .number {
+        max-width: 60px;
+        width: 100%;
+        height: 60px;
+        position: relative;
+        @include border-radius(50%);
+        text-align: center;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        border: 1px dashed $themeBlueMain;
+        color: $themeBlueMain;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 auto;
+      }
+    }
+    .label {
+      font-size: 16px;
+    }
+  }
+}
+
+.membersSlider {
+  width: 100%;
+  position: relative;
+  margin: 15px 0 0 0;
+}
+
+.ownerSlider {
+  width: 100%;
+  position: relative;
+
+  :global(.slick-track) {
+    min-width: 200px;
+    height: auto !important;
+  }
+
+  :global(.slick-slide) {
+    width: auto;
+    min-width: 110px;
+  }
+  :global(.slick-list) {
+    width: calc(100% - 50px);
+    left: 25px;
+  }
+  :global(.slick-prev),
+  :global(.slick-next) {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      @include position(absolute, 0, unset, unset, 0);
+    }
+  }
+  :global(.slick-prev) {
+    left: 0;
+    &:before {
+      background: url(../../../images/ic_arrow_left.svg) no-repeat 50% 50%;
+    }
+  }
+  :global(.slick-next) {
+    right: 0;
+    &:before {
+      background: url(../../../images/ic_arrow_right.svg) no-repeat 50% 50%;
+    }
+  }
+}
+
+.sliderWrap {
+  max-width: 330px;
+  position: relative;
+  z-index: 10;
+
+  &.dm {
+    max-width: 170px;
+  }
+}
+
+.sliderDiv {
+  margin: 0 auto;
+  max-width: 45px;
+}

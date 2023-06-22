@@ -1,0 +1,32 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.defectTrendsDrillDown {
+  width: 100%;
+}
+
+.defectAcceptanceInner {
+  width: 100%;
+  padding: 0 15px;
+}
+.CodeHealthDrillDownTabs {
+  :global(.nav-tabs) {
+    margin: 0 0 20px 0;
+
+    :global(.nav-item) {
+      padding: 5px 15px;
+      margin: 0;
+      border-left: 0;
+      border-right: 1px solid $themeBlueGeneric;
+
+      &:global(.active) {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+      }
+
+      &:first-child {
+        border-left: 1px solid $themeBlueGeneric;
+      }
+    }
+  }
+}

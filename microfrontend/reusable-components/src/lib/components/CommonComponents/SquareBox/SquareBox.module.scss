@@ -1,0 +1,28 @@
+@import '../../../theme/theme.scss';
+
+.squareBox {
+  width: 100%;
+  min-height: 150px;
+  padding: 9px 14px;
+  position: relative;
+  margin: 0 0 30px 0;
+  border: 1px solid $squareBoxBorder;
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include align-items(stretch);
+
+  .boxTitle {
+    width: 100%;
+    position: relative;
+    z-index: 106;
+
+    h2 {
+      @include truncate(100%);
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      color: $squareBoxTitle;
+    }
+  }
+}

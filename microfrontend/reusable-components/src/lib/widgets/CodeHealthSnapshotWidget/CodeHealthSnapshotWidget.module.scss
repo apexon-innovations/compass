@@ -1,0 +1,173 @@
+@import '../../theme/theme.scss';
+
+.singleGraph {
+  padding: 20px;
+  margin-bottom: 4px;
+  position: relative;
+  top: 0;
+  @include border-radius(4px);
+  @include transition(all, 0.5s, ease-out);
+  cursor: pointer;
+
+  :global(.recharts-responsive-container *) {
+    cursor: pointer;
+  }
+
+  &.treeGraphColorRed {
+    background-color: $treeGraphColorRed;
+
+    rect {
+      stroke: $treeGraphColorRed;
+    }
+  }
+  &.treeGraphColorYellow {
+    background-color: $treeGraphColorYellow;
+
+    rect {
+      stroke: $treeGraphColorYellow;
+    }
+  }
+  &.treeGraphColorGreen {
+    background-color: $treeGraphColorGreen;
+
+    rect {
+      stroke: $treeGraphColorGreen;
+    }
+  }
+  &.treeGraphColorBlue {
+    background-color: $treeGraphColorBlue;
+
+    rect {
+      stroke: $treeGraphColorBlue;
+    }
+  }
+  &.treeGraphColorGray {
+    background-color: $treeGraphColorGray;
+
+    rect {
+      stroke: $treeGraphColorGray;
+    }
+  }
+  &.treeGraphColorDarkRed {
+    background-color: $treeGraphColorDarkRed;
+
+    rect {
+      stroke: $treeGraphColorDarkRed;
+    }
+  }
+  &.treeGraphColorDarkBlue {
+    background-color: $treeGraphColorDarkBlue;
+
+    rect {
+      stroke: $treeGraphColorDarkBlue;
+    }
+  }
+  &.treeGraphColorLightGray {
+    background-color: $treeGraphColorLightGray;
+
+    rect {
+      stroke: $treeGraphColorLightGray;
+    }
+  }
+  &.treeGraphColorLightGreen {
+    background-color: $treeGraphColorLightGreen;
+
+    rect {
+      stroke: $treeGraphColorLightGreen;
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: $whiteColor;
+    margin-bottom: 29px;
+  }
+}
+
+svg * {
+  font-weight: 300;
+}
+
+.cursorPointer {
+  cursor: pointer;
+
+  :global(.recharts-responsive-container *) {
+    cursor: pointer;
+  }
+}
+
+/* Masonry SCSS */
+:global(.my-masonry-grid) {
+  @include flexbox;
+  margin-left: -4px;
+  width: auto;
+}
+:global(.my-masonry-grid_column) {
+  padding-left: 4px;
+}
+
+/* Custom Tooltip SCSS */
+.ttCodeHealthSnapshot {
+  .tooltipHead {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: $whiteColor;
+    border-bottom: 1px solid $technicalDebtBorder;
+
+    li {
+      margin-bottom: 5px;
+      span {
+        margin-left: 3px;
+
+        &.totalCount {
+          font-size: 14px;
+          font-weight: bold;
+          color: $technicalDebtCount;
+        }
+      }
+    }
+  }
+
+  .tooltipBody {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: normal;
+
+    li {
+      margin-top: 3px;
+
+      span {
+        margin-left: 3px;
+        font-weight: 600;
+        color: inherit;
+        min-width: 120px;
+        display: inline-block;
+      }
+
+      &.info1 {
+        color: $technicalDebtComplexity;
+      }
+      &.info2 {
+        color: $technicalDebtDuplication;
+      }
+      &.info3 {
+        color: $technicalDebtIssues;
+      }
+      &.info4 {
+        color: $technicalDebtReliable;
+      }
+      &.info5 {
+        color: $technicalDebtSize;
+      }
+      &.info6 {
+        color: $technicalDebtCoverage;
+      }
+    }
+  }
+}

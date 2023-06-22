@@ -1,0 +1,374 @@
+@import '../../../theme/theme.scss';
+
+.memberInfo {
+  width: 100%;
+
+  .userDetails {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-self(stretch);
+
+    .userImageArea {
+      position: relative;
+
+      .ratingNumber {
+        @include position(absolute, 50%, unset, unset, 50%);
+        padding: 0 7px;
+        @include border-radius(5px);
+        background: $graphBg;
+        color: $whiteColor;
+        text-align: center;
+        font-size: 18px;
+
+        &.red {
+          background: $themeRedMain;
+        }
+        &.green {
+          background: $themeGreenMain;
+        }
+        &.amber {
+          background: $themeAmberMain;
+        }
+      }
+
+      .userImg {
+        width: 66px;
+        height: 66px;
+        overflow: hidden;
+        margin: 0 0 10px 0;
+        border: 1px solid $whiteColor;
+        @include border-radius(10px);
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    .userInfo {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+      margin: 0 0 20px 0;
+
+      .name {
+        font-size: 20px;
+        color: $themeAmberMain;
+      }
+      .designatiion {
+        font-size: 16px;
+      }
+    }
+
+    .AllocationDetails {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+      margin: 20px 0 0 0;
+      font-size: 14px;
+
+      .title {
+        color: $themeBlueShade01;
+      }
+    }
+  }
+  .workDetails {
+    width: 100%;
+    @include align-self(stretch);
+
+    .taskStatus {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(center);
+      margin: 0 0 20px 0;
+
+      .status {
+        width: 100%;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(flex-start);
+        margin: 8px 0 10px 0;
+        cursor: pointer;
+
+        &.active {
+          .number {
+            background: $navyBlue;
+            color: $whiteColor;
+            border-color: $whiteColor;
+          }
+          .label {
+            color: $whiteColor;
+          }
+        }
+
+        &.amber {
+          .number {
+            color: $themeAmberMain;
+            border-color: $themeAmberMain;
+            .highlight {
+              @include box-shadow(0, 0, 10px, 0, $themeAmberMain, false);
+            }
+          }
+        }
+        &.red {
+          .number {
+            color: $themeRedMain;
+            border-color: $themeRedMain;
+            .highlight {
+              @include box-shadow(0, 0, 10px, 0, $themeRedMain, false);
+            }
+          }
+        }
+        &.green {
+          .number {
+            color: $themeGreenMain;
+            border-color: $themeGreenMain;
+            .highlight {
+              @include box-shadow(0, 0, 10px, 0, $themeGreenMain, false);
+            }
+          }
+        }
+
+        .number {
+          max-width: 40px;
+          width: 100%;
+          height: 40px;
+          position: relative;
+          @include border-radius(50%);
+          text-align: center;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          border: 1px dashed $themeBlueMain;
+          color: $themeBlueMain;
+          font-size: 16px;
+          font-weight: 600;
+          margin: 0 10px 0 0;
+
+          .highlight {
+            @include box-shadow(0, 0, 10px, 0, $themeBlueMain, false);
+            width: 100%;
+            height: 100%;
+            @include position(absolute, 0, unset, unset, 0);
+            @include border-radius(50%);
+          }
+        }
+        .label {
+          font-size: 14px;
+          font-weight: 400;
+          color: $themeBlueMain;
+          word-break: break-word;
+        }
+      }
+    }
+    .taskComments {
+      width: 100%;
+      min-height: 110px;
+      border: 1px solid $graphContainerGrey;
+      padding: 15px;
+      margin: 0 0 10px 0;
+
+      .noData {
+        width: 100%;
+        height: 80px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+      }
+
+      ol {
+        margin: 0;
+        padding: 0 0 0 15px;
+        list-style-position: inside;
+        font-size: 16px;
+        text-indent: -16px;
+
+        li {
+          margin: 0 0 5px 0;
+          a {
+            color: $themeBlueMain;
+          }
+        }
+      }
+    }
+  }
+}
+
+.totalSummary {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(center);
+  margin: 10px 0 0 0;
+
+  .status {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(flex-start);
+    margin: 8px 0 10px 0;
+    text-align: center;
+
+    &.amber {
+      .number {
+        color: $themeAmberMain;
+        .highlight {
+          opacity: 1;
+          @include box-shadow(0, 0, 30px, 0, $themeAmberMain, false);
+        }
+      }
+    }
+    &.red {
+      .number {
+        color: $themeRedMain;
+        .highlight {
+          opacity: 1;
+          @include box-shadow(0, 0, 30px, 0, $themeRedMain, false);
+        }
+      }
+    }
+    &.green {
+      .number {
+        color: $themeGreenMain;
+        .highlight {
+          opacity: 1;
+          @include box-shadow(0, 0, 30px, 0, $themeGreenMain, false);
+        }
+      }
+    }
+
+    .number {
+      max-width: 50px;
+      width: 100%;
+      height: 50px;
+      position: relative;
+      @include border-radius(50%);
+      text-align: center;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      border: 1px solid $themeBlueMain;
+      color: $themeBlueMain;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+
+      .highlight {
+        @include box-shadow(0, 0, 30px, 0, $themeBlueMain, false);
+        width: 100%;
+        height: 100%;
+        @include position(absolute, 0, unset, unset, 0);
+        opacity: 0;
+        @include border-radius(50%);
+      }
+    }
+    .label {
+      font-size: 12px;
+      font-weight: 400;
+      color: $themeBlueMain;
+      word-break: break-word;
+    }
+  }
+}
+
+.leaveList {
+  width: calc(100% - 15px);
+  @include flexbox();
+  @include flex-direction(column);
+  margin: 20px 0 0 0;
+
+  .leaveStack {
+    width: 100%;
+    border: 1px solid $graphContainerGrey;
+    padding: 5px;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    position: relative;
+
+    :global(.slick-track) {
+      height: auto !important;
+    }
+
+    :global(.slick-list) {
+      width: calc(100% - 50px);
+      left: 25px;
+    }
+    :global(.slick-prev),
+    :global(.slick-next) {
+      font-size: 0;
+      line-height: 0;
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      transform: translate(0, -50%);
+      cursor: pointer;
+      color: transparent;
+      border: none;
+      outline: none;
+      background: transparent;
+
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        @include position(absolute, 0, unset, unset, 0);
+      }
+    }
+    :global(.slick-prev) {
+      left: 0;
+      &:before {
+        background: url(../../../images/ic_arrow_left.svg) no-repeat 50% 50%;
+      }
+    }
+    :global(.slick-next) {
+      right: 0;
+      &:before {
+        background: url(../../../images/ic_arrow_right.svg) no-repeat 50% 50%;
+      }
+    }
+
+    .sliderWrap {
+      width: 250px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .sliderDiv {
+      margin: 0 auto;
+      max-width: 45px;
+      width: 45px !important;
+    }
+  }
+  .leaveBox {
+    @include flexbox();
+    @include flex-direction(column);
+    text-align: center;
+
+    .month {
+      color: $themeBlueMain;
+    }
+    .date {
+      color: $themeAmberMain;
+    }
+  }
+  .leaveCount {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+
+    span {
+      color: $themeAmberMain;
+    }
+  }
+}

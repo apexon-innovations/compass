@@ -1,0 +1,62 @@
+{
+  "tooltip": true,
+  "legend": true,
+  "legendIconType": "wye",
+  "height": 250,
+  "margin": {
+    "top": 10,
+    "right": 0,
+    "left": 10,
+    "bottom": 0
+  },
+  "x": {
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 110,
+    "tick": {
+      "fontSize": "10",
+      "verticalAnchor": "end"
+    }
+  },
+  "y": {
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "width": 45,
+    "allowDataOverflow": true,
+    "dy": 120,
+    "angle": -90,
+    "fontSize": 12,
+    "fill": "#01ffff",
+    "tick": { "fill": "#01ffff" },
+    "domain": [0, 10],
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": false,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false
+  },
+  "line": [],
+  "referenceLine": [
+    {
+      "y": 0,
+      "stroke": "#ffc145",
+      "label": {
+        "value": "0",
+        "fontSize": "14",
+        "position": "left",
+        "offset": 25,
+        "fill": "#ffc145"
+      },
+      "strokeDasharray": "8, 5"
+    }
+  ]
+}

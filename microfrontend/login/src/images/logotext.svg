@@ -1,0 +1,20 @@
+<svg class="animationText" version="1.1" xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="574.558px" height="90px"
+	viewBox="0 0 544.558 140" enable-background="new 0 0 544.558 140" xml:space="preserve">
+	<defs>
+		<pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+			<path id="logoTextColor" fill="#2272F2"
+				d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z" />
+		</pattern>
+
+		<text id="text" transform="matrix(1 0 0 1 1.0484 110.7852)" font-weight="300"
+			font-size="109px">COMPASS</text>
+
+		<mask id="text_mask">
+			<use x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff" />
+		</mask>
+	</defs>
+
+	<rect class="water-fill" mask="url(#text_mask)" fill="url(#water)" x="-10" y="10" width="600" height="120" />
+
+</svg>

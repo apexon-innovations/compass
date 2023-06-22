@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Defect Backlog",
+    "label": "Defect Backlog",
+    "value": 10001,
+    "stroke": "#de5e3f",
+    "fill": "#de5e3f",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Defect Resolved",
+    "label": "Defect Resolved",
+    "value": 10001,
+    "stroke": "#ffb200",
+    "fill": "#ffb200",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Defect Pending",
+    "label": "Defect Pending",
+    "value": 10001,
+    "stroke": "#ff7a00",
+    "fill": "#ff7a00",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  }
+]

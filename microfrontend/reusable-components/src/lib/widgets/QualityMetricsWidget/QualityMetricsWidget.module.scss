@@ -1,0 +1,85 @@
+@import '../../theme/theme.scss';
+
+.CodeMetricAndQualityMetrics {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+  @include flexbox();
+}
+
+.CodeMetricAndQualityMetrics {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+  @include flexbox();
+}
+
+.qualityMetrics {
+  width: 100%;
+
+  :global(.col) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .bt {
+    border-top: 1px solid $themeBlueMain;
+  }
+  .br {
+    border-right: 1px solid $themeBlueMain;
+  }
+  .bb {
+    border-bottom: 1px solid $themeBlueMain;
+  }
+  .bl {
+    border-left: 1px solid $themeBlueMain;
+  }
+
+  .qmLabel {
+    width: 100%;
+    color: $themeBlueMain;
+    font-size: 12px;
+  }
+  .qmLabel1 {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .qmBox {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+
+    .box {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+
+      &:global(.twoLine) {
+        width: 50%;
+      }
+
+      .title {
+        text-align: left;
+      }
+      .value {
+        font-size: 18px;
+        color: $themeGreenMain;
+        text-align: left;
+      }
+    }
+  }
+  .progressGraph {
+    margin: 5px 0;
+    width: 30px;
+    height: 30px;
+    @include border-radius(50%);
+    border: 1px solid $themeBlueMain;
+
+    svg {
+      max-width: 85%;
+      max-height: 85%;
+      margin: 0 7.5%;
+    }
+  }
+}

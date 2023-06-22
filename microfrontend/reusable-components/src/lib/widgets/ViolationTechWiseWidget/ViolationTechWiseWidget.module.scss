@@ -1,0 +1,83 @@
+@import '../../theme/theme.scss';
+
+.ViolationTechWise {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.violations {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  text-align: center;
+  margin: 20px 0;
+
+  .violationsInfo {
+    @include flexbox();
+    @include align-items(center);
+
+    &.amber {
+      .number {
+        color: $themeAmberMain;
+      }
+    }
+    &.red {
+      .number {
+        color: $themeRedMain;
+      }
+    }
+    &.green {
+      .number {
+        color: $themeGreenMain;
+      }
+    }
+    .number {
+      width: 70px;
+      height: 70px;
+      @include border-radius(50%);
+      text-align: center;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      border: 1px solid $themeBlueMain;
+      color: $themeBlueMain;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 0 10px;
+    }
+    .label {
+      font-size: 18px;
+      font-weight: 400;
+      color: $themeBlueMain;
+    }
+  }
+}
+.sliderDiv {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.techIcon {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 10px auto;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
+}
+
+.techName {
+  font-size: 14px;
+  color: $themeBlueMain;
+}
+
+.techNumber {
+  font-size: 20px;
+  color: $themeAmberMain;
+}

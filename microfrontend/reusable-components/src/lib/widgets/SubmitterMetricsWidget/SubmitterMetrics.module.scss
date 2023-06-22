@@ -1,0 +1,85 @@
+@import "../../theme/theme.scss";
+
+.submitterMetrics {
+  width: 100%;
+}
+
+.ttSubmitterMetrics {
+  width: 200px;
+  font-size: 12px;
+
+  .prNumbers {
+    width: 100%;
+    color: $themeBlueMain;
+    font-weight: 600;
+  }
+  .prStatus {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    border-bottom: 1px solid $graphContainerGrey;
+    padding: 5px 0;
+    margin: 0;
+
+    .row {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(space-between);
+
+      .data {
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(row);
+
+        &.red {
+          color: $themeRedMain;
+        }
+        &.green {
+          color: $themeGreenMain;
+        }
+        &.amber {
+          color: $themeAmberMain;
+        }
+        &.blue {
+          color: $themeBlueMain;
+        }
+      }
+    }
+  }
+
+  .detailsBox {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+
+    .box {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(row);
+      @include align-items(center);
+      margin: 10px 0 0 0;
+
+      .number {
+        width: 26px;
+        height: 26px;
+        @include border-radius(50%);
+        border: 1px solid $themeBlueMain;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        margin: 0 10px 0 0;
+      }
+
+      .comment {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.avgCycleTime {
+  margin-top: 10px;
+  border-top: 1px solid $graphContainerGrey;
+  padding-top : 10px;
+}

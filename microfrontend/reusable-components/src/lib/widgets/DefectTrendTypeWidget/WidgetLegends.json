@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Defects Raised",
+    "label": "Defects Raised",
+    "value": 10001,
+    "stroke": "#952323",
+    "fill": "#952323",
+    "type": "square",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Defects Closed",
+    "label": "Defects Closed",
+    "value": 10001,
+    "stroke": "#10e80a",
+    "fill": "#10e80a",
+    "type": "square",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "width": 200,
+  "height": 250,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": -20,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#01ffff"
+    },
+    "fontSize": 12
+  },
+  "y": {
+    "tick": {
+      "fill": "#01ffff",
+      "fontSize": 10
+    },
+    "tickCount": 10,
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "dy": 0,
+    "angle": -90,
+    "fontSize": 12,
+    "fill": "#01ffff",
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": false,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false
+  },
+  "bar": [
+    {
+      "key": "Added Lines Of Code",
+      "type": "linear",
+      "yAxisId": "left",
+      "barSize": 7,
+      "stroke": "#a399ff"
+    },
+    {
+      "key": "Removed Lines Of Code",
+      "type": "linear",
+      "yAxisId": "left",
+      "barSize": 7,
+      "stroke": "#f16293"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Story Backlog",
+    "label": "Story Backlog",
+    "value": 10001,
+    "stroke": "#34cb2e",
+    "fill": "#34cb2e",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Story Completed",
+    "label": "Story Completed",
+    "value": 10002,
+    "stroke": "#3d8d3d",
+    "fill": "#3d8d3d",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Story To Do",
+    "label": "Story To Do",
+    "value": 10003,
+    "stroke": "#ded739",
+    "fill": "#ded739",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  }
+]

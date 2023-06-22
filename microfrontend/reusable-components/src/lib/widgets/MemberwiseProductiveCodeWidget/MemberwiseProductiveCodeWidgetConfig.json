@@ -1,0 +1,66 @@
+{
+  "height": 300,
+  "barChart": {
+    "width": 500,
+    "height": 300,
+    "margin": {
+      "top": 5,
+      "right": 30,
+      "left": 20,
+      "bottom": 0
+    },
+    "stackOffset": "sign"
+  },
+  "x": {
+    "stroke": "#01ffff",
+    "dataKey": "name",
+    "height": 120,
+    "interval": 0,
+    "angle": -90,
+    "textAnchor": "end"
+  },
+  "y": {
+    "stroke": "#01ffff",
+    "domain": ["dateMin - 50", "dateMax + 50"]
+  },
+  "cartesianGrid": {
+    "horizontal": false,
+    "vertical": false
+  },
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "bar": [
+    {
+      "key": "Legacy Refactor",
+      "barSize": 14,
+      "stroke": "#979797",
+      "stackId": "a"
+    },
+    {
+      "key": "Code Churn",
+      "barSize": 14,
+      "stroke": "#24ff00",
+      "stackId": "a"
+    },
+    {
+      "key": "Removed Lines Of Code",
+      "stackId": "a",
+      "barSize": 14,
+      "stroke": "#ffc145"
+    },
+    {
+      "key": "Added Lines Of Code",
+      "stackId": "a",
+      "barSize": 14,
+      "stroke": "#1a91eb"
+    }
+  ],
+  "referenceLine": [
+    {
+      "y": 0,
+      "stroke": "#10e80a",
+      "strokeDasharray": "8, 5"
+    }
+  ]
+}
