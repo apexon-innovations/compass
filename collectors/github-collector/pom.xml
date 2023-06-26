@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>github-collector</artifactId>
+    <name>github</name>
+    <description>Github Collector Microservice collecting stats from Github</description>
+    <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <parent>
+        <artifactId>collectors</artifactId>
+        <groupId>com.apexon.compass.dashboard</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <properties>
+        <apache.rat.plugin.version>0.13</apache.rat.plugin.version>
+        <bc.version>3.0.1</bc.version>
+        <commons.io.version>2.4</commons.io.version>
+        <coveralls.maven.plugin.version>4.3.0</coveralls.maven.plugin.version>
+        <jacoco.maven.plugin.version>0.8.9</jacoco.maven.plugin.version>
+        <jacoco.coverage.percentage.minimum>0.000</jacoco.coverage.percentage.minimum><!-- will fix in future-->
+        <jacoco.classes.missed.minimum>25</jacoco.classes.missed.minimum>
+        <japicmp.breakBuildOnBinaryIncompatibleModifications>true</japicmp.breakBuildOnBinaryIncompatibleModifications>
+        <japicmp.breakBuildOnSourceIncompatibleModifications>true</japicmp.breakBuildOnSourceIncompatibleModifications>
+        <japicmp.skip>false</japicmp.skip>
+        <java.compilation.source>1.8</java.compilation.source>
+        <java.compilation.target>1.8</java.compilation.target>
+        <maven.changes.plugin.version>2.12.1</maven.changes.plugin.version>
+        <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
+        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.javadoc.plugin.version>3.1.0</maven.javadoc.plugin.version>
+        <maven.pmd.plugin.version>3.11.0</maven.pmd.plugin.version>
+        <maven.project-info.version>3.0.0</maven.project-info.version>
+        <maven.scm.publish.plugin.version>3.0.0</maven.scm.publish.plugin.version>
+        <maven.site.plugin.version>3.7.1</maven.site.plugin.version>
+        <mockito.all.version>1.10.19</mockito.all.version>
+        <spotbugs.plugin.version>3.1.11</spotbugs.plugin.version>
+        <svnkit.version>1.8.7</svnkit.version>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>Jay Momaya</name>
+            <email>jaymomaya95@gmail.com</email>
+        </developer>
+        <developer>
+            <name>Tanmay Baxi</name>
+            <email>tanmay.baxi@gmail.com</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.apexon.compass.dashboard</groupId>
+            <artifactId>core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.apexon.compass</groupId>
+            <artifactId>entities</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.apexon.compass</groupId>
+            <artifactId>file-upload</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>${mockito.all.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>commons</module>
-        <module>commons</module>
         <module>api-gateway</module>
         <module>psr-service</module>
         <module>client-service</module>

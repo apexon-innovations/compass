@@ -126,20 +126,17 @@ public class UnitTestHelper {
                 .language("Java")
                 .url("http://10.12.41.28:9000/dashboard/index/com.qmetry:intermiles")
                 .build()))
-            .accountManager(Arrays
-                .asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
+            .accountManager(
+                    Arrays.asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
             .billingType("T&M")
             .category("All")
             .clientName("Jet Privilege Pvt Ltd")
-            .clientProjectManager(Arrays
-                .asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
-            .deliveryManager(Arrays
-                .asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
-            .projectManager(Arrays.asList(ProjectManager.builder()
-                .email("demo@apexon.com")
-                .bandwidth(0)
-                .name("demo.apexon")
-                .build()))
+            .clientProjectManager(
+                    Arrays.asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
+            .deliveryManager(
+                    Arrays.asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
+            .projectManager(Arrays
+                .asList(ProjectManager.builder().email("demo@apexon.com").bandwidth(0).name("demo.apexon").build()))
             .endDate(1640943925)
             .startDate(1564652725)
             .industrySpecificExposure("Financial services")

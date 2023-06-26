@@ -1,0 +1,24 @@
+package com.apexon.compass.dashboard.repository;
+
+import com.apexon.compass.dashboard.model.score.ScoreMetric;
+import com.apexon.compass.dashboard.model.score.ScoreValueType;
+import com.apexon.compass.dashboard.model.score.settings.ScoreCriteriaSettings;
+import org.bson.types.ObjectId;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+import org.springframework.data.repository.CrudRepository;
+
+/**
+ * Repository for {@link ScoreCriteriaSettings} data.
+ */
+public interface ScoreCriteriaSettingsRepository
+		extends CrudRepository<ScoreCriteriaSettings, ObjectId>, QuerydslPredicateExecutor<ScoreMetric> {
+
+	/**
+	 * Finds {@link ScoreCriteriaSettings}s for a given type
+	 * {@link com.apexon.compass.dashboard.model.score.ScoreValueType}.
+	 * @param type Score Value Type
+	 * @return a {@link ScoreCriteriaSettings}
+	 */
+	ScoreCriteriaSettings findByType(ScoreValueType type);
+
+}
