@@ -1,0 +1,29 @@
+server:
+  port: 9093
+
+logging:
+  level:
+    ROOT: INFO
+    com.infostretch: INFO
+
+ribbon:
+  eureka:
+    enabled: false
+
+spring:
+  data:
+    mongodb:
+      uri: ${COMPASS_MONGO_URI}
+datasource:
+  driverClassName: mongodb.jdbc.MongoDriver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+jwt:
+  key: ${COMPASS_JWT_KEY}

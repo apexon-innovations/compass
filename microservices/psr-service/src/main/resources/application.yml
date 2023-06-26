@@ -1,0 +1,36 @@
+server:
+  port: 9091
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090 # TODO @Akbar Replace this with service-discovery url of user-service
+
+  data:
+    mongodb:
+      uri: ${COMPASS_MONGO_URI}
+jwt:
+  key: ${COMPASS_JWT_KEY}
+logging:
+  level:
+    ROOT: INFO
+    com:
+      infostretch: INFO
+    io:
+      github:
+        jhipster: INFO
+    org:
+      apache:
+        http: INFO
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+ribbon:
+  eureka:
+    enabled: false

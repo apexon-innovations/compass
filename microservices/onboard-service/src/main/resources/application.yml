@@ -1,0 +1,20 @@
+server:
+  port: 9096
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/des_db
+
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+encryption:
+  salt: eJyivdubjKDIYCXkLIZUYthPTIqZDqrq
+  random: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
