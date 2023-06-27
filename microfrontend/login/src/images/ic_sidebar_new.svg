@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C7C7C7;}
+</style>
+<title>Plus Icon</title>
+<desc>Created with Sketch.</desc>
+<g id="Persona-1--Operational-I">
+	<g id="Operational-1---Dashboard" transform="translate(-27.000000, -504.000000)">
+		<g id="Side-Navi" transform="translate(0.000000, 80.000000)">
+			<g id="Group-5" transform="translate(11.000000, 21.000000)">
+				<g id="Add-Project" transform="translate(0.000000, 387.000000)">
+					<g id="Plus-Icon">
+						<path class="st0" d="M24,32c-0.9,0-1.6-0.7-1.6-1.6v-4.8h-4.8c-0.9,0-1.6-0.7-1.6-1.6s0.7-1.6,1.6-1.6h4.8v-4.8
+							c0-0.8,0.6-1.5,1.5-1.6l0.2,0l0,0c0.9,0,1.6,0.7,1.6,1.6v4.8h4.8c0.8,0,1.5,0.6,1.6,1.5l0,0.2c0,0.9-0.7,1.6-1.6,1.6h-4.8v4.8
+							c0,0.8-0.6,1.5-1.5,1.6L24,32z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

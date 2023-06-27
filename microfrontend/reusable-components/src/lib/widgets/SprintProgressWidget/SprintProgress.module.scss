@@ -1,0 +1,91 @@
+@import '../../theme/theme.scss';
+
+.sprintProgress {
+  width: 100%;
+  min-height: 80px;
+  position: relative;
+  @include border-radius(9px);
+
+  :global(.progress) {
+    background: transparent;
+    border: 3px solid rgba(20, 57, 146, 0.7);
+    @include border-radius(9px);
+    padding: 3px;
+    height: 20px;
+    :global(.progress-bar) {
+      @include border-radius(5px);
+      background: linear-gradient(90deg, rgba(44, 112, 246, 0.9) 0%, rgba(91, 185, 249, 0.9) 100%);
+      @include transition(width, 0.4s, ease);
+    }
+  }
+}
+
+.sprintProgressBar {
+  width: calc(100% - 12px);
+  height: 20px;
+  @include position(absolute, 0, unset, unset, 6px);
+  @include flexbox();
+  @include flex-direction(row);
+
+  .division {
+    margin-top: 6px;
+    height: 8px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    @include transition(all, 0.4s, ease);
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 14px;
+      background: rgba(20, 57, 146, 1);
+      @include position(absolute, 50%, 0, unset, unset);
+      transform: translateY(-50%);
+    }
+    &:hover {
+      background: rgba(0, 210, 255, 0.8);
+    }
+    &:first-child {
+      @include border-radius(9px);
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child {
+      @include border-radius(9px);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &::after {
+        width: 0;
+        height: 0;
+        background: transparent;
+      }
+    }
+  }
+}
+.progressLegends {
+  width: 100%;
+  margin: 5px 0 0 0;
+  @include flexbox();
+  @include justify-content(space-between);
+  @include flex-direction(row);
+  color: $themeBlueMain;
+
+  .startPoint,
+  .endPoint {
+    font-size: 18px;
+  }
+  .middlePoint {
+    font-size: 16px;
+    @include flexbox();
+    @include flex-direction(row);
+    .daysLeft {
+      margin: 0 5px 0 0;
+      color: $themeBlueMain;
+    }
+    .hoursLeft {
+      color: $themeAmberMain;
+    }
+  }
+}

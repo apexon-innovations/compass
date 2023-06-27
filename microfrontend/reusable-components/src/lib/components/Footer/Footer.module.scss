@@ -1,0 +1,32 @@
+@import '../../theme/theme.scss';
+
+.footer {
+  width: 100%;
+  @include position(fixed, unset, unset, 0, 0);
+  font-size: 11px;
+  padding: 10px 0 5px 0;
+  z-index: 110;
+
+  .leftSide {
+    @include flexbox();
+    @include justify-content(flex-start);
+  }
+  .rightSide {
+    @include flexbox();
+    @include justify-content(flex-end);
+  }
+  .poweredBy {
+    @include flexbox();
+    @include align-items(center);
+
+    .text {
+      margin: 0 3px 0 0;
+    }
+
+    .img {
+      img {
+        height: 15px;
+      }
+    }
+  }
+}

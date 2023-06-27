@@ -1,0 +1,110 @@
+{
+  "height": 350,
+  "areaChart": {
+    "width": 730,
+    "height": 350,
+    "margin": {
+      "top": 30,
+      "right": 20,
+      "left": 5,
+      "bottom": 0
+    },
+    "padding": {
+      "bottom": 20
+    }
+  },
+  "x": {
+    "stroke": "#01ffff",
+    "dataKey": "name",
+    "height": 100,
+    "angle": false,
+    "interval": 0,
+    "allowDataOverflow": true,
+    "tick": {
+      "fill": "#01ffff",
+      "angle": -90,
+      "textAnchor": "end",
+      "verticalAnchor": "middle",
+      "width": 50
+    }
+  },
+  "y": {
+    "stroke": "#01ffff",
+    "height": 55,
+    "dy": 180,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff",
+    "interval": 0,
+    "allowDataOverflow": true,
+    "label": "Defect Ratio",
+    "tick": {
+      "tickUnit": "%",
+      "fill": "#01ffff",
+      "angle": 0,
+      "textAnchor": "end",
+      "verticalAnchor": "middle",
+      "width": 50
+    }
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false,
+    "id": "storyPointDefectRatio"
+  },
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "referenceLine": [
+    {
+      "y": 35,
+      "stroke": "#73ff9e",
+      "label": {
+        "value": "35",
+        "fontSize": "0",
+        "position": "left",
+        "offset": 0,
+        "fill": "#73ff9e"
+      },
+      "strokeDasharray": "8, 5"
+    }
+  ],
+  "linearGradient": {
+    "id": "storyPointDefectRatio",
+    "x1": 0,
+    "y1": 0,
+    "x2": 0,
+    "y2": 0,
+    "stop": [
+      {
+        "offset": "5%",
+        "stopColor": 0.8,
+        "stopOpacity": "#01ffff"
+      },
+      {
+        "offset": "95%",
+        "stopColor": 0,
+        "stopOpacity": "#01ffff"
+      }
+    ]
+  },
+  "area": [
+    {
+      "key": "Defect Ratio",
+      "type": "monotone",
+      "dot": {
+        "stroke": "#e1cc50",
+        "strokeWidth": 8,
+        "r": 4
+      },
+      "stroke": "#e1cc50",
+      "strokeWidth": "1",
+      "fillOpacity": 0.5,
+      "fill": true,
+      "id": "storyPointDefectRatio"
+    }
+  ]
+}

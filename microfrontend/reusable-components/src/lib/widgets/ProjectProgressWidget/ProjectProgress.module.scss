@@ -1,0 +1,265 @@
+@import '../../theme/theme.scss';
+
+.projectProgressMainBox {
+  width: 100%;
+  min-height: 100px;
+  @include flexbox();
+  @include flex-direction(column);
+  text-align: center;
+  position: relative;
+  margin: 10px 0 0 0;
+}
+
+.projectProgress {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(row);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  &.innerPageDropdown {
+    @include flex-direction(column);
+    .roundDropDown {
+      @include justify-content(center);
+    }
+  }
+  .customDropDownSpace {
+    margin: 0 auto;
+    max-width: 100%;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(flex-end);
+
+    :global(.transparentDropdownBox) {
+      width: 100%;
+    }
+
+    :global(.transparentMultiSelect) {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 100%;
+    }
+  }
+  .wrapBox {
+    width: 100%;
+    max-width: 100%;
+    min-width: 200px;
+    margin: 0 auto 30px auto;
+    cursor: pointer;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
+
+    &.red {
+      .icon {
+        background: $themeRedMain;
+        h6 {
+          color: $whiteColor;
+        }
+      }
+      .ring {
+        border-color: $themeRedMain;
+      }
+      .name {
+        color: $themeRedMain;
+      }
+    }
+    &.green {
+      .icon {
+        background: $themeGreenMain;
+        h6 {
+          color: $whiteColor;
+        }
+      }
+      .ring {
+        border-color: $themeGreenMain;
+      }
+      .name {
+        color: $themeGreenMain;
+      }
+    }
+    &.amber {
+      .icon {
+        background: $themeAmberMain;
+        h6 {
+          color: $whiteColor;
+        }
+      }
+      .ring {
+        border-color: $themeAmberMain;
+      }
+      .name {
+        color: $themeAmberMain;
+      }
+    }
+  }
+  .projectIcon {
+    position: relative;
+    .icon {
+      &.whiteBg {
+        background: $whiteColor !important;
+      }
+      width: 100px;
+      height: 100px;
+      @include border-radius(50%);
+      background: $whiteColor;
+      @include box-shadow(0, 0, 130px, 100px, rgba(0, 210, 255, 0.2), false);
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      position: relative;
+      z-index: 10;
+      h6 {
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none !important;
+        letter-spacing: -1px;
+        margin: 0;
+        color: $grey33;
+      }
+      img {
+        max-height: 70px;
+        max-width: 70px;
+      }
+    }
+    .ring {
+      width: 115px;
+      height: 115px;
+      @include position(absolute, 50%, unset, unset, 50%);
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      @include border-radius(50%);
+      border: 3px solid;
+    }
+  }
+  .name {
+    max-width: calc(100% - 100px);
+    color: $themeAmberShade01;
+    text-align: left;
+    font-size: 20px;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    position: relative;
+    z-index: 110;
+    padding: 0 20px;
+
+    .cmpName {
+      width: 100%;
+      @include truncate(100%);
+      color: $themeBlueMain;
+      margin: 0 0 5px 0;
+    }
+    .projName {
+      width: 100%;
+      color: $themeAmberMain;
+      margin: 0 0 5px 0;
+      span {
+        color: $themeBlueMain;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.progressBox {
+  width: 100%;
+  .sprintNumber {
+    display: none;
+    font-size: 24px;
+    margin: 5px 0 10px 0;
+    text-align: center;
+    color: $themeBlueMain;
+  }
+  :global(.progress) {
+    background: transparent;
+    border: 3px solid rgba(20, 57, 146, 0.7);
+    @include border-radius(9px);
+    padding: 3px;
+    height: 20px;
+    :global(.progress-bar) {
+      @include border-radius(5px);
+      background: linear-gradient(90deg, rgba(44, 112, 246, 0.9) 0%, rgba(91, 185, 249, 0.9) 100%);
+      @include transition(width, 0.4s, ease);
+    }
+  }
+  .progressLegends {
+    width: 100%;
+    margin: 5px 0 0 0;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include flex-direction(row);
+    color: $themeBlueMain;
+    .startPoint,
+    .endPoint {
+      font-size: 18px;
+    }
+    .middlePoint {
+      font-size: 16px;
+      @include flexbox();
+      @include flex-direction(row);
+      .daysLeft {
+        margin: 0 5px 0 0;
+        color: $themeBlueMain;
+      }
+      .hoursLeft {
+        color: $themeAmberMain;
+      }
+    }
+  }
+}
+
+.roundDropDown {
+  width: 100%;
+  position: relative;
+  margin: 20px 0 30px 0;
+  @include flexbox();
+  @include justify-content(flex-end);
+
+  :global(.transparentDropdownBox) {
+    position: relative;
+    right: auto;
+    top: 0;
+    @include flexbox;
+    @include justify-content(center);
+    :global(.dropdown) {
+      width: auto;
+      min-width: 160px;
+      max-width: 100%;
+      margin: 0;
+      border: 1px solid $themeBlueShade01;
+      @include border-radius(30px);
+
+      :global(.dropdown-menu) {
+        max-width: 100% !important;
+        width: 100%;
+        right: auto;
+        left: auto !important;
+        :global(.dropdown-item) {
+          @include truncate(100%);
+          text-align: left;
+        }
+      }
+
+      :global(.btn) {
+        width: 100%;
+        color: $themeBlueGeneric;
+        padding: 5px 35px 5px 15px;
+        font-size: 16px;
+        @include truncate(100%);
+
+        &:after {
+          right: 15px;
+          background: url('../../images/ic_down_arrow_blue.svg') no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.marginLeft10 {
+  margin-left: 10px;
+}

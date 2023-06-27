@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Story Backlog",
+    "label": "Story Backlog",
+    "value": 10001,
+    "stroke": "#34cb2e",
+    "fill": "#34cb2e",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Story Completed",
+    "label": "Story Completed",
+    "value": 10002,
+    "stroke": "#3d8d3d",
+    "fill": "#3d8d3d",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Story To Do",
+    "label": "Story To Do",
+    "value": 10003,
+    "stroke": "#ded739",
+    "fill": "#ded739",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Defects Backlog",
+    "label": "Defects Backlog",
+    "value": 10004,
+    "stroke": "#de5e3f",
+    "fill": "#de5e3f",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Defects Resolved",
+    "label": "Defects Resolved",
+    "value": 10005,
+    "stroke": "#ffb200",
+    "fill": "#ffb200",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Defects Pending",
+    "label": "Defects Pending",
+    "value": 10006,
+    "stroke": "#e00e2c",
+    "fill": "#e00e2c",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  }
+]

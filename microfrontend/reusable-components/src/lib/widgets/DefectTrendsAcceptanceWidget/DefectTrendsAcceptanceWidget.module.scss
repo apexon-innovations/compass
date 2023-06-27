@@ -1,0 +1,149 @@
+@import '../../theme/theme.scss';
+
+.viewBox {
+  width: 100%;
+  min-height: 180px;
+  position: relative;
+  margin: 0 0 40px 0;
+  padding: 0 15px;
+}
+
+.defectAcceptance {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  @include border-radius(4px);
+  border: 1px solid $themeBlueShade01;
+  padding: 10px;
+  margin: 0 0 30px 0;
+  background: $acceptanceBoxBg;
+
+  &.green {
+    border-color: $themeGreenMain;
+
+    .percentage {
+      border-color: $themeGreenMain !important;
+      color: $themeGreenMain;
+      background: $themeGreenRow;
+    }
+  }
+  &.amber {
+    border-color: $themeAmberMain;
+
+    .percentage {
+      border-color: $themeAmberMain !important;
+      color: $themeAmberMain;
+      background: $themeAmberRow;
+    }
+  }
+  &.red {
+    border-color: $themeRedMain;
+
+    .percentage {
+      border-color: $themeRedMain !important;
+      color: $themeRedMain;
+      background: $themeRedRow;
+    }
+  }
+
+  .titleArea {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+
+    .title {
+      width: 100%;
+      padding: 0 5px 0 0;
+      color: $whiteColor;
+    }
+    .percentage {
+      border: 1px dashed $themeBlueShade01;
+      padding: 3px 7px;
+      @include border-radius(4px);
+    }
+  }
+  .statistics {
+    width: 100%;
+    @include flexbox();
+    @include justify-content(space-between);
+    margin: 5px 0;
+
+    .box {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+      text-align: left;
+
+      .value {
+        @include truncate(100%);
+        font-size: 15px;
+        color: $whiteColor;
+      }
+      .label {
+        @include truncate(100%);
+        font-size: 12px;
+        color: $whiteColor;
+      }
+    }
+  }
+  .graph {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+}
+
+/* Custom Tooltip SCSS */
+.ttTechnicalDebtOverview {
+  .tooltipHead {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: $graphElements;
+    border-bottom: 1px solid $technicalDebtBorder;
+
+    .green {
+      color: $themeGreenMain;
+    }
+    .amber {
+      color: $themeAmberMain;
+    }
+    .red {
+      color: $themeRedMain;
+    }
+
+    li {
+      margin-bottom: 2px;
+      span {
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .tooltipBody {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: normal;
+
+    li {
+      margin-top: 3px;
+
+      span {
+        margin-left: 3px;
+        font-weight: 600;
+        color: inherit;
+      }
+
+      &.closed {
+        color: $defectRed;
+      }
+      &.raised {
+        color: $DefectSummaryClosed;
+      }
+    }
+  }
+}

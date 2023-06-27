@@ -1,0 +1,33 @@
+@import '../../theme/theme.scss';
+
+.memberMoodGraph {
+  .headding_row {
+    @include flexbox();
+    @include justify-content(space-evenly);
+    @include align-items(center);
+    margin-bottom: 15px;
+  }
+}
+.maincontainer {
+  padding: 20px 65px;
+}
+.graph_title {
+  font-size: 26px;
+  color: $whiteColor;
+  font-weight: 400;
+  flex: 3;
+  text-align: center;
+}
+.graph_rating {
+  font-size: 40px;
+  color: $themeAmberMain;
+  font-weight: 400;
+  flex: 1;
+}
+.smiley {
+  width: 54px;
+  margin-right: 20px;
+}
+.posRel {
+  position: relative;
+}

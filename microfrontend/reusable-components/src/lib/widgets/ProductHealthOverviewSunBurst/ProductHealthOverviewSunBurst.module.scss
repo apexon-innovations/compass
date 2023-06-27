@@ -1,0 +1,107 @@
+@import '../../theme/theme.scss';
+
+.sunBurstWrapper {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+}
+
+.chartBoxed {
+  position: relative;
+
+  svg {
+    padding: 25px 25px 0 25px;
+  }
+
+  :global(.text-contour) {
+    opacity: 0;
+  }
+  :global(.text-stroke) {
+    text-shadow: 0 0 1px $graphBg;
+  }
+}
+
+.sunBurstLegendsWrapper {
+  width: 100%;
+  @include flexbox();
+  @include justify-content(space-between);
+  padding: 0 30px;
+
+  .legendSunBurst {
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      @include align-items(center);
+      list-style: none;
+
+      &.storyBacklog {
+        .shape {
+          background: $SBSBacklog;
+        }
+        .name {
+          color: $SBSBacklog;
+        }
+      }
+      &.storyCompleted {
+        .shape {
+          background: $SBSCompleted;
+        }
+        .name {
+          color: $SBSCompleted;
+        }
+      }
+      &.storyToDo {
+        .shape {
+          background: $SBSToDo;
+        }
+        .name {
+          color: $SBSToDo;
+        }
+      }
+      &.defectBacklog {
+        .shape {
+          background: $SBDBacklog;
+        }
+        .name {
+          color: $SBDBacklog;
+        }
+      }
+      &.defectCompleted {
+        .shape {
+          background: $SBDCompleted;
+        }
+        .name {
+          color: $SBDCompleted;
+        }
+      }
+      &.defectToDo {
+        .shape {
+          background: $SBDToDo;
+        }
+        .name {
+          color: $SBDToDo;
+        }
+      }
+
+      .shape {
+        width: 8px;
+        height: 8px;
+        background: $themeBlueMain;
+        margin: 0 5px 0 0;
+
+        &.circle {
+          @include border-radius(50%);
+        }
+      }
+      .name {
+        width: 100%;
+      }
+    }
+  }
+}

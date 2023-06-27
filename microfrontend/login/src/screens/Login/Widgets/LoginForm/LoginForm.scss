@@ -1,0 +1,208 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.central_form {
+  width: 100%;
+  max-width: 710px;
+  @include position(absolute, 47%, unset, unset, 50%);
+  -webkit-transform: translate(-50%, -20%);
+  transform: translate(-50%, -20%);
+  @include transition(all, 0.8s, ease-out);
+  padding: 0 15px;
+
+  .oAuth {
+    width: 50%;
+    box-shadow: 0 0 0px 100px $navyBlue inset !important;
+    border: 1px solid white;
+    height: 59px;
+    font-size: 25px;
+    @include position(absolute, 47%, unset, unset, 26%);
+  }
+
+  &.active {
+    top: 50%;
+  }
+  .op0 {
+    opacity: 0;
+  }
+  .op1 {
+    opacity: 1 !important;
+  }
+  input {
+    background: transparent;
+    border: none;
+    display: block;
+    outline: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: $whiteColor;
+    height: 50px;
+    border-bottom: 2px solid $whiteColor;
+    font-size: 36px;
+    line-height: 100%;
+    filter: none;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      outline: none;
+      color: $whiteColor;
+      border-bottom: 2px solid $whiteColor;
+      @include box-shadow(0, 0, 0);
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-text-fill-color: $whiteColor !important;
+      caret-color: $whiteColor !important;
+      -webkit-box-shadow: 0 0 0px 100px $navyBlue inset !important;
+    }
+    &:-webkit-autofill::first-line {
+      font-size: 36px !important;
+    }
+  }
+
+  #userNameControl {
+    border-top: 1px solid $navyBlue;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $whiteColor;
+    font-size: 36px;
+  }
+
+  :-moz-placeholder {
+    color: $whiteColor;
+    font-size: 36px;
+  }
+
+  ::-moz-placeholder {
+    color: $whiteColor;
+    font-size: 36px;
+  }
+
+  :-ms-input-placeholder {
+    color: $whiteColor;
+    font-size: 36px;
+  }
+
+  .form_label {
+    color: $whiteColor;
+    font-size: 20px;
+    text-align: center;
+    @include transition(all, 0.8s, ease-out);
+  }
+
+  .pressEnter {
+    color: $whiteColor;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: right;
+    position: relative;
+    @include flexbox();
+
+    .lnk {
+      cursor: pointer;
+      color: $whiteColor;
+      text-decoration: none;
+      background-color: transparent;
+      > span {
+        position: relative;
+        &:before {
+          content: '';
+          @include position(absolute, unset, unset, 0, 0);
+          width: 100%;
+          height: 1px;
+          background-color: $whiteColor;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.3s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+          transition: all 0.3s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+        }
+        &:hover:before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        }
+      }
+      svg {
+        width: 100%;
+        max-width: 24px;
+        max-height: 15px;
+      }
+    }
+  }
+
+  input.userTextBox {
+    border-bottom: 0;
+    font-size: 30px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .bottom_out {
+    -webkit-transform: translateY(100rem);
+    transform: translateY(100rem);
+  }
+
+  .sub_console img {
+    margin-left: 10px;
+  }
+}
+
+.controls {
+  width: auto;
+  @include position(fixed, unset, 15px, 15px, unset);
+
+  .btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $whiteColor;
+    @include border-radius(5px);
+    padding: 0;
+    margin: 0 0 0 10px;
+    @include transition(all, 0.4s, ease-out);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      max-width: 17px;
+      max-height: 17px;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+    &:hover,
+    &.active {
+      background: $whiteColor;
+
+      svg {
+        polygon {
+          fill: $primaryText;
+        }
+      }
+    }
+  }
+}
+
+.loaderOverlay {
+  width: 100%;
+  height: 100%;
+  @include position(absolute, 0, unset, unset, 0);
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  .loader {
+    max-width: 80px;
+    @include position(absolute, 80%, unset, unset, 50%);
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.completionDrillDownInner {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  padding: 20px 0 0 0;
+}
+
+:global(.graphNavBox) {
+  &.completionDrillDownNavTitle {
+    :global(.caption) {
+      padding: 0;
+    }
+  }
+}
+
+:global(.controlSpace) {
+  &.completionTrendsdropdown {
+    :global(.transparentDropdownBox) {
+      z-index: 2085;
+    }
+  }
+}
+
+:global(.transparentMultiSelect) {
+  &.completionDrillDownmultiselect {
+    top: 12px;
+    max-width: 200px;
+  }
+}

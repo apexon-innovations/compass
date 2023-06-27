@@ -1,0 +1,35 @@
+@import '../../theme/theme.scss';
+
+.velocityTrend {
+  width: 100%;
+  min-height: 350px;
+
+  .velocityTrendInner {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    padding: 20px 0 0 0;
+  }
+
+  .controlRow {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+
+    :global(.transparentMultiSelect) {
+      position: relative;
+      top: 0;
+      right: 10px;
+    }
+  }
+}
+
+.popButton {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+}

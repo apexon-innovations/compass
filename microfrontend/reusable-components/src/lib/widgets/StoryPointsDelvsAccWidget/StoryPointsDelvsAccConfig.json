@@ -1,0 +1,109 @@
+{
+  "height": 300,
+  "areaChart": {
+    "width": 730,
+    "height": 300,
+    "margin": {
+      "top": 30,
+      "right": 10,
+      "left": 0,
+      "bottom": 0
+    },
+    "padding": {
+      "bottom": 20
+    }
+  },
+  "x": {
+    "stroke": "#01ffff",
+    "dataKey": "name",
+    "height": 100,
+    "angle": false,
+    "interval": 0,
+    "allowDataOverflow": true,
+    "tick": {
+      "fill": "#01ffff",
+      "angle": -90,
+      "textAnchor": "end",
+      "verticalAnchor": "middle",
+      "width": 90
+    }
+  },
+  "y": {
+    "stroke": "#01ffff",
+    "height": 65,
+    "dy": 160,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff",
+    "interval": 0,
+    "allowDataOverflow": true,
+    "label": "Story Point",
+    "tick": {
+      "fill": "#01ffff",
+      "angle": 0,
+      "textAnchor": "end",
+      "verticalAnchor": "middle",
+      "width": 50
+    }
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false,
+    "id": "storyPointDelVsAcc"
+  },
+  "linearGradient": {
+    "id": "storyPointDelVsAcc",
+    "x1": "0",
+    "y1": "0",
+    "x2": "0",
+    "y2": "1",
+    "stop": [
+      {
+        "offset": "5%",
+        "stopColor": "#01ffff",
+        "stopOpacity": 0.8
+      },
+      {
+        "offset": "95%",
+        "stopColor": "#01ffff",
+        "stopOpacity": 0
+      }
+    ]
+  },
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "area": [
+    {
+      "key": "Delivered",
+      "type": "monotone",
+      "dot": {
+        "stroke": "#0c7fff",
+        "strokeWidth": 2,
+        "r": 2
+      },
+      "stroke": "#00d2ff",
+      "strokeWidth": "2",
+      "fillOpacity": 0.5,
+      "fill": "#0c7fff",
+      "id": "storyPointDelVsAcc"
+    },
+    {
+      "key": "Accepted",
+      "type": "linear",
+      "dot": {
+        "stroke": "#6cff96",
+        "strokeWidth": 2,
+        "r": 2
+      },
+      "stroke": "#00d2ff",
+      "strokeWidth": "2",
+      "fillOpacity": 0.5,
+      "fill": "#6cff96",
+      "id": "storyPointDelVsAcc"
+    }
+  ]
+}

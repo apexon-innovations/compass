@@ -1,0 +1,23 @@
+@import '../../theme/theme.scss';
+
+.totalStoryPoint {
+  margin-left: auto;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+
+  .label {
+    margin: 0 10px 0 0;
+  }
+  .number {
+    span {
+      width: 36px;
+      height: 36px;
+      border: 1px dashed $themeBlueMain;
+      @include border-radius(50%);
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../../theme/theme.scss';
+
+.membersSlider {
+  width: 100%;
+  position: relative;
+
+  :global(.slick-track) {
+    height: auto !important;
+  }
+
+  :global(.slick-slide) {
+    width: auto;
+  }
+  :global(.slick-list) {
+    width: calc(100% - 50px);
+    left: 25px;
+  }
+  :global(.slick-prev),
+  :global(.slick-next) {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      @include position(absolute, 0, unset, unset, 0);
+    }
+  }
+  :global(.slick-prev) {
+    left: 0;
+    &:before {
+      background: url(../../../images/ic_arrow_left.svg) no-repeat 50% 50%;
+    }
+  }
+  :global(.slick-next) {
+    right: 0;
+    &:before {
+      background: url(../../../images/ic_arrow_right.svg) no-repeat 50% 50%;
+    }
+  }
+}
+
+.sliderWrap {
+  max-width: 650px;
+  position: relative;
+  z-index: 10;
+}
+
+.sliderDiv {
+  margin: 0 auto;
+  max-width: 45px;
+}
+
+.member {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  @include border-radius(50%);
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

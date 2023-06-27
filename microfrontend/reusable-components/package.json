@@ -1,0 +1,127 @@
+{
+  "name": "reusable-components",
+  "version": "0.0.1",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "dependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "@khanacademy/react-multi-select": "^0.3.3",
+    "@tiaanduplessis/react-progressbar": "^1.0.0",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.8.26",
+    "jwt-decode": "^2.2.0",
+    "node-sass": "^8.0.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-xmasonry": "^3.0.3",
+    "recharts": "^2.5.0",
+    "slick-carousel": "^1.8.1",
+    "sunburst-chart": "^1.11.2"
+  },
+  "jest": {
+    "transformIgnorePatterns": [],
+    "collectCoverageFrom": [
+      "src/lib/**/**/*.js",
+      "!<rootDir>/node_modules/",
+      "!**/__test__/**",
+      "!**/__tests__/**"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "^.+\\.module\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "^.+\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "^@/components/(.*)$": "<rootDir>/components/$1"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:watch": "nodemon --watch 'src/lib/*' --exec 'npm run build:watch'",
+    "start:watch:win": "nodemon --watch src/lib --exec \"npm run build:watch\"",
+    "build:watch": "npx babel --extensions \".snap,.js\"  src/lib --out-dir dist --copy-files --no-copy-ignored --ignore **/__test__/**",
+    "build:win": "(IF exist rmdir /Q /S dist && mkdir dist ELSE mkdir dist) && npx babel --extensions \".snap,.js\"  src/lib --out-dir dist --copy-files --no-copy-ignored --ignore **/__test__/**",
+    "build": "rm -rf dist && mkdir dist && npx babel --extensions \".snap,.js\"  src/lib --out-dir dist --copy-files  --no-copy-ignored --ignore **/__test__/**",
+    "build:react": "react-scripts build",
+    "test": "react-scripts test",
+    "test-report": "react-scripts test --coverage --watchAll -u",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook",
+    "lint": "eslint --fix",
+    "pretty": "prettier --write {src}/**/*.js"
+  },
+  "nodemonConfig": {
+    "ext": "js css scss html json"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-syntax-export-default-from": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/runtime": "^7.6.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "babel-jest": "^29.5.0",
+    "babel-plugin-lodash": "^3.3.0",
+    "bootstrap": "^5.2.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0",
+    "husky": "3.1.0",
+    "jest": "^29.5.0",
+    "lint-staged": "^10.0.5",
+    "nodemon": "^2.0.3",
+    "prettier": "^1.19.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-notifications": "^1.7.4",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.29.0",
+    "react-svg": "^16.1.7",
+    "react-tooltip": "^5.10.4"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,83 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "defs": {
+    "colorUvFirst": "#ffffff",
+    "colorUvSecond": "#387fe7",
+    "colorPvFirst": "#72ebed",
+    "colorPvSecond": "#72ebed"
+  },
+  "height": 300,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 30,
+    "bottom": 0
+  },
+  "x": {
+    "tick": {
+      "fill": "#01ffff",
+      "width": 80,
+      "verticalAnchor": "end"
+    },
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "allowDataOverflow": true,
+    "dataKey": "Name",
+    "dx": 0,
+    "angle": -90,
+    "height": 100
+  },
+  "y": {
+    "tick": {
+      "fill": "#01ffff"
+    },
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Hours",
+    "dy": 120,
+    "angle": -90,
+    "fontSize": 12,
+    "fill": "#01ffff"
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": true
+  },
+  "scatter": [
+    {
+      "name": "Hours",
+      "dataKey": "green",
+      "color": "#10e80a"
+    },
+    {
+      "name": "Hours",
+      "dataKey": "red",
+      "color": "#e00e2c"
+    },
+    {
+      "name": "Amber",
+      "dataKey": "amber",
+      "color": "#ffbb15"
+    }
+  ],
+  "referenceLine": [
+    {
+      "y": 9.0,
+      "stroke": "#ffc145",
+      "label": {
+        "value": 9.0,
+        "fontSize": "14",
+        "offset": 40,
+        "position": "left",
+        "fill": "#ffc145"
+      },
+      "strokeDasharray": "8, 5"
+    }
+  ]
+}

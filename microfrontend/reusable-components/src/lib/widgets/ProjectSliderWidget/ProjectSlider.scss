@@ -1,0 +1,274 @@
+@import '../../theme/theme.scss';
+
+.projectSlider {
+  width: 100%;
+  @include position(fixed, unset, unset, 0, 0);
+  z-index: 121;
+
+  &.limitProjects {
+    .slick-slide {
+      max-width: 150px !important;
+    }
+    .sliderDiv {
+      max-width: 130px !important;
+      .projectBox {
+        margin: 0 auto 0 30px;
+      }
+    }
+    .slick-center.slick-slide {
+      .leftArrow {
+        left: 0;
+      }
+      .rightArrow {
+        right: -30px;
+      }
+    }
+  }
+
+  &.project1 {
+    .sliderWrap {
+      max-width: 180px;
+    }
+  }
+
+  &.project2 {
+    .sliderWrap {
+      max-width: 320px;
+    }
+  }
+
+  &.project3 {
+    .sliderWrap {
+      max-width: 470px;
+    }
+  }
+
+  &.project4 {
+    .sliderWrap {
+      max-width: 620px;
+    }
+  }
+
+  &.project5 {
+    .sliderWrap {
+      max-width: 765px;
+    }
+    .slick-slide {
+      max-width: 150px !important;
+    }
+  }
+}
+
+.sliderWrap {
+  max-width: 650px;
+  min-height: 125px;
+  margin: 15px auto 0 auto;
+  position: relative;
+  z-index: 10;
+
+  #loaderOverlay {
+    top: -7px;
+  }
+
+  &:before {
+    // content: '';
+    @include position(absolute, -40px, unset, unset, 50%);
+    transform: translateX(-50%);
+    background: radial-gradient(rgba(2, 7, 27, 0.9) 55%, transparent 72%);
+    width: 130%;
+    height: 280px;
+  }
+}
+.slick-slider {
+  z-index: 100;
+}
+.slick-slider .slick-track {
+  height: 120px;
+}
+.slick-slide {
+  text-align: center;
+  @include transition(all, 0.4s, ease);
+  transform: translateX(0) translateY(0) scale(1);
+  cursor: pointer;
+}
+.sliderDiv {
+  color: #fff;
+  margin: 10px 10px 0 10px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+  height: 100px !important;
+  transform: translateX(-10px) translateY(10px) scale(1);
+
+  .leftArrow {
+    opacity: 0;
+    @include position(absolute, 19px, unset, unset, -10px);
+    width: 0;
+  }
+  .rightArrow {
+    opacity: 0.3;
+    @include position(absolute, 19px, -10px, unset, unset);
+    z-index: -1;
+    width: 0;
+  }
+  .projectBox {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+
+    &::after {
+      content: '';
+      z-index: -2;
+      @include position(absolute, -5px, unset, unset, -5px);
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border: 1px dashed;
+      @include border-radius(50%);
+      transform-origin: 50% 50%;
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      color: #000;
+      background: $whiteColor;
+      @include border-radius(50%);
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      overflow: hidden;
+      position: relative;
+      border: 2px solid $whiteColor;
+
+      &.whiteBg {
+        background: $whiteColor !important;
+      }
+
+      h6 {
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none !important;
+        letter-spacing: -1px;
+        margin: 0;
+        color: $whiteColor;
+      }
+
+      img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+    }
+    &.grey {
+      h6 {
+        color: $grey33;
+      }
+    }
+    &.red {
+      &::after,
+      .icon {
+        border-color: $themeRedMain;
+      }
+      .icon {
+        background: $themeRedMain;
+      }
+    }
+    &.amber {
+      &::after,
+      .icon {
+        border-color: $themeAmberMain;
+      }
+      .icon {
+        background: $themeAmberMain;
+      }
+    }
+    &.green {
+      &::after,
+      .icon {
+        border-color: $themeGreenMain;
+      }
+      .icon {
+        background: $themeGreenMain;
+      }
+    }
+    .ring {
+      opacity: 0;
+      @include position(absolute, -10px, unset, unset, -10px);
+      z-index: -1;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+
+      .bottom {
+        @include position(absolute, unset, unset, 0, 0);
+        width: 100%;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.slick-center.slick-slide {
+  * {
+    @include transition(all, 0.4s, ease);
+  }
+
+  .sliderDiv {
+    margin: 0 30px;
+    font-size: 36px;
+    transform: translateX(-30px) translateY(5px) translateZ(0) scale(1.1);
+
+    .leftArrow {
+      opacity: 0.3;
+      width: 45px;
+      left: -25px;
+    }
+    .rightArrow {
+      opacity: 0.3;
+      width: 45px;
+      right: -25px;
+    }
+    .projectBox {
+      width: 85px;
+      height: 85px;
+
+      &:after,
+      .icon {
+        border-color: transparent;
+      }
+
+      .ring {
+        opacity: 1;
+      }
+      .icon {
+        width: 85px;
+        height: 85px;
+        @include border-radius(50%);
+      }
+    }
+  }
+}
+
+.bgRays {
+  background: url('../../images/slider_bg_rays.svg') no-repeat 50% 100%;
+  background-size: contain;
+  @include position(absolute, 0, unset, unset, 0);
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.projectSliderBg {
+  width: 100%;
+  height: 140px;
+  @include position(fixed, unset, unset, 0, 0);
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(2, 7, 27, 0.2) 3%,
+    rgba(2, 7, 27, 0.9) 14%,
+    rgba(2, 7, 27, 0.9) 55%,
+    rgba(2, 7, 27, 0.7) 100%
+  );
+}

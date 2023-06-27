@@ -1,0 +1,106 @@
+@import '../../theme/theme.scss';
+
+.NPSGraph {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+}
+.npsNumber {
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(flex-start);
+  margin: 8px 0 10px 10px;
+  position: relative;
+  flex: 1;
+
+  .number {
+    max-width: 64px;
+    width: 100%;
+    height: 64px;
+    position: relative;
+    @include border-radius(50%);
+    text-align: center;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    border: 2px dashed $themeBlueMain;
+    color: $themeBlueMain;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 10px 0 0;
+  }
+}
+.recharts-cartesian-axis-tick {
+  font-size: 5px !important;
+}
+.number_color {
+  color: $themeBlueMain;
+
+  &.amber {
+    color: $themeAmberMain;
+  }
+  &.green {
+    color: $themeGreenMain;
+  }
+  &.red {
+    color: $themeRedMain;
+  }
+}
+.average_nps {
+  justify-self: right;
+  flex: 1;
+  text-align: right;
+}
+.recharts-legend-wrapper {
+  background-color: $themeBlueMain;
+}
+.custom_legend_circles {
+  list-style-type: none;
+  font-size: 12px;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: $themeBlueMain;
+  }
+  .legentNewCircle {
+    display: inline-block;
+    background-color: transparent;
+    @include border-radius(50%);
+    border: 2px solid $themeBlueMain;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 4px;
+    left: -6px;
+  }
+}
+
+.formButton {
+  width: 100%;
+  @include flexbox();
+
+  a {
+    width: 20px;
+    height: 20px;
+    @include flexbox();
+    margin-left: auto;
+
+    .icon {
+      width: 100%;
+      height: 100%;
+      @include flexbox();
+      z-index: 120;
+
+      img {
+        width: 100%;
+        @include flexbox();
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Blocker",
+    "label": "Blocker",
+    "value": 10001,
+    "stroke": "#952323",
+    "fill": "#952323",
+    "type": "none",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Critical",
+    "label": "Critical",
+    "value": 10001,
+    "stroke": "#5c4893",
+    "fill": "#5c4893",
+    "type": "none",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Major",
+    "label": "Major",
+    "value": 10001,
+    "stroke": "#1d7097",
+    "fill": "#1d7097",
+    "type": "none",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Minor",
+    "label": "Minor",
+    "value": 10001,
+    "stroke": "#399a65",
+    "fill": "#399a65",
+    "type": "none",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Planned",
+    "label": "Planned",
+    "value": 10001,
+    "stroke": "#01ffff",
+    "fill": "#01ffff",
+    "type": "square",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "right"
+  },
+  {
+    "name": "Backlog",
+    "label": "Backlog",
+    "value": 10001,
+    "stroke": "#01ffff",
+    "fill": "#01ffff",
+    "type": "line",
+    "hasBorder": true,
+    "borderType": "dashed",
+    "align": "left"
+  }
+]

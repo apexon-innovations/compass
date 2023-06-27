@@ -1,0 +1,207 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.collapsibleBox {
+  width: 100%;
+  padding: 23px 30px;
+  margin: 0 0 30px 0;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  border: 1px solid $projectBoxBorder;
+  background: $collapsableBg;
+
+  &.collapsed {
+    min-height: 80px;
+
+    .summaryView {
+      max-width: 100%;
+      max-height: 100px;
+      opacity: 1;
+      z-index: 0;
+    }
+
+    .projectBoxes,
+    .projectBoxes .box {
+      padding: 0;
+      opacity: 0;
+      max-height: 1px;
+    }
+  }
+  .projectBoxes .box.hover {
+    cursor: pointer;
+  }
+}
+
+.summaryView {
+  width: 100%;
+  max-width: 0;
+  max-height: 0;
+  opacity: 0;
+  z-index: -11;
+  @include flexbox();
+  @include align-items(center);
+  @include transition(all, 0.4s, ease);
+
+  .arrow {
+    height: 20px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+  }
+
+  .title {
+    color: $whiteColor;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 10px 0 0;
+  }
+
+  .stageWiseNumber {
+    @include flexbox();
+    @include flex-direction(row);
+
+    .box {
+      width: 36px;
+      height: 36px;
+      padding: 5px;
+      background: $themeBlueMain;
+      color: $whiteColor;
+      margin: 0 10px 0 0;
+      text-align: center;
+      font-weight: 700;
+      @include border-radius(2px);
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+
+      &.green {
+        background: $gradGreenDarkUp;
+      }
+      &.amber {
+        background: $gradAmberUp;
+      }
+      &.red {
+        background: $gradRedDarkUp;
+      }
+    }
+  }
+}
+
+.projectBoxes {
+  width: 100%;
+  max-width: 820px;
+  max-height: 2000px;
+  padding: 20px 15px 0 15px;
+  margin: 0 auto;
+  position: relative;
+  @include transition(max-height, 0.4s, ease);
+
+  :global(.row) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  :global(.col) {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .box {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include border-radius(5px);
+    @include transition(all, 0.4s, ease);
+    border: 1px solid $projectBoxBorder;
+    background: linear-gradient(180deg, $excelBlue -40%, darken($excelBlue, 35%));
+    padding: 24px 15px;
+    margin: 0 0 20px 0;
+
+    &.darkGreen {
+      background: linear-gradient(180deg, $gradGreenDarkUp -30%, $gradGreenDarkDown);
+
+      .percentage {
+        background: $projectBoxStatusGreen;
+        color: $projectBoxTextGreen;
+      }
+    }
+    &.lightGreen {
+      background: linear-gradient(180deg, $gradGreenLightUp -30%, $gradGreenLightDown);
+
+      .percentage {
+        background: $projectBoxStatusGreen;
+        color: $projectBoxTextGreen;
+      }
+    }
+    &.amber {
+      background: linear-gradient(180deg, $gradAmberUp -30%, $gradAmberDown);
+
+      .percentage {
+        background: $projectBoxStatusAmber;
+        color: $projectBoxTextAmber;
+      }
+    }
+    &.lightRed {
+      background: linear-gradient(180deg, $gradRedLightUp -30%, $gradRedLightDown);
+
+      .percentage {
+        background: $projectBoxStatusRed;
+        color: $projectBoxTextRed;
+      }
+    }
+    &.darkRed {
+      background: linear-gradient(180deg, $gradRedDarkUp -30%, $gradRedDarkDown);
+
+      .percentage {
+        background: $projectBoxStatusRed;
+        color: $projectBoxTextRed;
+      }
+    }
+
+    .projectName {
+      font-size: 12px;
+      font-weight: 600;
+      color: $whiteColor;
+      @include truncate(100%);
+    }
+    .progress {
+      width: 100%;
+      @include flexbox();
+      @include justify-content(center);
+      margin: 25px 0;
+
+      .percentage {
+        padding: 10px 15px;
+        @include border-radius(30px);
+        border: 1px dashed transparentize($whiteColor, 0.3);
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+    .status {
+      width: 100%;
+      @include flexbox();
+      @include flex-direction(row);
+      @include justify-content(space-between);
+
+      .data {
+        width: 100%;
+        text-align: center;
+        padding: 0 5px;
+        @include flexbox();
+        @include flex-direction(column);
+        @include truncate(100%);
+
+        .value {
+          font-size: 16px;
+          color: $whiteColor;
+          @include truncate(100%);
+        }
+        .label {
+          font-size: 12px;
+          color: $whiteColor;
+          @include truncate(100%);
+        }
+      }
+    }
+  }
+}

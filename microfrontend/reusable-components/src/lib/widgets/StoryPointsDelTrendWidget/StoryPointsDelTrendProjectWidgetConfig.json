@@ -1,0 +1,62 @@
+{
+  "tooltip": true,
+  "activeDot": true,
+  "legend": false,
+  "width": "100%",
+  "height": 350,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#01ffff"
+    }
+  },
+  "y": {
+    "tick": { "fill": "#01ffff" },
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Estimated Story",
+    "dy": 170,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff",
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": true
+  },
+  "line": [
+    {
+      "key": "Completed",
+      "dot": true,
+      "stroke": "#0060FF",
+      "fill": "#0060FF",
+      "strokeWidth": "1"
+    },
+    {
+      "key": "Committed",
+      "dot": true,
+      "stroke": "#A04646",
+      "fill": "#A04646",
+      "strokeWidth": "1"
+    }
+  ]
+}

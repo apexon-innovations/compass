@@ -1,0 +1,123 @@
+@import '../../theme/theme.scss';
+
+.sliderWrapper {
+  width: 100%;
+  position: relative;
+
+  :global(.slick-track) {
+    height: auto !important;
+  }
+
+  :global(.slick-slide) {
+    width: auto;
+    cursor: auto;
+  }
+  :global(.slick-list) {
+    width: calc(100% - 50px);
+    left: 25px;
+  }
+  :global(.slick-prev),
+  :global(.slick-next) {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  :global(.slick-prev) {
+    left: 0;
+    &:before {
+      background: url(../../images/ic_arrow_left.svg) no-repeat 50% 50%;
+    }
+  }
+  :global(.slick-next) {
+    right: 0;
+    &:before {
+      background: url(../../images/ic_arrow_right.svg) no-repeat 50% 50%;
+    }
+  }
+}
+
+.numberBox {
+  width: 60px;
+  height: 60px;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  @include border-radius(50%);
+  margin: 0 auto 10px auto;
+  border: 1px solid;
+
+  &.red {
+    .number {
+      color: $themeRedMain;
+    }
+  }
+  &.green {
+    .number {
+      color: $themeGreenMain;
+    }
+  }
+  &.amber {
+    .number {
+      color: $themeAmberMain;
+    }
+  }
+
+  .number {
+    font-size: 20px;
+  }
+}
+.riskName {
+  width: 100%;
+  @include truncate(100%);
+  font-size: 14px;
+  text-align: center;
+}
+
+.techName {
+  font-size: 14px;
+  color: $themeBlueMain;
+}
+
+.techNumber {
+  font-size: 20px;
+  color: $themeAmberMain;
+}
+
+.sliderWrap {
+  max-width: 650px;
+  position: relative;
+  z-index: 10;
+}
+
+.sliderDiv {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.sliderTitle {
+  width: 100%;
+  font-size: 16px;
+  margin: 5px 0 15px 0;
+  padding: 0 15px;
+  @include flexbox();
+}

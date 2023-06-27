@@ -1,0 +1,46 @@
+@import '../../theme/theme.scss';
+
+.storyPointsDelTrend {
+  width: 100%;
+  @include flexbox();
+
+  .storyPointsDelTrendInner {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    padding: 00px 0 0 0;
+  }
+}
+.titleArea {
+  width: 100%;
+  @include flexbox();
+  @include justify-content(space-between);
+  margin: 0 0 20px 0;
+
+  .title {
+    font-size: 24px;
+    color: $whiteColor;
+    margin: 0;
+  }
+  .controlSpace {
+    @include flexbox();
+    @include align-items(flex-start);
+
+    :global(.transparentDropdownBox) {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-left: 10px;
+    }
+    :global(.transparentMultiSelect) {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 180px;
+    }
+  }
+}
+.zeroPadding {
+  position: relative;
+  top: 0px;
+}

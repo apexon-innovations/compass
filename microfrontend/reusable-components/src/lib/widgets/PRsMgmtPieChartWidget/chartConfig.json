@@ -1,0 +1,18 @@
+ {
+  "activeIndex": [0, 1, 2, 3],
+  "width": 350,
+  "height": 350,
+  "responsiveContainerHeight": 250,
+  "cx": "50%",
+  "cy": "42%",
+  "innerRadius": 35,
+  "outerRadius": 50,
+  "fill": "#82ca9d",
+  "dataKey": "value",
+  "stroke": "none",
+  "tooltip": true,
+  "legend": false,
+  "legendIconType": "circle",
+  "legendHeight": "40px"
+}
+

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Blocker",
+    "label": "Blocker",
+    "value": 10001,
+    "stroke": "#952323",
+    "fill": "#952323",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Critical",
+    "label": "Critical",
+    "value": 10001,
+    "stroke": "#5c4893",
+    "fill": "#5c4893",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Major",
+    "label": "Major",
+    "value": 10001,
+    "stroke": "#51d6ff",
+    "fill": "#51d6ff",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Minor",
+    "label": "Minor",
+    "value": 10001,
+    "stroke": "#3dd385",
+    "fill": "#3dd385",
+    "type": "circle",
+    "hasBorder": false,
+    "borderType": "solid",
+    "align": "left"
+  }
+]

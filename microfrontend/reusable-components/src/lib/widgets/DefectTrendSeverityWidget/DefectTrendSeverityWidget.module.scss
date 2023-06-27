@@ -1,0 +1,251 @@
+@import '../../theme/theme.scss';
+
+.viewBox {
+  width: 100%;
+  min-height: 180px;
+  position: relative;
+  padding: 0 15px;
+}
+
+.defectProject {
+  width: 100%;
+  margin-bottom: 14px;
+  @include flexbox();
+  @include flex-wrap(wrap);
+
+  .titleWrapper {
+    width: 100%;
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    .title {
+      font-size: 14px;
+      font-weight: 500;
+      color: $whiteColor;
+      margin: 0;
+    }
+
+    .totalDefects {
+      font-size: 12px;
+      letter-spacing: normal;
+      color: $themeBlueMain;
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+
+      .defectsCount {
+        font-size: 16px;
+        font-weight: 300;
+        color: $themeYellow;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .defectWrapper {
+    width: 100%;
+    border: 1px solid $defectBorder;
+    @include flexbox();
+
+    .singleDefectSummary {
+      width: 50%;
+      padding: 8px 11px;
+      border-left: 1px solid $defectBorder;
+
+      .defectSummarytitle {
+        font-size: 12px;
+        font-weight: 300;
+        color: $whiteColor;
+        text-transform: capitalize;
+        @include flexbox();
+        @include align-items(center);
+
+        .defectsSummaryLabel {
+          margin-right: 5px;
+        }
+
+        .defectSummaryCount {
+          font-size: 16px;
+        }
+      }
+
+      &.openDefects {
+        .defectSummarytitle {
+          .defectSummaryCount {
+            color: $whiteColor;
+          }
+        }
+      }
+
+      &.closeDefects {
+        .defectSummarytitle {
+          .defectSummaryCount {
+            color: $whiteColor;
+          }
+        }
+
+        .defectXL,
+        .defectLG,
+        .defectMD,
+        .defectSM {
+          background: transparent !important;
+          border: 1px solid $themeBlueMain;
+          &.criticalDefect {
+            border-color: $defectRed;
+          }
+          &.minorDefect {
+            border-color: $defectGreen;
+          }
+          &.majorDefect {
+            border-color: $defectBlue;
+          }
+          &.blockerDefect {
+            border-color: $defectPurple;
+          }
+        }
+      }
+
+      &.backlogDefects {
+        .defectSummarytitle {
+          .defectSummaryCount {
+            color: $whiteColor;
+          }
+        }
+
+        .defectXL,
+        .defectLG,
+        .defectMD,
+        .defectSM {
+          background: transparent !important;
+          border: 1px dashed $themeBlueMain;
+          &.criticalDefect {
+            border-color: $defectRed;
+          }
+          &.minorDefect {
+            border-color: $defectGreen;
+          }
+          &.majorDefect {
+            border-color: $defectBlue;
+          }
+          &.blockerDefect {
+            border-color: $defectPurple;
+          }
+        }
+      }
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      .defectChart {
+        position: relative;
+        width: 105px;
+        height: 92px;
+        margin: 2px auto 0 auto;
+        @include flexbox();
+
+        div {
+          font-size: 14px;
+          font-weight: 300;
+          color: $whiteColor;
+          text-align: center;
+          @include border-radius(50%);
+        }
+
+        .defectXL {
+          width: 48px;
+          height: 48px;
+          line-height: 48px;
+          @include position(absolute, 11px, auto, auto, 0);
+        }
+        .defectLG {
+          width: 44px;
+          height: 44px;
+          line-height: 44px;
+          @include position(absolute, 0, auto, auto, 46px);
+        }
+        .defectMD {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          @include position(absolute, 42px, auto, auto, 63px);
+        }
+        .defectSM {
+          width: 36px;
+          height: 36px;
+          line-height: 36px;
+          @include position(absolute, 54px, auto, auto, 28px);
+        }
+
+        .criticalDefect {
+          background-color: $defectRed;
+        }
+        .minorDefect {
+          background-color: $defectGreen;
+        }
+        .majorDefect {
+          background-color: $defectBlue;
+        }
+        .blockerDefect {
+          background-color: $defectPurple;
+        }
+      }
+    }
+  }
+}
+
+/* Custom Tooltip SCSS */
+.ttTechnicalDebtOverview {
+  .tooltipHead {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: $graphElements;
+    border-bottom: 1px solid $technicalDebtBorder;
+
+    .green {
+      color: $themeGreenMain;
+    }
+    .amber {
+      color: $themeAmberMain;
+    }
+    .red {
+      color: $themeRedMain;
+    }
+
+    li {
+      margin-bottom: 2px;
+      span {
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .tooltipBody {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: normal;
+
+    li {
+      margin-top: 3px;
+
+      span {
+        margin-left: 3px;
+        font-weight: 600;
+        color: inherit;
+      }
+
+      &.closed {
+        color: $defectRed;
+      }
+      &.raised {
+        color: $DefectSummaryClosed;
+      }
+    }
+  }
+}

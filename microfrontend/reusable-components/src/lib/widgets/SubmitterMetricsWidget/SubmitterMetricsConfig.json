@@ -1,0 +1,70 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "height": 330,
+  "width": 730,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "referenceLine": [
+    {
+      "y": "5.2",
+      "stroke": "#ffc145",
+      "label": {
+        "value": "5.2",
+        "fontSize": "16",
+        "offset": "30",
+        "position": "left",
+        "fill": "#ffc145"
+      },
+      "strokeDasharray": "8, 5"
+    }
+  ],
+  "padding": {
+    "bottom": 0
+  },
+  "x": {
+    "tick": {
+      "fill": "#01ffff",
+      "width": 70
+    },
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "Name",
+    "interval": 0,
+    "height": 100,
+    "textAnchor": "end",
+    "angle": -90,
+    "axisLine": true,
+    "tickLine": true
+  },
+  "y": {
+    "tick": {
+      "fill": "#01ffff"
+    },
+    "stroke": "#01ffff",
+    "dataKey": "Total PRs",
+    "axisLine": true,
+    "tickLine": true,
+    "allowDecimals": false
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": true
+  },
+  "line": [
+    {
+      "key": "Total PRs",
+      "dot": true,
+      "type": "monotone",
+      "stroke": "#24ff00"
+    }
+  ]
+}

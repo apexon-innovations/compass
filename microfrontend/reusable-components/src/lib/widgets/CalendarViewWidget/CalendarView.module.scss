@@ -1,0 +1,99 @@
+@import '../../theme/theme.scss';
+
+.customCalendar {
+  width: 100%;
+  max-width: 480px;
+  @include flexbox();
+  @include flex-direction(row);
+  margin: 0 auto 20px auto;
+
+  .col {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: $whiteColor;
+
+    .head {
+      padding: 7px 5px;
+      font-weight: 700;
+    }
+    .data {
+      padding: 12px 5px 11px 5px;
+      @include border-radius(3px);
+      font-size: 16px;
+      position: relative;
+      color: $themeBlueShade01;
+      @include border-radius(50%);
+      transition: background 0.2s linear, color 0.2s linear;
+
+      &.red {
+        color: $themeRedMain;
+      }
+
+      .box {
+        position: relative;
+        @include inline-flex();
+        padding: 0 3px;
+      }
+
+      .dot {
+        @include position(absolute, 1px, -5px, unset, unset);
+        width: 5px;
+        height: 5px;
+        @include border-radius(50%);
+        background: $themeAmberMain;
+
+        &.red {
+          background: $themeRedMain;
+        }
+        &.green {
+          background: $themeGreenMain;
+        }
+        &.amber {
+          background: $themeAmberMain;
+        }
+      }
+    }
+  }
+}
+
+.calHoursLost {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  @include flexbox();
+  @include justify-content(space-between);
+
+  .callData {
+    text-align: center;
+    margin: 0 10px 10px 0;
+    @include flexbox();
+    @include align-items(center);
+
+    .red {
+      color: $themeRedMain;
+    }
+
+    .number {
+      max-width: 56px;
+      width: 100%;
+      height: 56px;
+      @include border-radius(50%);
+      text-align: center;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      border: 1px solid $themeBlueMain;
+      color: $themeRedMain;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 10px 10px 0;
+    }
+    .text {
+      color: $whiteColor;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}

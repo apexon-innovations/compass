@@ -1,0 +1,60 @@
+@import '../../../theme/theme.scss';
+
+.recharts-legend-wrapper {
+  background-color: $themeBlueMain;
+}
+.custom_legends {
+  list-style-type: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  @include flexbox();
+  @include flex-wrap(wrap);
+
+  li {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    margin: 0 10px 5px 0;
+    color: $themeBlueMain;
+
+    .icon {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px 0 0;
+
+      &.square {
+        background: $themeBlueMain;
+
+        &.hasBorder {
+          background: transparent !important;
+          border-width: 2px;
+          border-style: solid;
+          border-color: $themeBlueMain;
+
+          &.dashed {
+            border-style: dotted;
+          }
+        }
+      }
+      &.circle {
+        @include border-radius(50%);
+        background: $themeBlueMain;
+
+        &.hasBorder {
+          background: transparent !important;
+          border-width: 2px;
+          border-style: solid;
+          border-color: $themeBlueMain;
+
+          &.dashed {
+            border-style: dotted;
+          }
+        }
+      }
+    }
+  }
+  .pointer {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,70 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.channelButtons {
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include calc(height, '100vh - 148px');
+
+  :global(.row) {
+    width: 100%;
+  }
+
+  .redirectBox {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    cursor: pointer;
+  }
+  .iconBox {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    @include border-radius(50%);
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    margin: 20px 0 30px 0;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      @include position(absolute, -5px, unset, unset, -5px);
+      z-index: 0;
+      border: 2px solid $themeAmberMain;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      @include border-radius(50%);
+    }
+
+    svg {
+      width: 100%;
+      max-width: 40px;
+      max-height: 40px;
+      path,
+      * {
+        fill: $themeBlueMain !important;
+      }
+    }
+  }
+  .departmentName {
+    font-size: 26px;
+    margin: 0 0 10px 0;
+    color: $themeBlueShade01;
+    text-transform: uppercase;
+  }
+  .categoryName {
+    font-size: 16px;
+    color: $themeAmberMain;
+    margin: 0 0 20px 0;
+  }
+}
+
+.mainLandingPage {
+  width: 100%;
+  transform: translateX(0);
+}

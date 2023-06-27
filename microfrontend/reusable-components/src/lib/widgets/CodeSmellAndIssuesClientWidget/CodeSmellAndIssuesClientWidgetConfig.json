@@ -1,0 +1,78 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "allowDecimals": false,
+  "legend": false,
+  "width": "100%",
+  "height": 250,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": -20,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#00d2ff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#00d2ff"
+    },
+    "fontSize": 12
+  },
+  "y": {
+    "tick": {
+      "fill": "#00d2ff",
+      "fontSize": 12
+    },
+    "tickCount": 8,
+    "stroke": "#00d2ff",
+    "axisLine": true,
+    "tickLine": true,
+    "dy": 0,
+    "angle": -90,
+    "fontSize": 12,
+    "fill": "#00d2ff",
+    "interval": 0,
+    "domain": [0, "auto"]
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#00d2ff",
+    "fillOpacity": 0.5,
+    "fill": false
+  },
+  "line": [
+    {
+      "key": "Coverage",
+      "activeDot": {
+        "stroke": "#0597f2",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#0597f2",
+      "fill": "#0597f2",
+      "strokeWidth": "2"
+    },
+    {
+      "key": "Duplication",
+      "activeDot": {
+        "stroke": "#b82b9f",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#b82b9f",
+      "fill": "#b82b9f",
+      "strokeWidth": "2"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.staticPopupPage {
+  width: 100%;
+  height: 100vh;
+  @include position(fixed, 0, unset, unset, 0);
+  background: $modalBgLight;
+  z-index: 2061;
+
+  :global(.titleArea) {
+    width: 100%;
+    @include flexbox();
+    @include justify-content(space-between);
+    margin: 0 0 30px 0;
+    padding-right: 2px;
+
+    :global(.title) {
+      font-size: 24px;
+      color: $whiteColor;
+      margin: 0;
+
+      :global(.info) {
+        margin: 0 0 0 5px;
+        @include inline-flex();
+        cursor: pointer;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    :global(.controlSpace) {
+      @include flexbox();
+      @include justify-content(flex-end);
+      position: relative;
+      z-index: 2081;
+
+      :global(.transparentDropdownBox) {
+        @include position(relative, 0, 0, unset, unset);
+        margin-left: 10px;
+      }
+      :global(.transparentMultiSelect) {
+        @include position(relative, 0, 0, unset, unset);
+        min-width: 60px;
+      }
+    }
+  }
+  :global(.controlRow) {
+    width: 100%;
+    min-height: 40px;
+    @include flexbox();
+    @include justify-content(space-between);
+    padding: 10px 10px 10px 30px;
+  }
+}
+.modalBox {
+  width: 1200px;
+  min-height: 50vh;
+  max-height: 85vh;
+  padding: 15px;
+  @include position(relative, 50%, unset, unset, 50%);
+  z-index: 1010;
+  transform: translate(-50%, -50%);
+  border: 1px solid $graphContainerGreyOpaque;
+  background: rgba(2, 7, 27, 0.8)
+    linear-gradient(
+      180deg,
+      rgba(70, 157, 246, 1) 0,
+      rgba(70, 157, 246, 0.2) 50px,
+      rgba(2, 7, 27, 0.9) 70px,
+      rgba(2, 7, 27, 0.9) 100%
+    );
+  background-size: 100% 110%;
+
+  &.small {
+    width: 300px;
+  }
+  &.medium {
+    width: 500px;
+  }
+  &.default {
+    width: 700px;
+  }
+  &.large {
+    width: 900px;
+  }
+  &.extraLarge {
+    width: 1200px;
+  }
+
+  .close {
+    width: 34px;
+    height: 34px;
+    @include position(absolute, -22px, -22px, unset, unset);
+    cursor: pointer;
+    background: $graphBg;
+    padding: 3px;
+    @include border-radius(50%);
+
+    img {
+      @include position(absolute, 50%, unset, unset, 50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .modalBoxInner {
+    width: 100%;
+    max-height: calc(85vh - 40px);
+    overflow-y: auto;
+  }
+  .decoration {
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    @include position(absolute, -10px, unset, unset, -10px);
+    z-index: -1;
+
+    .corner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: $graphContainerGreyOpaque;
+        position: absolute;
+      }
+      &::after {
+        content: '';
+        width: 2px;
+        height: 30px;
+        background: $graphContainerGreyOpaque;
+        position: absolute;
+      }
+      &.TL {
+        top: 0;
+        left: 0;
+
+        &:before {
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.TR {
+        top: 0;
+        right: 0;
+        &:before {
+          top: 0;
+          right: 0;
+        }
+        &::after {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.BL {
+        bottom: 0;
+        left: 0;
+
+        &:before {
+          bottom: 0;
+          left: 0;
+        }
+        &::after {
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &.BR {
+        bottom: 0;
+        right: 0;
+        &:before {
+          bottom: 0;
+          right: 0;
+        }
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}

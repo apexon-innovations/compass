@@ -1,0 +1,19 @@
+@import '../../theme/theme.scss';
+@import '../../theme/keyframes.scss';
+
+.loaderOverlay {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  min-height: 60px;
+  @include position(absolute, 1px, unset, unset, 1px);
+  z-index: 2050;
+  background: $modalBg;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  @include position(absolute, 50%, unset, unset, 50%);
+  margin: -20px 0 0 -20px;
+  animation: rotateReverse360 8s linear infinite;
+}

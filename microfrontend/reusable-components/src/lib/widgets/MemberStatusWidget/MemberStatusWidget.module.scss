@@ -1,0 +1,25 @@
+@import "../../theme/theme.scss";
+@import "../../theme/keyframes.scss";
+
+.memberStatusBox {
+  width: 100%;
+  @include flexbox();
+}
+.memberStatus {
+
+  th {
+    font-weight: 600;
+    padding: 10px 5px 15px 5px ;
+
+    &.firstColumn {
+      text-align: left;  
+    }
+  }
+  tr {
+    .firstColumn {
+      
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+const data = {
+  data: [
+    {
+      id: '5ec53867bdaa23a9cf0ddcd4',
+      jiraProjectId: '10003',
+      sprintId: '3',
+      sprintName: 'IM Sprint 9',
+      summary: { total: 159, totalDone: 159, totalClosed: 105 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddcd6',
+      jiraProjectId: '10003',
+      sprintId: '4',
+      sprintName: 'IA Sprint 3',
+      summary: { total: 8, totalDone: 8, totalClosed: 0 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddcde',
+      jiraProjectId: '10003',
+      sprintId: '5',
+      sprintName: 'IA Sprint 4',
+      summary: { total: 25, totalDone: 25, totalClosed: 17 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddce2',
+      jiraProjectId: '10003',
+      sprintId: '6',
+      sprintName: 'MVP_1.0_High',
+      summary: { total: 0, totalDone: 0, totalClosed: 0 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddce0',
+      jiraProjectId: '10003',
+      sprintId: '7',
+      sprintName: 'IA Sprint 5',
+      summary: { total: 73, totalDone: 73, totalClosed: 39 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddce4',
+      jiraProjectId: '10003',
+      sprintId: '8',
+      sprintName: 'IA Sprint 6',
+      summary: { total: 49, totalDone: 49, totalClosed: 8 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddcd8',
+      jiraProjectId: '10003',
+      sprintId: '9',
+      sprintName: 'IA Sprint 7',
+      summary: { total: 21, totalDone: 21, totalClosed: 13 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddcda',
+      jiraProjectId: '10003',
+      sprintId: '10',
+      sprintName: 'IA Sprint 8',
+      summary: { total: 45, totalDone: 45, totalClosed: 45 },
+    },
+    {
+      id: '5ec53867bdaa23a9cf0ddcdc',
+      jiraProjectId: '10003',
+      sprintId: '11',
+      sprintName: 'IA Sprint 9',
+      summary: { total: 16, totalDone: 16, totalClosed: 16 },
+    },
+    {
+      id: '5f0c070b87f89b1ae2147d36',
+      jiraProjectId: '10003',
+      sprintId: '12',
+      sprintName: 'IA Sprint 10',
+      summary: { total: 3, totalDone: 3, totalClosed: 3 },
+    },
+    {
+      id: '5f0c070b87f89b1ae2147d38',
+      jiraProjectId: '10003',
+      sprintId: '13',
+      sprintName: 'IA Sprint 11',
+      summary: { total: 0, totalDone: 0, totalClosed: 0 },
+    },
+    {
+      id: '5f0c070b87f89b1ae2147d34',
+      jiraProjectId: '10003',
+      sprintId: '14',
+      sprintName: 'IA Sprint 12 August',
+      summary: { total: 6, totalDone: 6, totalClosed: 0 },
+    },
+    {
+      id: '5f154a1b87f89b1ae22aa88e',
+      jiraProjectId: '10003',
+      sprintId: '16',
+      sprintName: 'IA Sprint 13 - September',
+      summary: {},
+    },
+  ],
+}
+
+export default data

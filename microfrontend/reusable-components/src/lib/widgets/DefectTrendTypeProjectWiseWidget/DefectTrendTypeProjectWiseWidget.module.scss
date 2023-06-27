@@ -1,0 +1,26 @@
+@import '../../theme/theme.scss';
+@import '../../theme/keyframes.scss';
+
+.totalStoryPoint {
+  margin-left: auto;
+  position: relative;
+  margin: 0 0 30px 0;
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+
+  .label {
+    margin: 0 10px 0 0;
+  }
+  .number {
+    span {
+      width: 36px;
+      height: 36px;
+      border: 1px dashed $themeBlueMain;
+      @include border-radius(50%);
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
+}

@@ -1,0 +1,227 @@
+@import 'reusable-components/dist/theme/theme';
+@import 'reusable-components/dist/theme/keyframes';
+
+.sectionArea {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+
+  :global(.cols) {
+    @include flexbox();
+  }
+}
+
+.codeHealthTitle {
+  width: 100%;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  .status {
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    margin-left: 31px;
+    padding-left: 21px;
+
+    &::before {
+      content: '';
+      height: 14px;
+      width: 14px;
+      @include border-radius(50%);
+      @include position(absolute, 50%, auto, auto, 0);
+      margin-top: -7px;
+    }
+
+    &.onTrack {
+      color: $onTrackStatusColor;
+
+      &::before {
+        background-color: $onTrackStatusColor;
+      }
+    }
+  }
+}
+
+.codeHealthDashboard {
+  padding: 15px 18px;
+  border: solid 1px rgba(255, 255, 255, 0.12);
+  background-image: linear-gradient(to bottom, rgba(3, 88, 121, 0.78) -8%, #00090c 127%);
+
+  :global(.titleArea) {
+    @include align-items(center);
+
+    :global(.title) {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: auto;
+    }
+  }
+
+  .codeMetrix {
+    width: 100%;
+
+    .codeMetrixList {
+      font-size: 14px;
+      font-weight: normal;
+      color: $themeBlueMain;
+      list-style: none;
+      margin: 11px 0 0 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 8px;
+
+        span {
+          margin-left: 6px;
+          font-weight: 600;
+        }
+
+        &.newLine {
+          span {
+            color: $lineOfCode;
+          }
+        }
+        &.churn {
+          span {
+            color: $churn;
+          }
+        }
+        &.lagecy {
+          span {
+            color: $lagecy;
+          }
+        }
+      }
+    }
+    .codeMetrixGraph {
+      margin-top: 20px;
+    }
+  }
+
+  :global(.controlRow) {
+    @include justify-content(flex-end);
+    padding-top: 0;
+
+    :global(.graphNavBox) {
+      :global(.prev) {
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+.CodeHealthDrillDownTabs {
+  :global(.nav-tabs) {
+    margin: 0 0 20px 0;
+
+    :global(.nav-item) {
+      padding: 5px 15px;
+      margin: 0;
+      border-left: 0;
+      border-right: 1px solid $themeBlueGeneric;
+
+      &:global(.active) {
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+      }
+
+      &:first-child {
+        border-left: 1px solid $themeBlueGeneric;
+      }
+    }
+  }
+}
+
+.ttTechnicalDebtOverview {
+  .tooltipHead {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: $graphElements;
+    border-bottom: 1px solid $technicalDebtBorder;
+
+    li {
+      margin-bottom: 5px;
+      span {
+        margin-left: 3px;
+
+        &.totalCount {
+          font-size: 14px;
+          font-weight: bold;
+          color: $technicalDebtCount;
+        }
+      }
+    }
+  }
+
+  .tooltipBody {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: normal;
+
+    li {
+      margin-top: 3px;
+
+      span {
+        margin-left: 3px;
+        font-weight: 600;
+        color: inherit;
+      }
+
+      &.complexity {
+        color: $technicalDebtComplexity;
+      }
+      &.duplication {
+        color: $technicalDebtDuplication;
+      }
+      &.issues {
+        color: $technicalDebtIssues;
+      }
+      &.mainatainability {
+        color: $technicalDebtMaitenance;
+      }
+      &.reliability {
+        color: $technicalDebtReliable;
+      }
+      &.security {
+        color: $technicalDebtSecurity;
+      }
+      &.size {
+        color: $technicalDebtSize;
+      }
+      &.coverage {
+        color: $technicalDebtCoverage;
+      }
+    }
+  }
+}
+
+.prdouctiveLegend {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  margin-left: 31px;
+  padding-left: 21px;
+
+  &::before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    @include border-radius(50%);
+    @include position(absolute, 50%, auto, auto, 0);
+    margin-top: -7px;
+    background-color: #2bb834;
+  }
+}
+
+.nav-tabs .nav-link {
+  margin: 0px !important;
+}

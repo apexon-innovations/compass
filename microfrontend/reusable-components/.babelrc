@@ -1,0 +1,66 @@
+{
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-export-namespace-from",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-private-methods",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-private-property-in-object",
+      {
+        "loose": true
+      }
+    ],
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-function-bind",
+    "babel-plugin-lodash",
+    "@babel/plugin-syntax-export-default-from"
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ],
+    ["@babel/preset-react", {
+      "throwIfNamespace": false
+    }],
+    "@babel/preset-typescript"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs",
+        "istanbul",
+        "@babel/plugin-syntax-export-default-from",
+        "@babel/plugin-proposal-export-default-from"
+      ]
+    },
+    "commonjs": {
+      "plugins": [
+        [
+          "@babel/plugin-transform-modules-commonjs",
+          {
+            "loose": false
+          }
+        ]
+      ]
+    }
+  }
+}

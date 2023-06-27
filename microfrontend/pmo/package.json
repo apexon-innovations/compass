@@ -1,0 +1,85 @@
+{
+  "name": "pmo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "bootstrap": "^5.2.3",
+    "node-sass": "^8.0.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^18.2.0",
+    "react-notifications": "^1.7.4",
+    "react-router": "^6.10.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "^5.0.1",
+    "react-svg": "^16.1.7",
+    "reusable-components": "file:../reusable-components"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "babel-jest": "^29.5.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewire-aliases": "^0.2.0",
+    "react-app-rewired": "^2.2.1",
+    "webpack-bundle-analyzer": "^4.8.0"
+  },
+  "jest": {
+    "transformIgnorePatterns": [],
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!<rootDir>/node_modules/",
+      "!**/__tests__/**"
+    ]
+  },
+  "scripts": {
+    "start": "PORT=3001 react-app-rewired start",
+    "start:win": "set PORT=3001 && react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-scripts test",
+    "test-report": "react-scripts test --coverage --watchAll -u",
+    "eject": "react-scripts eject",
+    "analyze": "node analyze.js",
+    "start:pmo": "(cd ../reusable-components && npm link && npm run start:watch) & (cd ../login && npm link reusable-components && npm run start) & (cd ../pmo && npm link reusable-components && npm run start)",
+    "lint": "eslint --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

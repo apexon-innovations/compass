@@ -1,0 +1,718 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalClientInformation Snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="row"
+    >
+      <div
+        class="border-right pl-0 col-md-5 col-sm-5"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="pl-0 col-md-5 col-sm-5"
+          >
+            <div
+              class=" "
+            >
+              <div
+                class=" "
+              >
+                <img
+                  alt="Compass"
+                  src="http://sampleicon.com/image.png"
+                  title="Compass"
+                />
+                <div>
+                  <img
+                    alt=""
+                    src="[object Object]"
+                    title=""
+                  />
+                </div>
+                <input
+                  accept="image/png, image/jpeg, image/svg+xml"
+                  class="hide"
+                  name="fileUploader"
+                  type="file"
+                />
+              </div>
+              <div />
+            </div>
+          </div>
+          <div
+            class="pl-0 col-md-7 col-sm-7"
+          >
+            <div>
+              <div>
+                <div>
+                  Client
+                </div>
+                <div>
+                  Infostretch
+                </div>
+              </div>
+              <div>
+                <div>
+                  Project
+                </div>
+                <div>
+                  Compass
+                </div>
+              </div>
+              <div>
+                <div>
+                  Billing Type
+                </div>
+                <div>
+                  Internal
+                </div>
+              </div>
+              <div>
+                <div>
+                  Start Date
+                </div>
+                <div>
+                  01-01-2020
+                </div>
+              </div>
+              <div>
+                <div>
+                  Completion Date
+                </div>
+                <div>
+                  01-02-2020
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-md-7 col-sm-7"
+      >
+        <div>
+          <div>
+            <div
+              class=" "
+            >
+              <div
+                class="slick-slider slick-initialized"
+              >
+                <div
+                  class="slick-list"
+                >
+                  <div
+                    class="slick-track"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+                  >
+                    <div
+                      aria-hidden="false"
+                      class="slick-slide slick-active slick-current"
+                      data-index="0"
+                      style="outline: none; width: 0px;"
+                      tabindex="-1"
+                    >
+                      <div>
+                        <div
+                          data-tip="true"
+                          data-tooltip-id="Delivery Manager-0"
+                          style="width: 100%; display: inline-block;"
+                          tabindex="-1"
+                        >
+                          <div
+                            class=""
+                          >
+                            <img
+                              alt=""
+                              src="https://nest.infostretch.com/nativefw/images/profile_pic/2136.jpg?32186182"
+                              title=""
+                            />
+                          </div>
+                          <div>
+                            Delivery Manager
+                          </div>
+                          <div>
+                            Gunjan Shah
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class=" "
+            >
+              <div
+                class="slick-slider slick-initialized"
+              >
+                <div
+                  class="slick-list"
+                >
+                  <div
+                    class="slick-track"
+                    style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-md-3"
+            >
+              <div>
+                <div>
+                  <div>
+                    10
+                  </div>
+                </div>
+                <div>
+                  Members
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-9"
+            >
+              <div>
+                <div>
+                  <div>
+                    <div
+                      class="slick-slider slick-initialized"
+                      dir="ltr"
+                    >
+                      <button
+                        class="slick-arrow slick-prev"
+                        data-role="none"
+                        style="display: block;"
+                        type="button"
+                      >
+                         
+                        Previous
+                      </button>
+                      <div
+                        class="slick-list"
+                      >
+                        <div
+                          class="slick-track"
+                          style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="-4"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="gunjan.shah@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/2136.jpg?32186182"
+                                    title="Gunjan Shah"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="-3"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="namra.porecha@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/545.jpg?23733375"
+                                    title="Namra Porecha"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="-2"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="purushottam.Khandebharad@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3740.jpg?8948437"
+                                    title="Purushottam Khandebharad"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="-1"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="amit.ghadge@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3855.JPG?34957269"
+                                    title="Amit Ghadge"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="false"
+                            class="slick-slide slick-active slick-current"
+                            data-index="0"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="Pradeep.shrivastava@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/2755.jpg?77098933"
+                                    title="Pradeep Shrivastava"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="false"
+                            class="slick-slide slick-active"
+                            data-index="1"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="vijay.solanki@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/1546.jpg?9447621"
+                                    title="Vijay Solanki"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="false"
+                            class="slick-slide slick-active"
+                            data-index="2"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="suraj.bhosale@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3536.jpg?89267950"
+                                    title="Suraj Bhosale"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="false"
+                            class="slick-slide slick-active"
+                            data-index="3"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="yatin.bhavsar@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3104.jpg?9939973"
+                                    title="Yatin Bhavsar"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide"
+                            data-index="4"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="vishal.kumar@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3057.jpg?72778930"
+                                    title="Vishal kumar"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide"
+                            data-index="5"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="gunjan.shah@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/2136.jpg?32186182"
+                                    title="Gunjan Shah"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide"
+                            data-index="6"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="namra.porecha@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/545.jpg?23733375"
+                                    title="Namra Porecha"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide"
+                            data-index="7"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="purushottam.Khandebharad@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3740.jpg?8948437"
+                                    title="Purushottam Khandebharad"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide"
+                            data-index="8"
+                            style="outline: none; width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="amit.ghadge@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3855.JPG?34957269"
+                                    title="Amit Ghadge"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="9"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="Pradeep.shrivastava@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/2755.jpg?77098933"
+                                    title="Pradeep Shrivastava"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="10"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="vijay.solanki@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/1546.jpg?9447621"
+                                    title="Vijay Solanki"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="11"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="suraj.bhosale@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3536.jpg?89267950"
+                                    title="Suraj Bhosale"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="12"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="yatin.bhavsar@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3104.jpg?9939973"
+                                    title="Yatin Bhavsar"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="13"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="vishal.kumar@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3057.jpg?72778930"
+                                    title="Vishal kumar"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="14"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="gunjan.shah@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/2136.jpg?32186182"
+                                    title="Gunjan Shah"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="15"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="namra.porecha@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/545.jpg?23733375"
+                                    title="Namra Porecha"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="16"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="purushottam.Khandebharad@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3740.jpg?8948437"
+                                    title="Purushottam Khandebharad"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="slick-slide slick-cloned"
+                            data-index="17"
+                            style="width: 0px;"
+                            tabindex="-1"
+                          >
+                            <div>
+                              <div
+                                style="width: 100%; display: inline-block;"
+                                tabindex="-1"
+                              >
+                                <div>
+                                  <img
+                                    alt="amit.ghadge@infostretch.com"
+                                    src="https://nest.infostretch.com/nativefw/images/profile_pic/3855.JPG?34957269"
+                                    title="Amit Ghadge"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="slick-arrow slick-next"
+                        data-role="none"
+                        style="display: block;"
+                        type="button"
+                      >
+                         
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

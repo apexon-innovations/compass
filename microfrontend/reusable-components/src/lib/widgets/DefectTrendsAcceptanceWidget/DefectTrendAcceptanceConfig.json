@@ -1,0 +1,98 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "width": "100%",
+  "height": 350,
+  "areaChart": {
+    "width": 730,
+    "height": 350,
+    "margin": {
+      "top": 10,
+      "right": 30,
+      "left": 0,
+      "bottom": 0
+    },
+    "padding": {
+      "bottom": 0,
+      "right": 40
+    }
+  },
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": 90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "start",
+      "fill": "#01ffff"
+    }
+  },
+  "y": {
+    "tick": { "fill": "#01ffff", "tickUnit": "" },
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickCount": 8,
+    "tickLine": true,
+    "label": "Defects #",
+    "dy": 190,
+    "dx": 10,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff",
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false,
+    "id": "storyPointDelVsAcc"
+  },
+  "linearGradient": {
+    "id": "storyPointDelVsAcc",
+    "x1": "0",
+    "y1": "0",
+    "x2": "0",
+    "y2": "1",
+    "stop": [
+      {
+        "offset": "55%",
+        "stopColor": "#01ffff",
+        "stopOpacity": 0.6
+      },
+      {
+        "offset": "90%",
+        "stopColor": "#01ffff",
+        "stopOpacity": 0
+      }
+    ]
+  },
+  "area": [
+    {
+      "key": "Defects",
+      "type": "monotone",
+      "dot": {
+        "stroke": "#01ffff",
+        "strokeWidth": 2,
+        "r": 4
+      },
+      "stroke": "#01ffff",
+      "strokeWidth": "1",
+      "fillOpacity": 0.5,
+      "fill": true,
+      "id": "storyPointDelVsAcc"
+    }
+  ]
+}

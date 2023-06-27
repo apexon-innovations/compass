@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipTechnicalDebtOverview Snapshot 1`] = `
+<div>
+  <div
+    class="graphToolTip "
+  >
+    <ul>
+      <li>
+        Jan-2021
+      </li>
+      <li>
+        Total - 
+        <span>
+          1.4
+           days
+        </span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        Maintainability - 
+        <span>
+          1.4
+           days
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`TooltipTechnicalDebtOverview Snapshot No data 1`] = `<div />`;

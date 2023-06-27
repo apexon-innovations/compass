@@ -1,0 +1,52 @@
+@import '../../../theme/theme.scss';
+
+.recharts-legend-wrapper {
+  background-color: $themeBlueMain;
+}
+.custom_legend_circles {
+  list-style-type: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: $themeBlueMain;
+  }
+  .legendNewCircle {
+    display: inline-block;
+    background-color: transparent;
+    @include border-radius(50%);
+    border: 2px solid $themeBlueMain;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 4px;
+    left: -6px;
+  }
+}
+
+.custom_legend_square {
+  list-style-type: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: $themeBlueMain;
+  }
+  .legendNewSquare {
+    display: inline-block;
+    background-color: $themeBlueMain;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 4px;
+    left: -6px;
+  }
+}

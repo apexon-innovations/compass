@@ -1,0 +1,89 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "activeDot": false,
+  "legend": true,
+  "width": "100%",
+  "height": 250,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": 0,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#01ffff"
+    }
+  },
+  "y": {
+    "tick": {
+      "fill": "#01ffff",
+      "fontSize": 12
+    },
+    "tickCount": 8,
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "label": "Code Violations",
+    "dy": 130,
+    "angle": -90,
+    "fontSize": 13,
+    "fill": "#01ffff",
+    "interval": 0
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false
+  },
+  "line": [
+    {
+      "key": "Violations",
+      "activeDot": {
+        "stroke": "#00afff",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#00afff",
+      "fill": "#00afff",
+      "strokeWidth": "2"
+    },
+    {
+      "key": "Added",
+      "activeDot": {
+        "stroke": "#ac98ff",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#ac98ff",
+      "fill": "#ac98ff",
+      "strokeWidth": "2"
+    },
+    {
+      "key": "Removed",
+      "activeDot": {
+        "stroke": "#c23d6d",
+        "fill": false,
+        "strokeWidth": 2,
+        "r": 5
+      },
+      "stroke": "#c23d6d",
+      "fill": "#c23d6d",
+      "strokeWidth": "2"
+    }
+  ]
+}

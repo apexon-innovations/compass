@@ -1,0 +1,10 @@
+@import '../../theme/theme.scss';
+
+.MemberwiseActivityMetrics {
+  width: 100%;
+  @include flexbox();
+
+  :global(.coloredToggleSwitch) {
+    margin-top: 10px;
+  }
+}

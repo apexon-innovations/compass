@@ -1,0 +1,36 @@
+@import '../../theme/theme.scss';
+
+.securityComplianceScoreWidget {
+  width: 100%;
+}
+
+.securityScore {
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  padding: 20px 0;
+
+  .row {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    text-align: center;
+    margin: 0 0 5px 0;
+  }
+  .box {
+    width: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    padding: 10px 5px;
+
+    .label {
+      color: $themeBlueGeneric;
+      font-size: 14px;
+    }
+    .value {
+      color: $whiteColor;
+      font-size: 18px;
+    }
+  }
+}

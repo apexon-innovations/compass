@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Blocker",
+    "label": "Blocker",
+    "value": 10001,
+    "stroke": "#e00e2c",
+    "fill": "#e00e2c",
+    "type": "square",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Critical",
+    "label": "Critical",
+    "value": 10001,
+    "stroke": "#de5e3f",
+    "fill": "#de5e3f",
+    "type": "square",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Major",
+    "label": "Major",
+    "value": 10001,
+    "stroke": "#ffb200",
+    "fill": "#ffb200",
+    "type": "square",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Minor",
+    "label": "Minor",
+    "value": 10001,
+    "stroke": "#ded739",
+    "fill": "#ded739",
+    "type": "square",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  },
+  {
+    "name": "Unattended",
+    "label": "Unattended",
+    "value": 10001,
+    "stroke": "#ffffff",
+    "fill": "#ffffff",
+    "type": "square",
+    "hasBorder": true,
+    "borderType": "solid",
+    "align": "left"
+  }
+]

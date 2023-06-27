@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectCompletionTrendsToolTip Snapshot 1`] = `
+<div>
+  <div
+    class="customToolTip sprintPoint text-center"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="sprintName"
+      >
+        Prev Sprint 4
+      </div>
+    </div>
+    <div
+      class="content"
+    >
+      <ul>
+        <li>
+          <span
+            class="label"
+          >
+            Story Points
+          </span>
+          <span
+            class="value"
+          >
+            253
+          </span>
+        </li>
+        <li>
+          <span
+            class="label"
+          >
+            Squads
+          </span>
+          <span
+            class="value"
+          >
+            4
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ProjectCompletionTrendsToolTip Snapshot No Data 1`] = `<div />`;
+
+exports[`ProjectCompletionTrendsToolTip Snapshot No Line Index 1`] = `<div />`;

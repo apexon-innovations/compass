@@ -1,0 +1,17 @@
+@import './theme';
+
+
+body {
+    margin: 0;
+    font-family: 'Gilroy', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $graphBg;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }

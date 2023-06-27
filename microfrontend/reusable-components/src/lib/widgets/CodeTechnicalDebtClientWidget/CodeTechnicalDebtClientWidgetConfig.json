@@ -1,0 +1,73 @@
+{
+  "tooltip": true,
+  "toolTipType": "color",
+  "legend": false,
+  "allowDecimals": false,
+  "width": "100%",
+  "height": 250,
+  "margin": {
+    "top": 10,
+    "right": 10,
+    "left": -20,
+    "bottom": 0
+  },
+  "x": {
+    "axisLine": true,
+    "tickLine": true,
+    "stroke": "#01ffff",
+    "allowDataOverflow": true,
+    "dataKey": "name",
+    "dx": 0,
+    "angle": -90,
+    "height": 80,
+    "tick": {
+      "verticalAnchor": "middle",
+      "fill": "#01ffff"
+    },
+    "fontSize": 12
+  },
+  "y": {
+    "tick": {
+      "fill": "#01ffff",
+      "fontSize": 12
+    },
+    "tickCount": 8,
+    "stroke": "#01ffff",
+    "axisLine": true,
+    "tickLine": true,
+    "dy": 0,
+    "angle": -90,
+    "fontSize": 12,
+    "fill": "#01ffff",
+    "interval": 0,
+    "domain": [0, "auto"]
+  },
+  "cartesianGrid": {
+    "horizontal": true,
+    "vertical": false,
+    "stroke": "#01ffff",
+    "fillOpacity": 0.5,
+    "fill": false
+  },
+  "bar": [
+    {
+      "key": "ProductiveCode",
+      "type": "linear",
+      "yAxisId": "left",
+      "barSize": 7,
+      "stroke": "#2bb834"
+    }
+  ],
+  "line": [
+    {
+      "key": "ProductiveCodeLine",
+      "dot": {
+        "fill": "#2bb834",
+        "r": 4
+      },
+      "stroke": "#2bb834",
+      "fill": "#2bb834",
+      "strokeWidth": "1"
+    }
+  ]
+}

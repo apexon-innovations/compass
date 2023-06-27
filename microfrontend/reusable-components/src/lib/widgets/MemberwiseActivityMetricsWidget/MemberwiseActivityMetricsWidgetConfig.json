@@ -1,0 +1,94 @@
+{
+  "height": 350,
+  "width": 750,
+  "margin": {
+    "top": 20,
+    "right": 0,
+    "left": 20,
+    "bottom": 0
+  },
+  "x": {
+    "stroke": "#01ffff",
+    "dataKey": "Label",
+    "hide": false,
+    "height": 110,
+    "interval": 0,
+    "angle": -90,
+    "axisLine": true,
+    "tickLine": false,
+    "dy": 15,
+    "dx": -5
+  },
+  "y": {
+    "stroke": "#01ffff",
+    "width": 1,
+    "axisLine": false,
+    "hide": true,
+    "tick": false,
+    "tickLine": false
+  },
+  "cartesianGrid": {
+    "horizontal": false,
+    "vertical": false
+  },
+  "tooltip": true,
+  "legend": true,
+  "legendIconType": "square",
+  "legendMargin": {
+    "top": 50,
+    "right": 0,
+    "left": 0,
+    "bottom": 0
+  },
+  "legendAlign": "left",
+  "bar": [
+    {
+      "key": "sprint2.Code Commits",
+      "barSize": 14,
+      "stroke": "#10e80a",
+      "stackId": "b"
+    },
+    {
+      "key": "sprint2.Merged PRs",
+      "barSize": 14,
+      "stroke": "#00d2ff",
+      "stackId": "b"
+    },
+    {
+      "key": "sprint2.Total PRs",
+      "barSize": 14,
+      "stroke": "#ffbb15",
+      "stackId": "b"
+    },
+    {
+      "key": "sprint2.Review Comments",
+      "barSize": 14,
+      "stroke": "#e00e2c",
+      "stackId": "b"
+    },
+    {
+      "key": "sprint1.Code Commits",
+      "barSize": 14,
+      "stroke": "#10e80a",
+      "stackId": "a"
+    },
+    {
+      "key": "sprint1.Merged PRs",
+      "barSize": 14,
+      "stroke": "#00d2ff",
+      "stackId": "a"
+    },
+    {
+      "key": "sprint1.Total PRs",
+      "barSize": 14,
+      "stroke": "#ffbb15",
+      "stackId": "a"
+    },
+    {
+      "key": "sprint1.Review Comments",
+      "barSize": 14,
+      "stroke": "#e00e2c",
+      "stackId": "a"
+    }
+  ]
+}
