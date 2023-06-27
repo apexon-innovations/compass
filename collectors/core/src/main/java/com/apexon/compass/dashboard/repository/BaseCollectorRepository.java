@@ -1,0 +1,43 @@
+package com.apexon.compass.dashboard.repository;
+
+import com.apexon.compass.dashboard.model.Collector;
+import com.apexon.compass.dashboard.model.CollectorType;
+import org.bson.types.ObjectId;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import java.util.List;
+
+/**
+ * Generic Collector repository that contains methods common to any model that extends
+ * from Collector.
+ *
+ * @param <T> Class that extends {@link Collector}
+ */
+public interface BaseCollectorRepository<T extends Collector>
+		extends PagingAndSortingRepository<T, ObjectId>, CrudRepository<T, ObjectId> {
+
+	/**
+	 * Finds a {@link Collector} by its name.
+	 * @param name name
+	 * @return a {@link Collector}
+	 */
+	T findByName(String name);
+
+	/**
+	 * Finds all {@link Collector}s of a given {@link CollectorType}.
+	 * @param collectorType a {@link CollectorType}
+	 * @return list of {@link Collector}s of a given {@link CollectorType}
+	 */
+	List<T> findByCollectorType(CollectorType collectorType);
+
+	/**
+	 * Finds all {@link Collector}s of a given {@link CollectorType}.
+	 * @param collectorType a {@link CollectorType}
+	 * @param name
+	 * @return list of {@link Collector}s of a given {@link CollectorType}
+	 */
+
+	List<T> findByCollectorTypeAndName(CollectorType collectorType, String name);
+
+}

@@ -73,7 +73,7 @@ public class UnitTestHelper {
                 .blockerTasks(4)
                 .completedTasks(1)
                 .remainingTasks(42)
-                .team(Arrays.asList(Team.builder().personName("gopi manikandan").storyPointCompleted(8).build()))
+                .team(Arrays.asList(Team.builder().personName("john doe").storyPointCompleted(8).build()))
                 .build()))
             .build());
     }
@@ -91,7 +91,7 @@ public class UnitTestHelper {
     public static List<SprintDataDto> getSprintDataDtos() {
         return Arrays.asList(SprintDataDto.builder()
             .sprintName("IA Sprint 9")
-            .team(Arrays.asList(TeamDto.builder().personName("gopi manikandan").storyPointCompleted(8).build()))
+            .team(Arrays.asList(TeamDto.builder().personName("john doe").storyPointCompleted(8).build()))
             .build());
     }
 
@@ -112,20 +112,17 @@ public class UnitTestHelper {
                 .language("Java")
                 .url("http://10.12.41.28:9000/dashboard/index/com.qmetry:intermiles")
                 .build()))
-            .accountManager(Arrays
-                .asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
+            .accountManager(
+                    Arrays.asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
             .billingType("T&M")
             .category("All")
             .clientName("Jet Privilege Pvt Ltd")
-            .clientProjectManager(Arrays
-                .asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
-            .deliveryManager(Arrays
-                .asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
-            .projectManager(Arrays.asList(ProjectManager.builder()
-                .email("demo@apexon.com")
-                .bandwidth(0)
-                .name("demo.apexon")
-                .build()))
+            .clientProjectManager(
+                    Arrays.asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
+            .deliveryManager(
+                    Arrays.asList(ManagerDetails.builder().name("demo.apexon").email("demo@apexon.com").build()))
+            .projectManager(Arrays
+                .asList(ProjectManager.builder().email("demo@apexon.com").bandwidth(0).name("demo.apexon").build()))
             .endDate(1640943925)
             .startDate(1564652725)
             .industrySpecificExposure("Financial services")

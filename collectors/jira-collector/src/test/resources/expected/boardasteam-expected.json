@@ -1,0 +1,15 @@
+[
+{
+  "collectorId" : "5c38f2f087cd1f53ca81bd3d",
+  "teamId" : "999",
+  "name" : "TestBoard scrum 3",
+  "changeDate" : "",
+  "assetState" : "Active",
+  "isDeleted" : "False",
+  "enabled" : false,
+  "teamType" : "scrum",
+  "lastCollected" : 0,
+  "boardId": "999",
+  "boardName":"TestBoard scrum 3"
+}
+]
