@@ -38,11 +38,9 @@ class StrategicControllerTestCase {
 
     private static final String CONTROLLER_URL = "/project";
 
-    private static final String ISC_PROJECT_ID = "5e7dbe36215e091c132c8f88";
+    private static final String PROJECT_ID = "5e7dbe36215e091c132c8f88";
 
     private static final String AUTHORIZATION = "Authorization";
-
-    private static final String SPRINT_ID = "924";
 
     private static final String DUMMY_TOKEN = "token";
 
@@ -61,7 +59,6 @@ class StrategicControllerTestCase {
 
     @BeforeEach
     public void setUp() {
-        // mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
         mockMvc = MockMvcBuilders.standaloneSetup(new StrategicController(strategicService))
             .setControllerAdvice(new ApiExceptionHandler())
             .build();
@@ -71,10 +68,10 @@ class StrategicControllerTestCase {
     void testViolationsSummary() throws Exception {
         // ARRANGE
         String url = CONTROLLER_URL + VIOLATIONS_SUMMARY;
-        Mockito.when(strategicService.getViolationsSummary(ISC_PROJECT_ID, REPO_ID))
+        Mockito.when(strategicService.getViolationsSummary(PROJECT_ID, REPO_ID))
             .thenReturn(UnitTestHelper.getViolationsSummaryDto());
         // Act
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .header(AUTHORIZATION, DUMMY_TOKEN)
             .accept(MediaType.APPLICATION_JSON)
@@ -84,17 +81,17 @@ class StrategicControllerTestCase {
             .andDo(print())
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-        verify(strategicService).getViolationsSummary(ISC_PROJECT_ID, REPO_ID);
+        verify(strategicService).getViolationsSummary(PROJECT_ID, REPO_ID);
     }
 
     @Test
-    public void testCollaborationMetrics() throws Exception {
+    void testCollaborationMetrics() throws Exception {
         // ARRANGE
         String url = CONTROLLER_URL + COLLABORATION_METRICS;
-        Mockito.when(strategicService.getCollaborationMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getCollaborationMetrics(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenReturn(UnitTestHelper.getCollaborationMetricDataDto());
         // Act
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .param("dayCount", DAY_COUNT)
             .header(AUTHORIZATION, DUMMY_TOKEN)
@@ -104,15 +101,15 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-        verify(strategicService).getCollaborationMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT);
+        verify(strategicService).getCollaborationMetrics(PROJECT_ID, REPO_ID, DAY_COUNT);
     }
 
     @Test
-    public void getReviewerMetricsTest() throws Exception {
+    void getReviewerMetricsTest() throws Exception {
         String url = CONTROLLER_URL + SPRINT_REVIEWER_METRICS;
-        Mockito.when(strategicService.getReviewerMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getReviewerMetrics(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenReturn(UnitTestHelper.getReviewerMetricsDto());
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .param("dayCount", DAY_COUNT)
             .header(AUTHORIZATION, DUMMY_TOKEN)
@@ -121,15 +118,15 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-        verify(strategicService).getReviewerMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT);
+        verify(strategicService).getReviewerMetrics(PROJECT_ID, REPO_ID, DAY_COUNT);
     }
 
     @Test
-    public void testPrJourney() throws Exception {
+    void testPrJourney() throws Exception {
         String url = CONTROLLER_URL + PR_JOURNEY;
-        Mockito.when(strategicService.getPrJourney(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getPrJourney(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenReturn(UnitTestHelper.getPullRequestsDto());
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .param("dayCount", DAY_COUNT)
             .header(AUTHORIZATION, DUMMY_TOKEN)
@@ -138,15 +135,15 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-        verify(strategicService).getPrJourney(ISC_PROJECT_ID, REPO_ID, DAY_COUNT);
+        verify(strategicService).getPrJourney(PROJECT_ID, REPO_ID, DAY_COUNT);
     }
 
     @Test
-    public void testCodeMetrics() throws Exception {
+    void testCodeMetrics() throws Exception {
         String url = CONTROLLER_URL + CODE_METRICS;
-        Mockito.when(strategicService.getCodeMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getCodeMetrics(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenReturn(UnitTestHelper.getCodeMetricsDto());
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .param("dayCount", DAY_COUNT)
             .header(AUTHORIZATION, DUMMY_TOKEN)
@@ -155,15 +152,15 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-        verify(strategicService).getCodeMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT);
+        verify(strategicService).getCodeMetrics(PROJECT_ID, REPO_ID, DAY_COUNT);
     }
 
     @Test
-    public void GetTechnicalDebtTest() throws Exception {
+    void GetTechnicalDebtTest() throws Exception {
         String url = CONTROLLER_URL + TECHNICAL_DEBT_METRICS;
-        Mockito.when(strategicService.getTechnicalDebtMetrics(ISC_PROJECT_ID, REPO_ID))
+        Mockito.when(strategicService.getTechnicalDebtMetrics(PROJECT_ID, REPO_ID))
             .thenReturn(UnitTestHelper.getTechnicalDebtDto());
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .header(AUTHORIZATION, DUMMY_TOKEN)
             .accept(MediaType.APPLICATION_JSON)
@@ -171,17 +168,17 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-        verify(strategicService).getTechnicalDebtMetrics(ISC_PROJECT_ID, REPO_ID);
+        verify(strategicService).getTechnicalDebtMetrics(PROJECT_ID, REPO_ID);
     }
 
     @Test
-    public void getComplianceAnalysisTestCase() throws Exception {
+    void getComplianceAnalysisTestCase() throws Exception {
         // ARRANGE
         String url = CONTROLLER_URL + GET_COMPLIANCE_ANALYSIS;
-        Mockito.when(strategicService.getComplianceAnalysis(ISC_PROJECT_ID, REPO_ID))
+        Mockito.when(strategicService.getComplianceAnalysis(PROJECT_ID, REPO_ID))
             .thenReturn(UnitTestHelper.getComplianceAnalysisDto());
         // ACT
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .header(AUTHORIZATION, DUMMY_TOKEN)
             .accept(MediaType.APPLICATION_JSON)
@@ -190,18 +187,18 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(org.springframework.http.MediaType.APPLICATION_JSON));
-        verify(strategicService).getComplianceAnalysis(ISC_PROJECT_ID, REPO_ID);
+        verify(strategicService).getComplianceAnalysis(PROJECT_ID, REPO_ID);
     }
 
     @Test
-    public void getSprintPullRequestSummaryTest() throws Exception {
+    void getSprintPullRequestSummaryTest() throws Exception {
         String url = CONTROLLER_URL + SPRINT_PULL_REQUEST_SUMMARY;
-        Mockito.when(strategicService.getSprintPullRequestSummary(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getSprintPullRequestSummary(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenReturn(SprintPullRequestSummaryDto.builder()
                 .data(UnitTestHelper.getSprintPullRequestSummaryDataDto())
                 .build());
         // ACT
-        MockHttpServletRequestBuilder requestBuilder = get(url).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(url).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .param("dayCount", DAY_COUNT)
             .header(AUTHORIZATION, DUMMY_TOKEN)
@@ -211,16 +208,16 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(org.springframework.http.MediaType.APPLICATION_JSON));
-        verify(strategicService).getSprintPullRequestSummary(ISC_PROJECT_ID, REPO_ID, DAY_COUNT);
+        verify(strategicService).getSprintPullRequestSummary(PROJECT_ID, REPO_ID, DAY_COUNT);
     }
 
     @Test
-    public void getSprintPullRequestSummaryTestWithUnauthorizedException() throws Exception {
+    void getSprintPullRequestSummaryTestWithUnauthorizedException() throws Exception {
         String url = CONTROLLER_URL + SPRINT_PULL_REQUEST_SUMMARY;
-        Mockito.when(strategicService.getSprintPullRequestSummary(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getSprintPullRequestSummary(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenThrow(new UnauthorizedException("Invalid claim exception"));
         mockMvc
-            .perform(get(url).param("iscProjectId", ISC_PROJECT_ID)
+            .perform(get(url).param("projectId", PROJECT_ID)
                 .param("repoIds", REPO_ID)
                 .param("dayCount", DAY_COUNT)
                 .header(AUTHORIZATION, DUMMY_TOKEN)
@@ -230,9 +227,9 @@ class StrategicControllerTestCase {
     }
 
     @Test
-    public void getSprintPullRequestSummaryTestWithRecordNotFoundException() throws Exception {
+    void getSprintPullRequestSummaryTestWithRecordNotFoundException() throws Exception {
         String url = CONTROLLER_URL + "%s/repo/%s/pullrequests/summary";
-        Mockito.when(strategicService.getSprintPullRequestSummary(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getSprintPullRequestSummary(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenThrow(new RecordNotFoundException(RECORD_NOT_FOUND));
         mockMvc.perform(get(url).header(AUTHORIZATION, DUMMY_TOKEN).contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isNotFound())
@@ -240,13 +237,13 @@ class StrategicControllerTestCase {
     }
 
     @Test
-    public void getSprintSubmitterMetricsTest() throws Exception {
-        Mockito.when(strategicService.getSprintSubmitterMetrics(ISC_PROJECT_ID, SORT, REPO_ID, DAY_COUNT))
+    void getSprintSubmitterMetricsTest() throws Exception {
+        Mockito.when(strategicService.getSprintSubmitterMetrics(PROJECT_ID, SORT, REPO_ID, DAY_COUNT))
             .thenReturn(SprintSubmitterMetricsResponseDto.builder()
                 .data(UnitTestHelper.getSprintSubmitterMetricsDto())
                 .build());
         MvcResult result = mockMvc
-            .perform(get(CONTROLLER_URL.concat(SPRINT_SUBMITTER_METRICS)).param("iscProjectId", ISC_PROJECT_ID)
+            .perform(get(CONTROLLER_URL.concat(SPRINT_SUBMITTER_METRICS)).param("projectId", PROJECT_ID)
                 .param("sortBy", SORT)
                 .param("repoIds", REPO_ID)
                 .param("dayCount", DAY_COUNT)
@@ -260,11 +257,11 @@ class StrategicControllerTestCase {
     }
 
     @Test
-    public void getSprintSubmitterMetricsTestWithUnauthorizedException() throws Exception {
-        Mockito.when(strategicService.getSprintSubmitterMetrics(ISC_PROJECT_ID, SORT, REPO_ID, DAY_COUNT))
+    void getSprintSubmitterMetricsTestWithUnauthorizedException() throws Exception {
+        Mockito.when(strategicService.getSprintSubmitterMetrics(PROJECT_ID, SORT, REPO_ID, DAY_COUNT))
             .thenThrow(new UnauthorizedException("Invalid claim exception"));
         mockMvc
-            .perform(get(CONTROLLER_URL.concat(SPRINT_SUBMITTER_METRICS)).param("iscProjectId", ISC_PROJECT_ID)
+            .perform(get(CONTROLLER_URL.concat(SPRINT_SUBMITTER_METRICS)).param("projectId", PROJECT_ID)
                 .param("sortBy", SORT)
                 .param("repoIds", REPO_ID)
                 .param("dayCount", DAY_COUNT)
@@ -275,12 +272,12 @@ class StrategicControllerTestCase {
     }
 
     @Test
-    public void getSprintSubmitterMetricsTestWithRecordNotFoundException() throws Exception {
+    void getSprintSubmitterMetricsTestWithRecordNotFoundException() throws Exception {
         String url = CONTROLLER_URL + "%s/repo/%s/submitter/metrics";
-        Mockito.when(strategicService.getSprintSubmitterMetrics(ISC_PROJECT_ID, SORT, REPO_ID, DAY_COUNT))
+        Mockito.when(strategicService.getSprintSubmitterMetrics(PROJECT_ID, SORT, REPO_ID, DAY_COUNT))
             .thenThrow(new RecordNotFoundException(RECORD_NOT_FOUND));
         mockMvc
-            .perform(get(url).param("iscProjectId", ISC_PROJECT_ID)
+            .perform(get(url).param("projectId", PROJECT_ID)
                 .param("repoIds", REPO_ID)
                 .header(AUTHORIZATION, DUMMY_TOKEN)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -289,12 +286,12 @@ class StrategicControllerTestCase {
     }
 
     @Test
-    public void getQualityMetricsTest() throws Exception {
+    void getQualityMetricsTest() throws Exception {
         String url = CONTROLLER_URL + GET_QUALITY_SUMMARY;
-        when(strategicService.getQualityMetrics(ISC_PROJECT_ID, REPO_ID))
+        when(strategicService.getQualityMetrics(PROJECT_ID, REPO_ID))
             .thenReturn(UnitTestHelper.getQualityMetricsSummaryDto());
         MvcResult result = mockMvc
-            .perform(get(url).param("iscProjectId", ISC_PROJECT_ID)
+            .perform(get(url).param("projectId", PROJECT_ID)
                 .param("repoIds", REPO_ID)
                 .header(AUTHORIZATION, DUMMY_TOKEN)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -305,13 +302,13 @@ class StrategicControllerTestCase {
     }
 
   @Test
-  public void getQualityMetricsTestWithUnauthorizedException() throws Exception {
-    when(strategicService.getQualityMetrics(ISC_PROJECT_ID, REPO_ID))
+  void getQualityMetricsTestWithUnauthorizedException() throws Exception {
+    when(strategicService.getQualityMetrics(PROJECT_ID, REPO_ID))
         .thenThrow(new UnauthorizedException("Invalid claim exception"));
     mockMvc
         .perform(
             get(CONTROLLER_URL.concat(GET_QUALITY_SUMMARY))
-                .param("iscProjectId", ISC_PROJECT_ID)
+                .param("projectId", PROJECT_ID)
                 .param("repoIds", REPO_ID)
                 .header(AUTHORIZATION, DUMMY_TOKEN)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -320,13 +317,13 @@ class StrategicControllerTestCase {
   }
 
   @Test
-  public void getQualityMetricsTestWithRecordNotFoundException() throws Exception {
-    when(strategicService.getQualityMetrics(ISC_PROJECT_ID, REPO_ID))
+  void getQualityMetricsTestWithRecordNotFoundException() throws Exception {
+    when(strategicService.getQualityMetrics(PROJECT_ID, REPO_ID))
         .thenThrow(new RecordNotFoundException(RECORD_NOT_FOUND));
     mockMvc
         .perform(
             get(CONTROLLER_URL.concat(GET_QUALITY_SUMMARY))
-                .param("iscProjectId", ISC_PROJECT_ID)
+                .param("projectId", PROJECT_ID)
                 .param("repoIds", REPO_ID)
                 .header(AUTHORIZATION, DUMMY_TOKEN)
                 .contentType(MediaType.APPLICATION_JSON))
@@ -335,13 +332,13 @@ class StrategicControllerTestCase {
   }
 
     @Test
-    public void testActivityMetrics() throws Exception {
-        Mockito.when(strategicService.getMemberWiseActivityMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT))
+    void testActivityMetrics() throws Exception {
+        Mockito.when(strategicService.getMemberWiseActivityMetrics(PROJECT_ID, REPO_ID, DAY_COUNT))
             .thenReturn(UnitTestHelper.getActivityMetricsDto());
         String url = CONTROLLER_URL + MEMBERWISE_ACTIVITY_METRICS;
-        String formattedUrl = String.format(url, ISC_PROJECT_ID, REPO_ID);
+        String formattedUrl = String.format(url, PROJECT_ID, REPO_ID);
         // ACT
-        MockHttpServletRequestBuilder requestBuilder = get(formattedUrl).param("iscProjectId", ISC_PROJECT_ID)
+        MockHttpServletRequestBuilder requestBuilder = get(formattedUrl).param("projectId", PROJECT_ID)
             .param("repoIds", REPO_ID)
             .param("dayCount", DAY_COUNT)
             .header(AUTHORIZATION, DUMMY_TOKEN)
@@ -351,7 +348,7 @@ class StrategicControllerTestCase {
         mockMvc.perform(requestBuilder)
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-        verify(strategicService).getMemberWiseActivityMetrics(ISC_PROJECT_ID, REPO_ID, DAY_COUNT);
+        verify(strategicService).getMemberWiseActivityMetrics(PROJECT_ID, REPO_ID, DAY_COUNT);
     }
 
 }
