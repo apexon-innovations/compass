@@ -40,7 +40,6 @@
     }
   },
   "scripts": {
-    "start": "react-scripts start",
     "start:watch": "nodemon --watch 'src/lib/*' --exec 'npm run build:watch'",
     "start:watch:win": "nodemon --watch src/lib --exec \"npm run build:watch\"",
     "build:watch": "npx babel --extensions \".snap,.js\"  src/lib --out-dir dist --copy-files --no-copy-ignored --ignore **/__test__/**",
@@ -49,7 +48,6 @@
     "build:react": "react-scripts build",
     "test": "react-scripts test",
     "test-report": "react-scripts test --coverage --watchAll -u",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook",
     "lint": "eslint --fix",
     "pretty": "prettier --write {src}/**/*.js"
@@ -92,6 +90,7 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
     "@babel/plugin-proposal-function-bind": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-syntax-export-default-from": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/polyfill": "^7.6.0",
@@ -121,7 +120,19 @@
     "react-svg": "^16.1.7",
     "react-tooltip": "^5.10.4"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Richa Shah",
+      "email": "richakinjal4@gmail.com"
+    },
+    {
+      "name": "Nisarg Thakkar",
+      "email": "nisargthakkar113@gmail.com"
+    },
+    {
+      "name": "Jay Momaya",
+      "email": "jaymomaya95@gmail.com"
+    }
+  ]
 }

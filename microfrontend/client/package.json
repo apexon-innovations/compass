@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.0.1",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@khanacademy/react-multi-select": "^0.3.3",
     "node-sass": "^8.0.0",
@@ -97,5 +98,19 @@
     "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.7.4",
     "webpack-bundle-analyzer": "^4.8.0"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Richa Shah",
+      "email": "richakinjal4@gmail.com"
+    },
+    {
+      "name": "Nisarg Thakkar",
+      "email": "nisargthakkar113@gmail.com"
+    },
+    {
+      "name": "Jay Momaya",
+      "email": "jaymomaya95@gmail.com"
+    }
+  ]
 }

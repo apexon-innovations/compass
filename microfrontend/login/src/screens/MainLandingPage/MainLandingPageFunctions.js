@@ -1,7 +1,6 @@
 import userRoles from 'reusable-components/dist/utils/userRoles'
 import {
   IC_OPERATIONAL,
-  IC_STRATEGIC,
   IC_CLIENT,
 } from 'reusable-components/dist/const/imgConst'
 
