@@ -1,13 +1,25 @@
 {
   "name": "apexon-microfrontend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "contributors": [
+    {
+      "name": "Richa Shah",
+      "email": "richakinjal4@gmail.com"
+    },
+    {
+      "name": "Nisarg Thakkar",
+      "email": "nisargthakkar113@gmail.com"
+    },
+    {
+      "name": "Jay Momaya",
+      "email": "jaymomaya95@gmail.com"
+    }
+  ],
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
     "express-http-proxy": "^1.6.3"

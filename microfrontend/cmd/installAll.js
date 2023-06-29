@@ -15,6 +15,6 @@ if (osType.includes('Windows')) {
 } else {
     //mac
     shell.exec(
-        `(cd reusable-components && npm install) & (cd login && npm isntall) & (cd pmo && npm install) & (cd client && npm install)`,
+        `(cd reusable-components && npm install --legacy-peer-deps) & (cd login && npm install --legacy-peer-deps) & (cd pmo && npm install --legacy-peer-deps) & (cd client && npm install --legacy-peer-deps)`,
     )
 }
