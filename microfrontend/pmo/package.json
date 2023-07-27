@@ -55,7 +55,8 @@
     "eject": "react-scripts eject",
     "analyze": "node analyze.js",
     "start:pmo": "(cd ../reusable-components && npm link && npm run start:watch) & (cd ../login && npm link reusable-components && npm run start) & (cd ../pmo && npm link reusable-components && npm run start)",
-    "lint": "eslint --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
