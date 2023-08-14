@@ -11,7 +11,7 @@ coverage/
 
 # Log files
 *.log
-log/*
+**/log/*
 
 # Package files
 *.jar
