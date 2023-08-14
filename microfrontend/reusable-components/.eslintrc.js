@@ -8,6 +8,7 @@ module.exports = {
     browser: true,
     node: true, //For access .env process variables
     es6: true,
+    jest: true,
   },
   extends: ['eslint:recommended', 'plugin:react/recommended', 'react-app'],
   globals: {

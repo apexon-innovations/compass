@@ -27,7 +27,8 @@
     "eject": "react-scripts eject",
     "analyze": "node analyze.js",
     "pretty": "prettier --write {src}/**/*.js",
-    "lint": "eslint --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

@@ -48,7 +48,8 @@
     "pretty": "prettier --write {src}/**/*.js",
     "start:all": "node start.js",
     "start:utilities": "node startUtilities.js",
-    "lint": "eslint --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
