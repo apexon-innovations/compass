@@ -2,7 +2,6 @@ package com.apexon.compass.sonarservice.controller;
 
 import com.apexon.compass.exception.custom.RecordNotFoundException;
 import com.apexon.compass.exception.custom.UnauthorizedException;
-import com.apexon.compass.exception.handler.ApiExceptionHandler;
 import com.apexon.compass.sonarservice.dto.*;
 import com.apexon.compass.sonarservice.service.StrategicService;
 import jakarta.validation.constraints.Pattern;
@@ -21,7 +20,7 @@ import static com.apexon.compass.constants.StrategyServiceRouteConstants.*;
 @AllArgsConstructor
 @RequestMapping(value = PROJECT)
 @Validated
-public class StrategicController extends ApiExceptionHandler {
+public class StrategicController {
 
     private StrategicService strategicService;
 
